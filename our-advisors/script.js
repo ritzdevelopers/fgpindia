@@ -1055,13 +1055,13 @@ function initEnquiryPopup() {
     });
 
     // Auto-open popup after 7 seconds (only once per session)
-    const hasAutoOpened = sessionStorage.getItem('enquiry-popup-auto-opened');
-    if (!hasAutoOpened) {
-        setTimeout(() => {
-            openPopup();
-            sessionStorage.setItem('enquiry-popup-auto-opened', 'true');
-        }, 7000); // 7 seconds
-    }
+    // const hasAutoOpened = sessionStorage.getItem('enquiry-popup-auto-opened');
+    // if (!hasAutoOpened) {
+    //     setTimeout(() => {
+    //         openPopup();
+    //         sessionStorage.setItem('enquiry-popup-auto-opened', 'true');
+    //     }, 7000); // 7 seconds
+    // }
 }
 
 // Initialize enquiry popup when DOM is ready
