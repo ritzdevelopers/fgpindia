@@ -1991,7 +1991,7 @@ He also lends his expertise in engaging with law enforcement agencies, adeptly a
     {
         desination: "Chairman",
         desination2: "(Project Development)",
-        name: "Avdhesh Kumar Goel",
+        name: "Avdhesh Kumar Goel FCA, ACS, AICWA",
         image: "img/founders/fond44.jpg",
         content: `Dynamic executive leader with more than 35 years of distinguished expertise spanning finance, regulatory compliance, corporate governance, strategic project management, and real estate development. A highly accomplished Chartered Accountant, Cost & Works Accountant, and Company Secretary, Mr. Goel has provided strategic financial advisory, audit, and restructuring services to many renowned multinational and Indian corporations.  <br><br>
         
@@ -2130,28 +2130,12 @@ window.addEventListener('load', () => {
 // Navigation Functions
 // ============================================
 
-// Function to navigate to Home page (opens in new tab)
-function navigateToHome(event) {
-    if (event) {
-        event.preventDefault();
-    }
-    window.open('https://fgpindia.com/', '_blank');
-}
-
-// Function to navigate to Luxury & Clarity page (opens in new tab)
-function navigateToLuxuryClarity(event) {
-    if (event) {
-        event.preventDefault();
-    }
-    window.open('https://fgpindia.com/', '_blank');
-}
-
 // Function to navigate to Featured Project page (opens in new tab)
 function navigateToFeaturedProject(event) {
     if (event) {
         event.preventDefault();
     }
-    window.open('https://fgpindia.com/fab-luxe/', '_blank');
+    window.open('/fab-luxe/', '_blank');
 }
 
 // Function to scroll to top hero section with smooth scrolling

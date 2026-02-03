@@ -1992,6 +1992,7 @@ He also lends his expertise in engaging with law enforcement agencies, adeptly a
         desination: "Chairman",
         desination2: "(Project Development)",
         name: "Avdhesh Kumar Goel",
+        specialText: "FCA, ACS, AICWA",
         image: "img/founders/fond44.jpg",
         content: `Dynamic executive leader with more than 35 years of distinguished expertise spanning finance, regulatory compliance, corporate governance, strategic project management, and real estate development. A highly accomplished Chartered Accountant, Cost & Works Accountant, and Company Secretary, Mr. Goel has provided strategic financial advisory, audit, and restructuring services to many renowned multinational and Indian corporations.  <br><br>
         
@@ -2051,6 +2052,7 @@ function initTabSwitchingContainer1() {
     const textElement1 = document.getElementById('tab-content-text');
     const imageElement1 = document.getElementById('tab-content-image');
     const mobileNameElement1 = document.querySelector('.tab-content-name-mobile');
+    const specialText = document.querySelector('.special-text');
     const designationElement1 = document.getElementById('tab-content-designation');
     const designationElement2 = document.getElementById('tab-content-designation2');
 
@@ -2092,6 +2094,7 @@ function initTabSwitchingContainer1() {
         imageElement1.src = tabData.image;
         imageElement1.alt = tabData.name;
         if (mobileNameElement1) mobileNameElement1.textContent = tabData.name;
+        if (specialText) specialText.textContent = tabData.specialText;
         if (designationElement1 && tabData.desination) designationElement1.textContent = tabData.desination;
 
         // Handle designation2 - show if exists, hide if not
@@ -2129,31 +2132,7 @@ window.addEventListener('load', () => {
 // ============================================
 // Navigation Functions
 // ============================================
-
-// Function to navigate to Home page (opens in new tab)
-function navigateToHome(event) {
-    if (event) {
-        event.preventDefault();
-    }
-    window.open('https://fgpindia.com/', '_blank');
-}
-
-// Function to navigate to Luxury & Clarity page (opens in new tab)
-function navigateToLuxuryClarity(event) {
-    if (event) {
-        event.preventDefault();
-    }
-    window.open('https://fgpindia.com/', '_blank');
-}
-
 // Function to navigate to Featured Project page (opens in new tab)
-function navigateToFeaturedProject(event) {
-    if (event) {
-        event.preventDefault();
-    }
-    window.open('https://fgpindia.com/fab-luxe/', '_blank');
-}
-
 // Function to scroll to top hero section with smooth scrolling
 function scrollToAboutUs(event) {
     if (event) {

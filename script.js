@@ -1851,9 +1851,3 @@ if (document.readyState === 'loading') {
 } else {
   initAllForms();
 }
-
-
-
-function handleNavigation() {
-  window.open('https://fgpindia.com/fab-luxe', '_blank');
-}
