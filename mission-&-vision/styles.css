@@ -1,0 +1,431 @@
+/* Google Fonts Imports */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+/* Font Family Classes */
+.font-open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.font-baskervville {
+    font-family: 'Baskervville', serif;
+}
+
+.font-libre-baskerville {
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Slider Container Enhancements */
+
+.slider-image-container .slCard {
+    flex-shrink: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Desktop: Maintain original width */
+@media (min-width: 1024px) {
+    .slider-image-container .slCard {
+        width: 428px !important;
+    }
+}
+
+/* Enhanced Card Hover Effects */
+.slider-image-container .slCard:hover {
+    transform: translateY(-5px);
+}
+
+.slider-image-container .slCard img {
+    transition: transform 0.3s ease;
+}
+
+.slider-image-container .slCard:hover img {
+    transform: scale(1.05);
+}
+
+.activecard {
+    background-color: #BF4423 !important;
+}
+
+/* Section 5 Leadership Cards - Responsive Fixes */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    /* lg screens: 3 columns with proper spacing */
+    .leadership-card-lg-responsive {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1280px) {
+    /* xl screens: 4 columns with original desktop width */
+    .leadership-card-xl-responsive {
+        max-width: 294px;
+    }
+}
+
+@media (min-width:1370px) {
+    .max-width-container-xl {
+        width: 1200px !important;
+        margin: 0 auto !important;
+    }
+    .tab-card {
+        width: 225px !important;
+    }
+}
+
+.activecardImg {
+    opacity: 1 !important;
+    transition: opacity 0.2s ease-in-out, width 0.2s ease-in-out !important;
+}
+.activeCardBtm {
+    background-color: #BF4423 !important;
+    transition: background-color 0.2s ease-in-out !important;
+}
+
+.deactivecardImg {
+    opacity: 0.65 !important;
+    width: 408px !important;
+    transition: opacity 0.2s ease-in-out, width 0.2s ease-in-out !important;
+}
+.deactiveCardBtm {
+    background-color: transparent !important;
+    transition: background-color 0.2s ease-in-out !important;
+}
+
+/* Swiper Advisor Slider Styles */
+.advisorSwiper {
+    width: 100%;
+    padding: 0;
+}
+
+.advisorSwiper .swiper-wrapper {
+    display: flex;
+    align-items: center;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.advisorSwiper .swiper-slide {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* New Advisor Swiper Styles */
+.advisor-swiper {
+    width: 100% !important;
+    padding: 20px 60px !important;
+    overflow: visible !important;
+}
+
+.advisor-swiper .swiper-wrapper {
+    position: relative !important;
+}
+
+.advisor-swiper .swiper-wrapper {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.advisor-swiper .swiper-slide {
+    width: auto !important;
+    flex-shrink: 0 !important;
+    height: auto !important;
+}
+
+@media (max-width: 1024px) {
+    .advisor-swiper {
+        padding: 20px 55px;
+    }
+}
+
+@media (max-width: 768px) {
+    .advisor-swiper {
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width: 640px) {
+    .advisor-swiper {
+        padding: 20px 45px;
+    }
+}
+
+.advisor-swiper .swiper-wrapper {
+    align-items: center;
+}
+
+.advisor-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.advisor-tab-card { 
+    border-bottom: 1px solid #DFDFDF;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+ 
+.advisor-tab-card.active-advisor-tab { 
+    border-bottom: 3px solid #BF4423;
+}
+
+.advisor-tab-card.active-advisor-tab .advisor-tab-indicator {
+    display: block !important;
+}
+
+.advisor-tab-card.active-advisor-tab h3 {
+    color: #000000;
+}
+
+.advisor-tab-card:not(.active-advisor-tab) h3 {
+    color: #989696;
+}
+
+.advisor-tab-card.active-advisor-tab div img {
+    opacity: 1;
+}
+
+.advisor-tab-card:not(.active-advisor-tab) div img {
+    opacity: 0.65;
+}
+
+/* Navigation Buttons */
+.advisor-swiper-button-prev,
+.advisor-swiper-button-next {
+    color: #000 !important;
+    background: white !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+    z-index: 30 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    touch-action: manipulation !important;
+}
+
+.advisor-swiper-button-prev {
+    left: 10px !important;
+}
+
+.advisor-swiper-button-next {
+    right: 10px !important;
+}
+
+.advisor-swiper-button-prev:hover,
+.advisor-swiper-button-next:hover {
+    background: #BF4423 !important;
+    color: white !important;
+}
+
+.advisor-swiper-button-prev.swiper-button-disabled,
+.advisor-swiper-button-next.swiper-button-disabled {
+    opacity: 0.35 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .advisor-swiper {
+        padding: 20px 50px;
+    }
+    
+    .advisor-swiper-button-prev,
+    .advisor-swiper-button-next {
+        width: 35px !important;
+        height: 35px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .advisor-swiper {
+        padding: 20px 45px;
+    }
+    
+    .advisor-swiper-button-prev,
+    .advisor-swiper-button-next {
+        width: 32px !important;
+        height: 32px !important;
+    }
+}
+
+/* Advisor Content Transitions */
+#advisor-content-text,
+#advisor-content-image,
+#advisor-content-name,
+#advisor-content-designation {
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+/* Smooth transitions for card image containers */
+.slCard > div:first-child {
+    transition: opacity 0.6s ease-in-out, width 0.6s ease-in-out !important;
+}
+
+/* Smooth transitions for card bottom containers */
+.slCard > div:last-child {
+    transition: background-color 0.6s ease-in-out !important;
+}
+
+.slCard > div:last-child h6,
+.slCard > div:last-child p {
+    transition: color 0.6s ease-in-out !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+.activeCardBtm p {
+    color: #ffffff !important;
+    transition: color 0.6s ease-in-out !important;
+}
+.activeCardBtm h6 {
+    color: #ffffff !important;
+    transition: color 0.6s ease-in-out !important;
+}
+.deactiveCardBtm p {
+    color: #000000B2 !important;
+    transition: color 0.6s ease-in-out !important;
+}
+.deactiveCardBtm h6 {
+    color: #000000B2 !important;
+    transition: color 0.6s ease-in-out !important;
+}
+
+/* Section 5.5 Tab Card Styles */
+
+.activeTabCard { 
+    border: 1px solid #DFDFDF !important;
+    border-bottom: 3px solid #BF4423 !important;
+    /* border-radius: 15px !important; */
+}
+.activeTabCard div img {
+    opacity: 1 !important;
+    transition: opacity 0.6s ease-in-out !important;
+}
+.deactiveTabCard div img {
+    opacity: 0.65 !important;
+    transition: opacity 0.6s ease-in-out !important;
+}
+
+.activeTabCard h3 {
+    color: #000000 !important;
+    /* transition: color 0.6s ease-in-out !important; */
+}
+.activeTabCard p {
+    color: #222222 !important;
+    /* transition: color 0.6s ease-in-out !important; */
+}
+.deactiveTabCard h3 {
+    color: #989696 !important;
+    /* transition: color 0.6s ease-in-out !important; */
+}
+.deactiveTabCard p {
+    color: #989696 !important;
+    /* transition: color 0.6s ease-in-out !important; */
+}
+
+.activeTabCard .tabAbsDiv {
+    display: hidden !important;
+}
+.deactiveTabCard {
+    border: none !important;
+    border-bottom: 1px solid #DFDFDF !important;
+}
+.deactiveTabCard .tabAbsDiv {
+    display: none !important;
+}
+
+/* Tab Content Transitions - Container 1 */
+#tab-content-name,
+.tab-content-name-mobile {
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+/* Tab Content Transitions - Container 2 */
+#tab-content-name-2,
+#tab-content-text-2,
+#tab-content-image-2,
+.tab-content-name-mobile-2 {
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+/* Tab Content Transitions - Container 3 (Advisors Container 1) */
+#tab-content-text-3,
+#tab-content-image-3,
+.tab-content-name-mobile-3,
+#tab-content-designation-3 {
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+/* Tab Content Transitions - Container 4 (Advisors Container 2) */
+#tab-content-text-4,
+#tab-content-image-4,
+.tab-content-name-mobile-4 {
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+/* Tab Content Transitions - Container 5 (Advisors Container 3) */
+#tab-content-text-5,
+#tab-content-image-5,
+.tab-content-name-mobile-5,
+#tab-content-designation-5 {
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+/* Initial state for smooth transitions */
+#tab-content-name,
+#tab-content-text,
+#tab-content-image,
+.tab-content-name-mobile,
+#tab-content-designation,
+#tab-content-name-2,
+#tab-content-text-2,
+#tab-content-image-2,
+.tab-content-name-mobile-2,
+#tab-content-text-3,
+#tab-content-image-3,
+.tab-content-name-mobile-3,
+#tab-content-designation-3,
+#tab-content-text-4,
+#tab-content-image-4,
+.tab-content-name-mobile-4,
+#tab-content-text-5,
+#tab-content-image-5,
+.tab-content-name-mobile-5,
+#tab-content-designation-5 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Tab Container - Hide scrollbar on mobile but keep scroll functionality */
+@media (max-width: 1023px) {
+    .tab-container-responsive {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    
+    .tab-container-responsive::-webkit-scrollbar {
+        display: none;  /* Chrome, Safari and Opera */
+    }
+}
