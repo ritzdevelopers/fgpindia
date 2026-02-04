@@ -585,20 +585,47 @@ function initAnimations() {
       }
     });
 
-    // Location images and grid
-    const locationContent = section4.querySelectorAll('img, .flex.flex-col');
-    gsap.from(locationContent, {
-      opacity: 0,
-      y: 40,
-      duration: defaultDuration,
-      ease: defaultEase,
-      stagger: 0.15,
-      scrollTrigger: {
-        trigger: locationContent[0],
-        start: 'top 85%',
-        toggleActions: 'play none none none'
+    // Location images and grid - exclude elements with 'no-animation' class and main location images
+    const allLocationContent = section4.querySelectorAll('img:not(.no-animation), .flex.flex-col:not(.no-animation)');
+    const filteredLocationContent = Array.from(allLocationContent).filter(el => {
+      // Skip elements with no-animation class
+      if (el.classList.contains('no-animation')) {
+        return false;
       }
+      // Skip images that should not be animated (main location images)
+      if (el.tagName === 'IMG') {
+        const src = el.getAttribute('src') || '';
+        // Exclude fgp-location.png and location-2.png from animation
+        if (src.includes('fgp-location') || src.includes('location-2')) {
+          return false;
+        }
+      }
+      // Skip containers that contain the excluded images or have no-animation class
+      const excludedImages = el.querySelectorAll('img[src*="fgp-location"], img[src*="location-2"], .no-animation');
+      if (excludedImages.length > 0) {
+        return false;
+      }
+      // Skip if parent has no-animation class
+      if (el.closest('.no-animation')) {
+        return false;
+      }
+      return true;
     });
+    
+    if (filteredLocationContent.length > 0) {
+      gsap.from(filteredLocationContent, {
+        opacity: 0,
+        y: 40,
+        duration: defaultDuration,
+        ease: defaultEase,
+        stagger: 0.15,
+        scrollTrigger: {
+          trigger: filteredLocationContent[0],
+          start: 'top 85%',
+          toggleActions: 'play none none none'
+        }
+      });
+    }
   }
 
   // Section 5 - Layouts & Planning

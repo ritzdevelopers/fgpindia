@@ -1,15 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAB LUXE Residences, Serviced Luxury Homes, Greater Noida West</title>
-    <meta name="description"
-        content="AQI-managed indoor-outdoor living, serviced residences, wellness-led luxury and curated amenities in Sector 4, Greater Noida West. Executed by NBCC and monitored under Supreme Court oversight.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      FAB LUXE Residences, Serviced Luxury Homes, Greater Noida West
+    </title>
+    <meta
+      name="description"
+      content="AQI-managed indoor-outdoor living, serviced residences, wellness-led luxury and curated amenities in Sector 4, Greater Noida West. Executed by NBCC and monitored under Supreme Court oversight."
+    />
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- GSAP Core Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -24,1094 +27,2088 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- Top Header  -->
-    <div class="w-full bg-black text-white flex justify-end items-end pr-4 xl:pr-20 py-2 hidden">
-        <ul
-            class="flex justify-center items-center gap-4 md:gap-8 font-[600] text-[11px] md:text-[13px] font-open-sans">
-            <li class="hover:text-[#BF4423] cursor-pointer">Home</li>
-            <li class="hover:text-[#BF4423] cursor-pointer">About Us</li>
-            <li class="hover:text-[#BF4423] cursor-pointer">Blogs</li>
-            <li class="hover:text-[#BF4423] cursor-pointer">Contact Us</li>
-        </ul>
+    <div
+      class="w-full bg-black text-white flex justify-end items-end pr-4 xl:pr-20 py-2 hidden"
+    >
+      <ul
+        class="flex justify-center items-center gap-4 md:gap-8 font-[600] text-[11px] md:text-[13px] font-open-sans"
+      >
+        <li class="hover:text-[#BF4423] cursor-pointer">Home</li>
+        <li class="hover:text-[#BF4423] cursor-pointer">About Us</li>
+        <li class="hover:text-[#BF4423] cursor-pointer">Blogs</li>
+        <li class="hover:text-[#BF4423] cursor-pointer">Contact Us</li>
+      </ul>
     </div>
 
     <!-- Fixed Position Main Header Navbar -->
-    <div id="main-navbar"
-        class="w-full flex justify-between  absolute top-0 left-0 z-50 pr-4 xl:pr-20 xl:pl-10 transition-all duration-300 py-2 px-4">
-        <!-- Left Side Logo Container  -->
-        <a href="/" class="flex items-center md:w-[202px] w-[126px] h-auto cursor-pointer logo-link">
-            <!-- By DEfault It Wil Show  -->
-            <img id="default-logo" src="img/logo/white-logo2.png" alt="logo" class=" transition-opacity duration-300" />
+    <div
+      id="main-navbar"
+      class="w-full flex justify-between absolute top-0 left-0 z-50 pr-4 xl:pr-20 xl:pl-10 transition-all duration-300 py-2 px-4"
+    >
+      <!-- Left Side Logo Container  -->
+      <a
+        href="/"
+        class="flex items-center md:w-[202px] w-[126px] h-auto cursor-pointer logo-link"
+      >
+        <!-- By DEfault It Wil Show  -->
+        <img
+          id="default-logo"
+          src="img/logo/white-logo2.png"
+          alt="logo"
+          class="transition-opacity duration-300"
+        />
 
-            <!-- It Will SHow After Scroll  -->
-            <img id="scroll-logo" src="img/logo/white-logo2.png" alt="logo"
-                class=" overflow-hidden transition-opacity duration-300 hidden w-[156px]" />
-        </a>
+        <!-- It Will SHow After Scroll  -->
+        <img
+          id="scroll-logo"
+          src="img/logo/white-logo2.png"
+          alt="logo"
+          class="overflow-hidden transition-opacity duration-300 hidden w-[156px]"
+        />
+      </a>
 
-        <!-- Desktop Navigation Links Container  -->
-        <div class="hidden lg:block pt-4">
-            <ul
-                class="flex justify-center items-center gap-8  text-white font-[700] text-[13px] xl:text-[15px] font-open-sans">
-                <!-- <li class="hover:text-[#BF4423] cursor-pointer"><a href="/" class="nav-home-link">Home</a></li> -->
-                <li class="hover:text-[#BF4423] cursor-pointer"><a href="/about-us">About Us</a></li>
-                <li class="hover:text-[#BF4423] cursor-pointer"><a href="/our-advisors">Our Advisors</a></li>
-                <li class="hover:text-[#BF4423] cursor-pointer"><a href="/mission-&amp;-vision">Our Mission</a></li>
-                <li class="hover:text-[#BF4423] cursor-pointer"><a href="#" class="nav-featured-link">Featured
-                        Project</a></li>
-                <button
-                    class="enquiry-popup-trigger w-[180px] xl:w-[137px] h-[38px] xl:h-[43px] bg-[#CF4422] text-white font-[600] text-[11px] xl:text-[13px] rounded-[4px] font-[700] xl:text-[15px] hover:bg-[#BF4423] cursor-pointer">
-                    Get in Touch
-                </button>
-            </ul>
-        </div>
+      <!-- Desktop Navigation Links Container  -->
+      <div class="hidden lg:block pt-4">
+        <ul
+          class="flex justify-center items-center gap-8 text-white font-[700] text-[13px] xl:text-[15px] font-open-sans"
+        >
+          <!-- <li class="hover:text-[#BF4423] cursor-pointer"><a href="/" class="nav-home-link">Home</a></li> -->
+          <li class="hover:text-[#BF4423] cursor-pointer">
+            <a href="/about-us">About Us</a>
+          </li>
+          <li class="hover:text-[#BF4423] cursor-pointer">
+            <a href="/our-advisors">Our Advisors</a>
+          </li>
+          <li class="hover:text-[#BF4423] cursor-pointer">
+            <a href="/mission-&amp;-vision">Our Mission</a>
+          </li>
+          <li class="hover:text-[#BF4423] cursor-pointer">
+            <a href="/fab-luxe/" class="nav-featured-link">Featured Project</a>
+          </li>
+          <button
+            class="enquiry-popup-trigger w-[180px] xl:w-[137px] h-[38px] xl:h-[43px] bg-[#CF4422] text-white font-[600] text-[11px] xl:text-[13px] rounded-[4px] font-[700] xl:text-[15px] hover:bg-[#BF4423] cursor-pointer"
+          >
+            Contact Us
+          </button>
+        </ul>
+      </div>
 
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="lg:hidden text-white z-50 relative" aria-label="Toggle menu">
-            <!-- Menu Icon SVG -->
-            <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                </path>
-            </svg>
-            <!-- Close Icon SVG -->
-            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </button>
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-btn"
+        class="lg:hidden text-white z-50 relative"
+        aria-label="Toggle menu"
+      >
+        <!-- Menu Icon SVG -->
+        <svg
+          id="menu-icon"
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+        <!-- Close Icon SVG -->
+        <svg
+          id="close-icon"
+          class="w-6 h-6 hidden"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
     </div>
 
     <!-- Mobile Menu Slider -->
-    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white z-50 hidden">
-        <div class="w-full h-full flex flex-col justify-center items-center px-8">
-            <ul class="flex flex-col justify-center items-center gap-8 text-black">
-                <li class="mobile-menu-item">
-                    <a href="/"
-                        class="nav-home-link text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors">
-                        Home
-                    </a>
-                </li>
-                <li class="mobile-menu-item">
-                    <a href="/about-us"
-                        class="text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors">
-                        About Us
-                    </a>
-                </li>
-                <li class="mobile-menu-item">
-                    <a href="/our-advisors"
-                        class="text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors">
-                        Our Advisors
-                    </a>
-                </li>
-                <li class="mobile-menu-item">
-                    <a href="/mission-&amp;-vision"
-                        class="text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors">
-                        Our Mission
-                    </a>
-                </li>
-                <li class="mobile-menu-item">
-                    <a href="#"
-                        class="nav-featured-link text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors">
-                        Featured Project
-                    </a>
-                </li>
+    <div
+      id="mobile-menu"
+      class="fixed top-0 left-0 w-full h-full bg-white z-50 hidden"
+    >
+      <div class="w-full h-full flex flex-col justify-center items-center px-8">
+        <ul class="flex flex-col justify-center items-center gap-8 text-black">
+          <li class="mobile-menu-item">
+            <a
+              href="/"
+              class="nav-home-link text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors"
+            >
+              Home
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a
+              href="/about-us"
+              class="text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors"
+            >
+              About Us
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a
+              href="/our-advisors"
+              class="text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors"
+            >
+              Our Advisors
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a
+              href="/mission-&amp;-vision"
+              class="text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors"
+            >
+              Our Mission
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a
+              href="#"
+              class="nav-featured-link text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors"
+            >
+              Featured Project
+            </a>
+          </li>
 
-                <li class="mobile-menu-item">
-                    <button
-                        class="enquiry-popup-trigger w-[280px] md:w-[320px] h-[50px] md:h-[60px] bg-[#CF4422] text-white font-[600] text-[16px] md:text-[18px] rounded-[4px] hover:bg-[#BF4423] cursor-pointer transition-colors">
-                        Get in Touch
-                    </button>
-                </li>
-            </ul>
-            <!-- Close Button at Bottom -->
-            <button id="mobile-menu-close-btn"
-                class="mobile-menu-item mt-12 flex items-center justify-center gap-2 text-black font-[600] text-[18px] md:text-[20px] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors"
-                aria-label="Close menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                    </path>
-                </svg>
-                <span>Close</span>
+          <li class="mobile-menu-item">
+            <button
+              class="enquiry-popup-trigger w-[280px] md:w-[320px] h-[50px] md:h-[60px] bg-[#CF4422] text-white font-[600] text-[16px] md:text-[18px] rounded-[4px] hover:bg-[#BF4423] cursor-pointer transition-colors"
+            >
+              Contact Us
             </button>
-        </div>
+          </li>
+        </ul>
+        <!-- Close Button at Bottom -->
+        <button
+          id="mobile-menu-close-btn"
+          class="mobile-menu-item mt-12 flex items-center justify-center gap-2 text-black font-[600] text-[18px] md:text-[20px] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors"
+          aria-label="Close menu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+          <span>Close</span>
+        </button>
+      </div>
     </div>
     <!-- Loader Popup -->
-    <div id="loader-popup"
-        class="fixed inset-0 z-[20000] hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm">
+    <div
+      id="loader-popup"
+      class="fixed inset-0 z-[20000] hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm"
+    >
+      <div
+        class="bg-white rounded-[20px] md:rounded-[24px] p-8 md:p-12 flex flex-col items-center gap-6 md:gap-8 max-w-[400px] mx-4"
+      >
         <div
-            class="bg-white rounded-[20px] md:rounded-[24px] p-8 md:p-12 flex flex-col items-center gap-6 md:gap-8 max-w-[400px] mx-4">
-            <div
-                class="loader-spinner w-16 h-16 md:w-20 md:h-20 border-4 border-[#F9F9F9] border-t-[#CF4422] rounded-full animate-spin">
-            </div>
-            <p class="text-black font-[600] text-[16px] md:text-[18px] font-open-sans text-center">Submitting your
-                request...
-            </p>
-            <p class="text-gray-600 font-[400] text-[14px] md:text-[15px] font-open-sans text-center">Please wait</p>
-        </div>
+          class="loader-spinner w-16 h-16 md:w-20 md:h-20 border-4 border-[#F9F9F9] border-t-[#CF4422] rounded-full animate-spin"
+        ></div>
+        <p
+          class="text-black font-[600] text-[16px] md:text-[18px] font-open-sans text-center"
+        >
+          Submitting your request...
+        </p>
+        <p
+          class="text-gray-600 font-[400] text-[14px] md:text-[15px] font-open-sans text-center"
+        >
+          Please wait
+        </p>
+      </div>
     </div>
     <!-- Section 1  -->
     <section
-        class="s1 w-full lg:min-h-[552px]  min-h-[90vh] relative overflow-hidden flex items-center justify-center lg:justify-start pl-5 md:pl-10 text-center lg:text-start">
+      class="s1 w-full lg:min-h-[552px] min-h-[90vh] relative overflow-hidden flex items-center justify-center lg:justify-start pl-5 md:pl-10 text-center lg:text-start"
+    >
+      <!-- Absolute Position Image Slider  -->
+      <div
+        id="slider-image-container"
+        class="w-full h-full absolute top-0 left-0 z-0"
+      >
+        <img
+          id="slider-image"
+          src="img/leadership.jpg"
+          alt="slider"
+          class="w-full h-full object-cover transition-opacity duration-1000 hidden md:block"
+        />
+        <img
+          id="slider-image"
+          src="img/leadership-phone.jpg"
+          alt="slider"
+          class="w-full h-full object-cover transition-opacity duration-1000 block md:hidden"
+        />
+      </div>
 
-
-
-        <!-- Absolute Position Image Slider  -->
-        <div id="slider-image-container" class="w-full h-full absolute top-0 left-0 z-0">
-            <img id="slider-image" src="img/leadership.jpg" alt="slider"
-                class="w-full h-full object-cover transition-opacity duration-1000 hidden md:block" />
-            <img id="slider-image" src="img/leadership-phone.jpg" alt="slider"
-                class="w-full h-full object-cover transition-opacity duration-1000 block md:hidden" />
-        </div>
-
-        <!-- Absolute Position Slider Pagination Div  -->
-        <div id="slider-pagination"
-            class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-row gap-1">
-            <!-- Dots will be generated dynamically -->
-        </div>
-
-
-    </section>
-
-
-    <!-- Section 2  -->
-    <section
-        class="w-full px-4 sm:px-6 md:px-8 lg:px-[48px] py-8 sm:py-12 md:py-16 lg:py-[70px] flex justify-center items-center">
-        <div
-            class="w-full text-center flex justify-center items-center flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-[48px]">
-            <div class="flex flex-col justify-center items-center text-center lg:gap-6">
-                <h1 class="font-[700] text-2xl sm:text-3xl md:text-4xl lg:text-[46px] font-libre-baskerville ">
-                    Global Legacy Indian Precision.
-                </h1>
-                <!-- <h1 class="font-[700] text-2xl sm:text-3xl md:text-4xl lg:text-[46px] font-libre-baskerville ">
-                    Indian Precision.
-                </h1> -->
-            </div>
-            <div
-                class="flex w-full justify-center flex-col items-center gap-6 sm:gap-8 md:gap-10 lg:gap-[40px] text-center">
-                <p class="font-[400] text-[16px] lg:max-w-[800px] px-4 sm:px-6 md:px-0 font-open-sans">
-                    As the India arm of Forbes Global Properties,India Forbes Global properties extends beyond
-                    developing luxury projects we are building an integrated ecosystem that connects Indian and
-                    international luxury real estate through trusted advisory, luxury developments and market
-                    intelligence
-                </p>
-
-            </div>
-        </div>
+      <!-- Absolute Position Slider Pagination Div  -->
+      <div
+        id="slider-pagination"
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-row gap-1"
+      >
+        <!-- Dots will be generated dynamically -->
+      </div>
     </section>
 
     <!-- Section 3  -->
     <section
-        class="hidden lg:flex w-full px-4 sm:px-6 md:px-8 lg:px-[48px] border-t border-[#DFDFDF] pt-[70px] justify-center flex-col gap-8 items-center ">
-        <!-- Centered Align Container  -->
-        <div class="w-full flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-[58px]  max-width-container-xl">
-            <!-- Top Row Content  -->
-            <div class="w-full flex flex-col gap-3 sm:gap-4 text-center">
-                <h4 class="font-[700] text-2xl sm:text-3xl md:text-4xl lg:text-[46px] font-libre-baskerville">
-                    Our Indian Leadership
-                </h4>
-                <p class="font-[400] text-lg sm:text-xl md:text-2xl lg:text-[30px] font-baskervville">Built on
-                    Experience and Integrity</p>
-            </div>
-
-            <!-- Bottom Row Cotent  -->
-            <div class="flex flex-col items-center justify-center gap-4 sm:gap-5 md:gap-6 lg:gap-6 w-full">
-
-                <!-- Left Side Container  -->
-                <div
-                    class="tab-container-responsive flex flex-col gap-2 sm:gap-3 md:gap-4 overflow-x-auto overflow-y-hidden xl:overflow-visible w-full">
-                    <div class="flex gap-2 sm:gap-3 justify-center md:gap-4 min-w-max xl:min-w-0">
-                        <!-- Tab Card 1 - Arun Kumar -->
-                        <div class="tab-card flex flex-col lg:w-auto w-[140px] items-center cursor-pointer p-2 sm:p-2.5 md:p-3 lg:p-4 activeTabCard relative gap-1.5"
-                            data-tab="0">
-                            <!-- Left Side Image  -->
-                            <div class="w-[80px] h-[80px] overflow-hidden rounded-[15px] flex-shrink-0"><img
-                                    src="img/founders/fond11.jpg" alt=""
-                                    class="w-full h-full rounded-[10px] object-cover"></div>
-                            <h3 class="font-[600] text-[15px] lg:text-[16px] text-center xl:text-left leading-tight">
-                                Arun Kumar Sharma
-                            </h3>
-                            <p class="font-[400] text-[15px] leading-relaxed">Chairman</p>
-
-                            <!-- Absolute Position Active Tab Card Icon  -->
-                            <div class="absolute left-[50%] translate-x-[-50%] tabAbsDiv -bottom-[10px]">
-
-
-                                <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.62891 9.75L-0.000258724 -1.06691e-07L11.2581 8.77544e-07L5.62891 9.75Z"
-                                        fill="#BF4423" />
-                                </svg>
-
-
-                            </div>
-                        </div>
-
-                        <!-- Tab Card 2 - Avdhesh Kumar -->
-                        <div class="tab-card flex flex-col lg:w-auto w-[140px] items-center cursor-pointer p-2 sm:p-2.5 md:p-3 lg:p-4 deactiveTabCard relative gap-1.5"
-                            data-tab="1">
-                            <!-- Left Side Image  -->
-                            <div class="w-[80px] h-[80px] overflow-hidden rounded-[15px] flex-shrink-0"><img
-                                    src="img/founders/fond44.jpg" alt=""
-                                    class="w-full h-full rounded-[10px] object-cover"></div>
-                            <h3 class="font-[600] text-[15px] lg:text-[16px] text-center xl:text-left leading-tight">
-                                Avdhesh Kumar Goel
-                            </h3>
-                            <div class="text-center">
-                                <p class="font-[400] text-[15px]  ">Chairman</p>
-                                <p class="font-[400] text-[12px] ">(Project Development)</p>
-                            </div>
-                            <!-- Absolute Position Active Tab Card Icon  -->
-                            <!-- Absolute Position Active Tab Card Icon  -->
-                            <div class="absolute left-[50%] translate-x-[-50%] tabAbsDiv -bottom-[10px]">
-
-
-                                <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.62891 9.75L-0.000258724 -1.06691e-07L11.2581 8.77544e-07L5.62891 9.75Z"
-                                        fill="#BF4423" />
-                                </svg>
-
-
-                            </div>
-                        </div>
-
-                        <!-- Tab Card 3 - Mona Vij -->
-                        <div class="tab-card flex flex-col lg:w-auto w-[140px] items-center cursor-pointer p-2 sm:p-2.5 md:p-3 lg:p-4 deactiveTabCard relative gap-1.5"
-                            data-tab="2">
-                            <!-- Left Side Image  -->
-                            <div class="w-[80px] h-[80px] overflow-hidden rounded-[15px] flex-shrink-0"><img
-                                    src="img/founders/fond21.jpg" alt=""
-                                    class="w-full h-full rounded-[10px] object-cover"></div>
-                            <h3 class="font-[600] text-[15px] lg:text-[16px] text-center xl:text-left leading-tight">
-                                Mona <br class="block lg:hidden"> Vij
-                            </h3>
-                            <p class="font-[400] text-[15px] leading-relaxed">Director</p>
-                            <!-- Absolute Position Active Tab Card Icon  -->
-                            <!-- Absolute Position Active Tab Card Icon  -->
-                            <div class="absolute left-[50%] translate-x-[-50%] tabAbsDiv -bottom-[10px]">
-
-
-                                <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.62891 9.75L-0.000258724 -1.06691e-07L11.2581 8.77544e-07L5.62891 9.75Z"
-                                        fill="#BF4423" />
-                                </svg>
-
-
-                            </div>
-                        </div>
-
-                        <!-- Tab Card 4 - Mani -->
-                        <div class="tab-card flex flex-col lg:w-auto w-[140px] items-center cursor-pointer p-2 sm:p-2.5 md:p-3 lg:p-4 deactiveTabCard relative gap-1.5"
-                            data-tab="3">
-                            <!-- Left Side Image  -->
-                            <div class="w-[80px] h-[80px] overflow-hidden rounded-[15px] flex-shrink-0"><img
-                                    src="img/founders/mani-gupta.jpg" alt=""
-                                    class="w-full h-full rounded-[10px] object-cover"></div>
-                            <h3 class="font-[600] text-[15px] lg:text-[16px] text-center xl:text-left leading-tight">
-                                Mani <br class="block lg:hidden"> Gupta
-                            </h3>
-                            <p class="font-[400] text-[15px] leading-relaxed">Director</p>
-                            <!-- Absolute Position Active Tab Card Icon  -->
-                            <!-- Absolute Position Active Tab Card Icon  -->
-                            <div class="absolute left-[50%] translate-x-[-50%] tabAbsDiv -bottom-[10px]">
-
-
-                                <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.62891 9.75L-0.000258724 -1.06691e-07L11.2581 8.77544e-07L5.62891 9.75Z"
-                                        fill="#BF4423" />
-                                </svg>
-
-
-                            </div>
-                        </div>
-
-                        <!-- Tab Card 5 - Aditya -->
-                        <div class="tab-card flex flex-col lg:w-auto w-[140px] items-center cursor-pointer p-2 sm:p-2.5 md:p-3 lg:p-4 deactiveTabCard relative gap-1.5"
-                            data-tab="4">
-                            <!-- Left Side Image  -->
-                            <div class="w-[80px] h-[80px] overflow-hidden rounded-[15px] flex-shrink-0"><img
-                                    src="img/founders/Aditya-Goel2.jpg" alt=""
-                                    class="w-full h-full rounded-[10px] object-cover"></div>
-                            <h3 class="font-[600] text-[15px] lg:text-[16px] text-center xl:text-left leading-tight">
-                                Aditya <br class="block lg:hidden"> Goel
-                            </h3>
-                            <div class="text-center">
-                                <p class="font-[400] text-[15px]  ">Vice President</p>
-                                <p class="font-[400] text-[12px] ">(Business Development)</p>
-                            </div>
-                            <!-- Absolute Position Active Tab Card Icon  -->
-                            <!-- Absolute Position Active Tab Card Icon  -->
-                            <div class="absolute left-[50%] translate-x-[-50%] tabAbsDiv -bottom-[10px]">
-
-
-                                <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.62891 9.75L-0.000258724 -1.06691e-07L11.2581 8.77544e-07L5.62891 9.75Z"
-                                        fill="#BF4423" />
-                                </svg>
-
-
-                            </div>
-                        </div>
-
-                        <!-- Tab Card 6 - Yaman -->
-                        <div class="tab-card flex flex-col lg:w-auto w-[140px] items-center cursor-pointer p-2 sm:p-2.5 md:p-3 lg:p-4 deactiveTabCard relative gap-1.5"
-                            data-tab="5">
-                            <!-- Left Side Image  -->
-                            <div class=" w-[80px] h-[80px] overflow-hidden rounded-[15px] flex-shrink-0"><img
-                                    src="img/founders/yaman-rizvi.jpg" alt=""
-                                    class="w-full h-full rounded-[10px] object-cover"></div>
-                            <h3 class="font-[600] text-[15px] lg:text-[16px] text-center xl:text-left leading-tight">
-                                Yaman <br class="block lg:hidden"> Rizvi
-                            </h3>
-                            <div class="text-center">
-                                <p class="font-[400] text-[15px]  ">Executive Lead</p>
-                                <p class="font-[400] text-[12px] ">(Middle East Region)</p>
-                            </div>
-                            <!-- Absolute Position Active Tab Card Icon  -->
-                            <!-- Absolute Position Active Tab Card Icon  -->
-                            <div class="absolute left-[50%] translate-x-[-50%] tabAbsDiv -bottom-[10px]">
-
-
-                                <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.62891 9.75L-0.000258724 -1.06691e-07L11.2581 8.77544e-07L5.62891 9.75Z"
-                                        fill="#BF4423" />
-                                </svg>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Side Container  -->
-                <div class="flex flex-col gap-4 sm:gap-5 md:gap-6 w-full">
-                    <!-- Bottom Row For Content  -->
-                    <div
-                        class="flex flex-col lg:flex-row md:justify-between items-center lg:items-start w-full gap-4 sm:gap-5 md:gap-4 xl:gap-6">
-                        <!-- Left Side For User Details  -->
-                        <div class="w-full md:w-auto">
-                            <p id="tab-content-text" class="font-[400]  text-[16px] text-center lg:text-left">
-                                He is a retired senior Indian Police Services (IPS) officer from the 1987 batch, Gujarat
-                                cadre, who has served in various positions including Additional Director of the Central
-                                Bureau of Investigation (CBI). He has held several positions of distinction and
-                                important responsibilities and has a remarkable record of service. He has been honoured
-                                with the President’s Police Medal for Distinguished Service and awarded the Indian
-                                Police Medal for Meritorious Service. <br> <br>
-
-                                With over 34 years of expertise, he has held a pivotal role in investigations of bank
-                                and security fraud cases and also played an important advisory role in stressed asset
-                                management. He has attained specialisation in restructuring, management, and recovery of
-                                distressed assets. His acumen in strategy and planning serves as a guiding force for the
-                                organisation and helps in formulating optimal future action plans. <br> <br>
-
-                                He also lends his expertise in engaging with law enforcement agencies, adeptly
-                                addressing jurisdictional issues and overcoming roadblocks to expedite ongoing matters
-                                within the organisation. His extensive experience includes effectively managing public
-                                order and contributing to decision-making on vigilance and policy matters. He is
-                                currently handling and demonstrating a profound interest and active involvement in the
-                                real estate sector, which is the second-largest economy in India.
-                            </p>
-                        </div>
-
-                        <!-- Right Side For User Image  -->
-                        <div class="flex flex-col  w-full md:w-auto">
-                            <div
-                                class="w-full max-w-[280px] sm:max-w-[300px] md:w-[250px] md:max-w-[250px] aspect-square sm:aspect-[250/262] md:h-[262px] overflow-hidden rounded-[15px] flex-shrink-0 mx-auto md:mx-0">
-                                <img id="tab-content-image" src="img/founders/fond11.jpg" alt=""
-                                    class="w-full h-full object-cover">
-                            </div>
-                            <div class="flex flex-col text-center mt-3">
-                                <h5
-                                    class="font-[400] text-lg sm:text-xl md:text-2xl lg:text-[26px] tab-content-name-mobile t ">
-                                    Arun Kumar
-                                    Sharma</h5>
-                                <span class="text-sm sm:text-base md:text-lg special-text"></span>
-                                <p id="tab-content-designation" class="userDesination font-[500] text-[16px] mt-3">
-                                    Chairman</p>
-                                <p id="tab-content-designation2" class="userDesination font-[500] text-[16px]  "></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      class="hidden w-full px-4 sm:px-6 md:px-8 lg:px-[48px] border-t border-[#DFDFDF] pt-[70px] justify-center flex-col gap-8 items-center"
+    >
+      <!-- Centered Align Container  -->
+      <div
+        class="w-full flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-[58px] max-width-container-xl"
+      >
+        <!-- Top Row Content  -->
+        <div class="w-full flex flex-col gap-3 sm:gap-4 text-center">
+          <h4
+            class="font-[700] text-2xl sm:text-3xl md:text-4xl lg:text-[46px] font-libre-baskerville"
+          >
+            Our Indian Leadership
+          </h4>
+          <p
+            class="font-[400] text-lg sm:text-xl md:text-2xl lg:text-[30px] font-baskervville"
+          >
+            Built on Experience and Integrity
+          </p>
         </div>
 
+        <!-- Bottom Row Cotent  -->
+        <div
+          class="flex flex-col items-center justify-center gap-4 sm:gap-5 md:gap-6 lg:gap-6 w-full"
+        >
+          <!-- Left Side Container  -->
+          <div
+            class="tab-container-responsive flex flex-col gap-2 sm:gap-3 md:gap-4 overflow-x-auto overflow-y-hidden xl:overflow-visible w-full"
+          >
+            <div
+              class="flex gap-2 sm:gap-3 justify-center md:gap-4 min-w-max xl:min-w-0"
+            >
+              <!-- Tab Card 1 - Arun Kumar -->
+              <div
+                class="tab-card flex flex-col lg:w-auto w-[140px] items-center cursor-pointer p-2 sm:p-2.5 md:p-3 lg:p-4 activeTabCard relative gap-1.5"
+                data-tab="0"
+              >
+                <!-- Left Side Image  -->
+                <div
+                  class="w-[80px] h-[80px] overflow-hidden rounded-[15px] flex-shrink-0"
+                >
+                  <img
+                    src="img/founders/fond11.jpg"
+                    alt=""
+                    class="w-full h-full rounded-[10px] object-cover"
+                  />
+                </div>
+                <h3
+                  class="font-[600] text-[15px] lg:text-[16px] text-center xl:text-left leading-tight"
+                >
+                  Arun Kumar Sharma
+                </h3>
+                <p class="font-[400] text-[15px] leading-relaxed">Chairman</p>
+
+                <!-- Absolute Position Active Tab Card Icon  -->
+                <div
+                  class="absolute left-[50%] translate-x-[-50%] tabAbsDiv -bottom-[10px]"
+                >
+                  <svg
+                    width="12"
+                    height="10"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.62891 9.75L-0.000258724 -1.06691e-07L11.2581 8.77544e-07L5.62891 9.75Z"
+                      fill="#BF4423"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Tab Card 2 - Avdhesh Kumar -->
+              <div
+                class="tab-card flex flex-col lg:w-auto w-[140px] items-center cursor-pointer p-2 sm:p-2.5 md:p-3 lg:p-4 deactiveTabCard relative gap-1.5"
+                data-tab="1"
+              >
+                <!-- Left Side Image  -->
+                <div
+                  class="w-[80px] h-[80px] overflow-hidden rounded-[15px] flex-shrink-0"
+                >
+                  <img
+                    src="img/founders/fond44.jpg"
+                    alt=""
+                    class="w-full h-full rounded-[10px] object-cover"
+                  />
+                </div>
+                <h3
+                  class="font-[600] text-[15px] lg:text-[16px] text-center xl:text-left leading-tight"
+                >
+                  Avdhesh Kumar Goel
+                </h3>
+                <div class="text-center">
+                  <p class="font-[400] text-[15px]">Chairman</p>
+                  <p class="font-[400] text-[12px]">(Project Development)</p>
+                </div>
+                <!-- Absolute Position Active Tab Card Icon  -->
+                <!-- Absolute Position Active Tab Card Icon  -->
+                <div
+                  class="absolute left-[50%] translate-x-[-50%] tabAbsDiv -bottom-[10px]"
+                >
+                  <svg
+                    width="12"
+                    height="10"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.62891 9.75L-0.000258724 -1.06691e-07L11.2581 8.77544e-07L5.62891 9.75Z"
+                      fill="#BF4423"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Tab Card 3 - Mona Vij -->
+              <div
+                class="tab-card flex flex-col lg:w-auto w-[140px] items-center cursor-pointer p-2 sm:p-2.5 md:p-3 lg:p-4 deactiveTabCard relative gap-1.5"
+                data-tab="2"
+              >
+                <!-- Left Side Image  -->
+                <div
+                  class="w-[80px] h-[80px] overflow-hidden rounded-[15px] flex-shrink-0"
+                >
+                  <img
+                    src="img/founders/fond21.jpg"
+                    alt=""
+                    class="w-full h-full rounded-[10px] object-cover"
+                  />
+                </div>
+                <h3
+                  class="font-[600] text-[15px] lg:text-[16px] text-center xl:text-left leading-tight"
+                >
+                  Mona <br class="block lg:hidden" />
+                  Vij
+                </h3>
+                <p class="font-[400] text-[15px] leading-relaxed">Director</p>
+                <!-- Absolute Position Active Tab Card Icon  -->
+                <!-- Absolute Position Active Tab Card Icon  -->
+                <div
+                  class="absolute left-[50%] translate-x-[-50%] tabAbsDiv -bottom-[10px]"
+                >
+                  <svg
+                    width="12"
+                    height="10"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.62891 9.75L-0.000258724 -1.06691e-07L11.2581 8.77544e-07L5.62891 9.75Z"
+                      fill="#BF4423"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Tab Card 4 - Mani -->
+              <div
+                class="tab-card flex flex-col lg:w-auto w-[140px] items-center cursor-pointer p-2 sm:p-2.5 md:p-3 lg:p-4 deactiveTabCard relative gap-1.5"
+                data-tab="3"
+              >
+                <!-- Left Side Image  -->
+                <div
+                  class="w-[80px] h-[80px] overflow-hidden rounded-[15px] flex-shrink-0"
+                >
+                  <img
+                    src="img/founders/mani-gupta.jpg"
+                    alt=""
+                    class="w-full h-full rounded-[10px] object-cover"
+                  />
+                </div>
+                <h3
+                  class="font-[600] text-[15px] lg:text-[16px] text-center xl:text-left leading-tight"
+                >
+                  Mani <br class="block lg:hidden" />
+                  Gupta
+                </h3>
+                <p class="font-[400] text-[15px] leading-relaxed">Director</p>
+                <!-- Absolute Position Active Tab Card Icon  -->
+                <!-- Absolute Position Active Tab Card Icon  -->
+                <div
+                  class="absolute left-[50%] translate-x-[-50%] tabAbsDiv -bottom-[10px]"
+                >
+                  <svg
+                    width="12"
+                    height="10"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.62891 9.75L-0.000258724 -1.06691e-07L11.2581 8.77544e-07L5.62891 9.75Z"
+                      fill="#BF4423"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Tab Card 5 - Aditya -->
+              <div
+                class="tab-card flex flex-col lg:w-auto w-[140px] items-center cursor-pointer p-2 sm:p-2.5 md:p-3 lg:p-4 deactiveTabCard relative gap-1.5"
+                data-tab="4"
+              >
+                <!-- Left Side Image  -->
+                <div
+                  class="w-[80px] h-[80px] overflow-hidden rounded-[15px] flex-shrink-0"
+                >
+                  <img
+                    src="img/founders/Aditya-Goel2.jpg"
+                    alt=""
+                    class="w-full h-full rounded-[10px] object-cover"
+                  />
+                </div>
+                <h3
+                  class="font-[600] text-[15px] lg:text-[16px] text-center xl:text-left leading-tight"
+                >
+                  Aditya <br class="block lg:hidden" />
+                  Goel
+                </h3>
+                <div class="text-center">
+                  <p class="font-[400] text-[15px]">Vice President</p>
+                  <p class="font-[400] text-[12px]">(Business Development)</p>
+                </div>
+                <!-- Absolute Position Active Tab Card Icon  -->
+                <!-- Absolute Position Active Tab Card Icon  -->
+                <div
+                  class="absolute left-[50%] translate-x-[-50%] tabAbsDiv -bottom-[10px]"
+                >
+                  <svg
+                    width="12"
+                    height="10"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.62891 9.75L-0.000258724 -1.06691e-07L11.2581 8.77544e-07L5.62891 9.75Z"
+                      fill="#BF4423"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Tab Card 6 - Yaman -->
+              <div
+                class="tab-card flex flex-col lg:w-auto w-[140px] items-center cursor-pointer p-2 sm:p-2.5 md:p-3 lg:p-4 deactiveTabCard relative gap-1.5"
+                data-tab="5"
+              >
+                <!-- Left Side Image  -->
+                <div
+                  class="w-[80px] h-[80px] overflow-hidden rounded-[15px] flex-shrink-0"
+                >
+                  <img
+                    src="img/founders/yaman-rizvi.jpg"
+                    alt=""
+                    class="w-full h-full rounded-[10px] object-cover"
+                  />
+                </div>
+                <h3
+                  class="font-[600] text-[15px] lg:text-[16px] text-center xl:text-left leading-tight"
+                >
+                  Yaman <br class="block lg:hidden" />
+                  Rizvi
+                </h3>
+                <div class="text-center">
+                  <p class="font-[400] text-[15px]">Executive Lead</p>
+                  <p class="font-[400] text-[12px]">(Middle East Region)</p>
+                </div>
+                <!-- Absolute Position Active Tab Card Icon  -->
+                <!-- Absolute Position Active Tab Card Icon  -->
+                <div
+                  class="absolute left-[50%] translate-x-[-50%] tabAbsDiv -bottom-[10px]"
+                >
+                  <svg
+                    width="12"
+                    height="10"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.62891 9.75L-0.000258724 -1.06691e-07L11.2581 8.77544e-07L5.62891 9.75Z"
+                      fill="#BF4423"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side Container  -->
+          <div class="flex flex-col gap-4 sm:gap-5 md:gap-6 w-full">
+            <!-- Bottom Row For Content  -->
+            <div
+              class="flex flex-col lg:flex-row md:justify-between items-center lg:items-start w-full gap-4 sm:gap-5 md:gap-4 xl:gap-6"
+            >
+              <!-- Left Side For User Details  -->
+              <div class="w-full md:w-auto">
+                <p
+                  id="tab-content-text"
+                  class="font-[400] text-[16px] text-center lg:text-left"
+                >
+                  He is a retired senior Indian Police Services (IPS) officer
+                  from the 1987 batch, Gujarat cadre, who has served in various
+                  positions including Additional Director of the Central Bureau
+                  of Investigation (CBI). He has held several positions of
+                  distinction and important responsibilities and has a
+                  remarkable record of service. He has been honoured with the
+                  President’s Police Medal for Distinguished Service and awarded
+                  the Indian Police Medal for Meritorious Service. <br />
+                  <br />
+
+                  With over 34 years of expertise, he has held a pivotal role in
+                  investigations of bank and security fraud cases and also
+                  played an important advisory role in stressed asset
+                  management. He has attained specialisation in restructuring,
+                  management, and recovery of distressed assets. His acumen in
+                  strategy and planning serves as a guiding force for the
+                  organisation and helps in formulating optimal future action
+                  plans. <br />
+                  <br />
+
+                  He also lends his expertise in engaging with law enforcement
+                  agencies, adeptly addressing jurisdictional issues and
+                  overcoming roadblocks to expedite ongoing matters within the
+                  organisation. His extensive experience includes effectively
+                  managing public order and contributing to decision-making on
+                  vigilance and policy matters. He is currently handling and
+                  demonstrating a profound interest and active involvement in
+                  the real estate sector, which is the second-largest economy in
+                  India.
+                </p>
+              </div>
+
+              <!-- Right Side For User Image  -->
+              <div class="flex flex-col w-full md:w-auto">
+                <div
+                  class="w-full max-w-[280px] sm:max-w-[300px] md:w-[250px] md:max-w-[250px] aspect-square sm:aspect-[250/262] md:h-[262px] overflow-hidden rounded-[15px] flex-shrink-0 mx-auto md:mx-0"
+                >
+                  <img
+                    id="tab-content-image"
+                    src="img/founders/fond11.jpg"
+                    alt=""
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="flex flex-col text-center mt-3">
+                  <h5
+                    class="font-[400] text-lg sm:text-xl md:text-2xl lg:text-[26px] tab-content-name-mobile t"
+                  >
+                    Arun Kumar Sharma
+                  </h5>
+                  <span
+                    class="text-sm sm:text-base md:text-lg special-text"
+                  ></span>
+                  <p
+                    id="tab-content-designation"
+                    class="userDesination font-[500] text-[16px] mt-3"
+                  >
+                    Chairman
+                  </p>
+                  <p
+                    id="tab-content-designation2"
+                    class="userDesination font-[500] text-[16px]"
+                  ></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6.1 - Mobile/Tablet View: All Advisors in Columns -->
+    <section
+      class="w-full px-4 sm:px-6 md:px-8 border-t border-[#DFDFDF] pt-[35px] md:pt-[48px] flex justify-center flex-col gap-8 items-center"
+    >
+      <!-- Centered Align Container  -->
+      <div
+        class="w-full flex flex-col gap-6 sm:gap-8 md:gap-10 max-width-container-xl"
+      >
+        <!-- Top Row Content  -->
+        <div class="w-full flex flex-col gap-3 md:gap-4 text-center">
+          <h4
+            class="font-[700] text-[25px] sm:text-3xl md:text-4xl font-libre-baskerville"
+          >
+            Our Indian Leadership
+          </h4>
+          <p
+            class="font-[400] text-lg sm:text-xl md:text-2xl xl:text-[20px] font-baskervville"
+          >
+            Expertise That Built on Experience and Integrity
+          </p>
+        </div>
+
+        <!-- Users Grid Container -->
+        <div class="w-full grid grid-cols-1 gap-4 sm:gap-6 md:gap-8">
+          <!-- User 1 - Arun Kumar Sharma -->
+          <div
+            class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col xl:flex-row xl:gap-8 gap-4"
+          >
+            <!-- Left Container: Image and Name -->
+            <div class="flex flex-col gap-4 xl:w-[250px] xl:shrink-0">
+              <div
+                class="w-full aspect-square max-w-[200px] mx-auto xl:mx-0 overflow-hidden rounded-[15px]"
+              >
+                <img
+                  src="img/founders/fond11.jpg"
+                  alt="Anil Kumar Yadav"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col gap-2 text-center xl:text-left">
+                <h3
+                  class="font-[600] text-lg sm:text-xl md:text-2xl xl:text-[20px] font-libre-baskerville"
+                >
+                  Arun Kumar Sharma
+                </h3>
+                <p class="font-[500] text-base sm:text-lg text-[#BF4423]">
+                  Chairman
+                </p>
+              </div>
+            </div>
+            <!-- Right Container: Description -->
+            <div
+              class="font-[400] text-sm sm:text-base xl:text-left text-center leading-relaxed flex-1"
+            >
+              He is a retired senior Indian Police Services (IPS) officer from
+              the 1987 batch, Gujarat cadre, who has served in various positions
+              including Additional Director of the Central Bureau of
+              Investigation (CBI). He has held several positions of distinction
+              and important responsibilities and has a remarkable record of
+              service. He has been honoured with the President's Police Medal
+              for Distinguished Service and awarded the Indian Police Medal for
+              Meritorious Service. <br /><br />
+              With over 34 years of expertise, he has held a pivotal role in
+              investigations of bank and security fraud cases and also played an
+              important advisory role in stressed asset management. He has
+              attained specialisation in restructuring, management, and recovery
+              of distressed assets. His acumen in strategy and planning serves
+              as a guiding force for the organisation and helps in formulating
+              optimal future action plans. <br /><br />
+              He also lends his expertise in engaging with law enforcement
+              agencies, adeptly addressing jurisdictional issues and overcoming
+              roadblocks to expedite ongoing matters within the organisation.
+              His extensive experience includes effectively managing public
+              order and contributing to decision-making on vigilance and policy
+              matters. He is currently handling and demonstrating a profound
+              interest and active involvement in the real estate sector, which
+              is the second-largest economy in India.
+            </div>
+          </div>
+          <!-- User 2 - Avdesh Kumar Goel -->
+          <div
+            class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col xl:flex-row xl:gap-8 gap-4"
+          >
+            <!-- Left Container: Image and Name -->
+            <div class="flex flex-col gap-4 xl:w-[250px] xl:shrink-0">
+              <div
+                class="w-full aspect-square max-w-[200px] mx-auto xl:mx-0 overflow-hidden rounded-[15px]"
+              >
+                <img
+                  src="img/founders/fond44.jpg"
+                  alt="Avdesh Kumar Goel"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col gap-2 text-center xl:text-left">
+                <h3
+                  class="font-[600] text-lg sm:text-xl md:text-2xl xl:text-[20px] font-libre-baskerville"
+                >
+                  Avdesh Kumar Goel
+                </h3>
+                <span class="text-sm sm:text-base md:text-lg special-text"
+                  >FCA, ACS, AICWA</span
+                >
+                <p class="font-[500] text-base sm:text-lg text-[#BF4423]">
+                  Chairman
+                </p>
+                <p class="font-[500] text-sm sm:text-base text-[#BF4423]">
+                  (Project Development)
+                </p>
+              </div>
+            </div>
+            <!-- Right Container: Description -->
+            <div
+              class="font-[400] text-sm sm:text-base xl:text-left text-center leading-relaxed flex-1"
+            >
+              Dynamic executive leader with more than 35 years of distinguished
+              expertise spanning finance, regulatory compliance, corporate
+              governance, strategic project management, and real estate
+              development. A highly accomplished Chartered Accountant, Cost &
+              Works Accountant, and Company Secretary, Mr. Goel has provided
+              strategic financial advisory, audit, and restructuring services to
+              many renowned multinational and Indian corporations. <br /><br />
+              Since transitioning into real estate in 2006, he has strategically
+              shaped successful residential, commercial, IT, and farmhouse
+              projects. With comprehensive experience in project development and
+              marketing, Mr. Goel excels at overseeing end-to-end execution of
+              complex developments, emphasizing financial efficiency and
+              innovative, market-relevant solutions.
+              <br /><br />
+              He brings in the Core Competencies of Strategic Leadership &
+              Corporate Governance, Real Estate Development & Project
+              Management, Financial Analysis & Risk Management, Stakeholder
+              Engagement & Partnership Building, Business Structuring &
+              Regulatory Compliance, Investment Strategy & Capital Markets.
+              <br /><br />
+              He brings in deep expertise in financial advisory, regulatory
+              compliance, and corporate governance, followed by more than 20
+              years in real estate development and project leadership. He has
+              led development of innovative residential, commercial, IT space,
+              and farmhouse projects in Delhi NCR region with a focus on
+              market-driven growth and expansion. He specializes in distressed
+              asset acquisitions, land aggregation, legal documentation of real
+              estate projects, and investment advisory, consistently delivering
+              high-impact urban development projects.
+            </div>
+          </div>
+          <!-- User 3 - Mona Vij -->
+          <div
+            class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col xl:flex-row xl:gap-8 gap-4"
+          >
+            <!-- Left Container: Image and Name -->
+            <div class="flex flex-col gap-4 xl:w-[250px] xl:shrink-0">
+              <div
+                class="w-full aspect-square max-w-[200px] mx-auto xl:mx-0 overflow-hidden rounded-[15px]"
+              >
+                <img
+                  src="img/founders/fond21.jpg"
+                  alt="Anil Kumar Yadav"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col gap-2 text-center xl:text-left">
+                <h3
+                  class="font-[600] text-lg sm:text-xl md:text-2xl xl:text-[20px] font-libre-baskerville"
+                >
+                  Mona Vij
+                </h3>
+                <p class="font-[500] text-base sm:text-lg text-[#BF4423]">
+                  Director
+                </p>
+              </div>
+            </div>
+            <!-- Right Container: Description -->
+            <div
+              class="font-[400] text-sm sm:text-base xl:text-left text-center leading-relaxed flex-1"
+            >
+              With over 25 years of extensive and diverse experience, she has
+              worked in real estate, project management, marketing
+              communication, and brand and business development. She has
+              consistently demonstrated success in formulating strategies for
+              brand launches and establishing a strong market presence, along
+              with creating aspirational brand images post-launch. <br /><br />
+              She is strong in innovation, having pioneered the concept of
+              in-film movie tie-ups at India's leading telecom operator,
+              Airtel-a concept that was subsequently adopted by others within
+              and beyond the industry. Additionally, she has established an
+              international initiative that fosters innovation in the telecom
+              sector among youth and has several other groundbreaking
+              initiatives to her credit. <br /><br />
+              In recent years, her focus and involvement have been in the real
+              estate sector. Notably, she played a key role in securing the
+              Indirapuram Habitat Centre project, a distinctive venture
+              encompassing socio-cultural, recreational, and commercial aspects,
+              spanning an expansive area of more than 2 million square feet.
+            </div>
+          </div>
+          <!-- User 4 - Mani Gupta -->
+          <div
+            class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col xl:flex-row xl:gap-8 gap-4"
+          >
+            <!-- Left Container: Image and Name -->
+            <div class="flex flex-col gap-4 xl:w-[250px] xl:shrink-0">
+              <div
+                class="w-full aspect-square max-w-[200px] mx-auto xl:mx-0 overflow-hidden rounded-[15px]"
+              >
+                <img
+                  src="img/founders/mani-gupta.jpg"
+                  alt="Anil Kumar Yadav"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col gap-2 text-center xl:text-left">
+                <h3
+                  class="font-[600] text-lg sm:text-xl md:text-2xl xl:text-[20px] font-libre-baskerville"
+                >
+                  Mani Gupta
+                </h3>
+                <p class="font-[500] text-base sm:text-lg text-[#BF4423]">
+                  Director
+                </p>
+              </div>
+            </div>
+            <!-- Right Container: Description -->
+            <div
+              class="font-[400] text-sm sm:text-base xl:text-left text-center leading-relaxed flex-1"
+            >
+              It is always a privilege of working alongside a professional whose
+              depth of experience and instinct for excellence have consistently
+              elevated our collective vision. With over a decade immersed in the
+              real estate industry, spanning hospitality, healthcare, and
+              large-scale development, Mani embodies a rare synthesis of
+              entrepreneurial drive and meticulous execution. Her ability to
+              lead complex initiatives, craft meaningful client experiences, and
+              cultivate high-value relationships has been instrumental in
+              shaping the stature and substance of our projects. <br /><br />
+              She brings more than just expertise, she brings perspective.
+              Whether it's steering promotional strategy, guiding narrative
+              development, or overseeing cross-functional programs, her presence
+              ensures that every endeavor is thoughtful, innovative, and aligned
+              with long-term impact. Her leadership continues to set a benchmark
+              within our organization – quietly powerful, unwaveringly
+              strategic, and always a step ahead.
+            </div>
+          </div>
+          <!-- User 5 - Aditya Goel -->
+          <div
+            class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col xl:flex-row xl:gap-8 gap-4"
+          >
+            <!-- Left Container: Image and Name -->
+            <div class="flex flex-col gap-4 xl:w-[250px] xl:shrink-0">
+              <div
+                class="w-full aspect-square max-w-[200px] mx-auto xl:mx-0 overflow-hidden rounded-[15px]"
+              >
+                <img
+                  src="img/founders/Aditya-Goel2.jpg"
+                  alt="Aditya Goel"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col gap-2 text-center xl:text-left">
+                <h3
+                  class="font-[600] text-lg sm:text-xl md:text-2xl xl:text-[20px] font-libre-baskerville"
+                >
+                  Aditya Goel
+                </h3>
+                <p class="font-[500] text-base sm:text-lg text-[#BF4423]">
+                  Vice President
+                </p>
+                <p class="font-[500] text-base sm:text-lg text-[#BF4423]">
+                  (Business Development)
+                </p>
+              </div>
+            </div>
+            <!-- Right Container: Description -->
+            <div
+              class="font-[400] text-sm sm:text-base xl:text-left text-center leading-relaxed flex-1"
+            >
+              Aditya Goel, brings over 10 years of experience in the real estate
+              sector, built through consistent execution and a long-term
+              operating mindset. He holds an LLB and a BBA with a specialisation
+              in Real Estate and Urban Infrastructure, grounding his leadership
+              in both commercial acumen and regulatory understanding.
+              <br /><br />
+              His career spans sales strategy, luxury real estate marketing,
+              business development, portfolio advisory, and transaction
+              structuring across high-value residential assets. Known for a
+              sharp reading of market cycles and disciplined decision-making, he
+              has worked closely with discerning homeowners, investors, and
+              strategic partners in the premium and luxury segments.
+              <br /><br />
+              Aditya's leadership is defined by clarity, discretion, and
+              operational depth. Rather than scale through noise, he has focused
+              on building trust-led systems and sustainable growth. He reflects
+              stability, refined execution, and a mature approach to luxury real
+              estate driven by long-term value creation.
+            </div>
+          </div>
+          <!-- User 6 - Yaman Rizvi -->
+          <div
+            class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col xl:flex-row xl:gap-8 gap-4"
+          >
+            <!-- Left Container: Image and Name -->
+            <div class="flex flex-col gap-4 xl:w-[250px] xl:shrink-0">
+              <div
+                class="w-full aspect-square max-w-[200px] mx-auto xl:mx-0 overflow-hidden rounded-[15px]"
+              >
+                <img
+                  src="img/founders/yaman-rizvi.jpg"
+                  alt="Yaman Rizvi"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex flex-col gap-2 text-center xl:text-left">
+                <h3
+                  class="font-[600] text-lg sm:text-xl md:text-2xl xl:text-[20px] font-libre-baskerville"
+                >
+                  Yaman Rizvi
+                </h3>
+                <p class="font-[500] text-base sm:text-lg text-[#BF4423]">
+                  Executive Lead
+                </p>
+                <p class="font-[500] text-base sm:text-lg text-[#BF4423]">
+                  (Middle East Region)
+                </p>
+              </div>
+            </div>
+            <!-- Right Container: Description -->
+            <div
+              class="font-[400] text-sm sm:text-base xl:text-left text-center leading-relaxed flex-1"
+            >
+              With over a decade of experience across hospitality, healthcare,
+              and real estate, she brings a unique blend of entrepreneurial
+              instinct and refined operational expertise. Known for turning
+              ambitious ideas into high-performing ventures, she has led diverse
+              projects and luxury-focused events with creativity, precision, and
+              a sharp understanding of elevated experiences.
+              <br /><br />
+              In real estate, her strategic influence is both sophisticated and
+              impactful. She plays a key role in positioning projects for
+              high-net-worth individuals and global investors, especially across
+              the Middle East. By cultivating meaningful relationships and
+              extending curated investment opportunities, she continues to shape
+              ventures that are not only successful but enduringly iconic.
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Section 3.1 - Mobile/Tablet View: All Users in Columns -->
     <section
-        class="lg:hidden w-full px-4 sm:px-6 md:px-8 border-t border-[#DFDFDF] pt-[35px] md:pt-[48px] lg:pt-[70px] flex justify-center flex-col gap-8 items-center">
-        <!-- Centered Align Container  -->
-        <div class="w-full flex flex-col gap-6 sm:gap-8 md:gap-10 max-width-container-xl">
-            <!-- Top Row Content  -->
-            <div class="w-full flex flex-col gap-3 md:gap-4 text-center">
-                <h4 class="font-[700] text-[25px] sm:text-3xl md:text-4xl font-libre-baskerville">
-                    Our Indian Leadership
-                </h4>
-                <p class="font-[400] text-lg sm:text-xl md:text-2xl font-baskervville">Built on
-                    Experience and Integrity </p>
-            </div>
-
-            <!-- Users Grid Container -->
-            <div class="w-full grid grid-cols-1   gap-4 sm:gap-6 md:gap-8">
-                <!-- User 1 - Arun Kumar Sharma -->
-                <div class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col gap-4">
-                    <div class="w-full aspect-square max-w-[200px] mx-auto overflow-hidden rounded-[15px]">
-                        <img src="img/founders/fond11.jpg" alt="Arun Kumar Sharma" class="w-full h-full object-cover">
-                    </div>
-                    <div class="flex flex-col gap-2 text-center">
-                        <h3 class="font-[600] text-lg sm:text-xl md:text-2xl font-libre-baskerville">
-                            Arun Kumar Sharma
-                        </h3>
-                        <p class="font-[500] text-base sm:text-lg text-[#BF4423]">Chairman</p>
-                    </div>
-                    <div class="font-[400] text-sm sm:text-base text-center leading-relaxed">
-                        He is a retired senior Indian Police Services (IPS) officer from the 1987 batch, Gujarat
-                        cadre, who has served in various positions including Additional Director of the Central
-                        Bureau of Investigation (CBI). He has held several positions of distinction and
-                        important responsibilities and has a remarkable record of service. He has been honoured
-                        with the President's Police Medal for Distinguished Service and awarded the Indian
-                        Police Medal for Meritorious Service. <br><br>
-
-                        With over 34 years of expertise, he has held a pivotal role in investigations of bank
-                        and security fraud cases and also played an important advisory role in stressed asset
-                        management. He has attained specialisation in restructuring, management, and recovery of
-                        distressed assets. His acumen in strategy and planning serves as a guiding force for the
-                        organisation and helps in formulating optimal future action plans. <br><br>
-
-                        He also lends his expertise in engaging with law enforcement agencies, adeptly
-                        addressing jurisdictional issues and overcoming roadblocks to expedite ongoing matters
-                        within the organisation. His extensive experience includes effectively managing public
-                        order and contributing to decision-making on vigilance and policy matters. He is
-                        currently handling and demonstrating a profound interest and active involvement in the
-                        real estate sector, which is the second-largest economy in India.
-                    </div>
-                </div>
-
-                <!-- User 2 - Avdhesh Kumar Goel -->
-                <div class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col gap-4">
-                    <div class="w-full aspect-square max-w-[200px] mx-auto overflow-hidden rounded-[15px]">
-                        <img src="img/founders/fond44.jpg" alt="Avdhesh Kumar Goel" class="w-full h-full object-cover">
-                    </div>
-                    <div class="flex flex-col gap-2 text-center">
-                        <h3 class="font-[600] text-lg sm:text-xl md:text-2xl font-libre-baskerville">
-                            Avdhesh Kumar Goel
-                        </h3>
-                        <span class="text-sm sm:text-base md:text-lg special-text">FCA, ACS, AICWA</span>
-                        <p class="font-[500] text-base sm:text-lg text-[#BF4423]">Chairman</p>
-                        <p class="font-[500] text-sm sm:text-base text-[#BF4423]">(Project Development)</p>
-                    </div>
-                    <div class="font-[400] text-sm sm:text-base text-center leading-relaxed">
-                        Dynamic executive leader with more than 35 years of distinguished expertise spanning finance,
-                        regulatory compliance, corporate governance, strategic project management, and real estate
-                        development. A highly accomplished Chartered Accountant, Cost & Works Accountant, and Company
-                        Secretary, Mr. Goel has provided strategic financial advisory, audit, and restructuring services
-                        to many renowned multinational and Indian corporations. <br><br>
-
-                        Since transitioning into real estate in 2006, he has strategically shaped successful
-                        residential, commercial, IT, and farmhouse projects. With comprehensive experience in project
-                        development and marketing, Mr. Goel excels at overseeing end-to-end execution of complex
-                        developments, emphasizing financial efficiency and innovative, market-relevant solutions.
-                        <br><br>
-                        He brings in the Core Competencies of Strategic Leadership & Corporate Governance, Real Estate
-                        Development & Project Management, Financial Analysis & Risk Management, Stakeholder Engagement &
-                        Partnership Building, Business Structuring & Regulatory Compliance, Investment Strategy &
-                        Capital Markets. <br><br>
-                        He brings in deep expertise in financial advisory, regulatory compliance, and corporate
-                        governance, followed by more than 20 years in real estate development and project leadership. He
-                        has led development of innovative residential, commercial, IT space, and farmhouse projects in
-                        Delhi NCR region with a focus on market-driven growth and expansion. He specializes in
-                        distressed asset acquisitions, land aggregation, legal documentation of real estate projects,
-                        and investment advisory, consistently delivering high-impact urban development projects.
-                    </div>
-                </div>
-
-                <!-- User 3 - Mona Vij -->
-                <div class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col gap-4">
-                    <div class="w-full aspect-square max-w-[200px] mx-auto overflow-hidden rounded-[15px]">
-                        <img src="img/founders/fond21.jpg" alt="Mona Vij" class="w-full h-full object-cover">
-                    </div>
-                    <div class="flex flex-col gap-2 text-center">
-                        <h3 class="font-[600] text-lg sm:text-xl md:text-2xl font-libre-baskerville">
-                            Mona Vij
-                        </h3>
-                        <p class="font-[500] text-base sm:text-lg text-[#BF4423]">Director</p>
-                    </div>
-                    <div class="font-[400] text-sm sm:text-base text-center leading-relaxed">
-                        With over 25 years of extensive and diverse experience, she has worked in real estate, project
-                        management, marketing communication, and brand and business development. She has consistently
-                        demonstrated success in formulating strategies for brand launches and establishing a strong
-                        market presence, along with creating aspirational brand images post-launch. <br><br>
-
-                        She is strong in innovation, having pioneered the concept of in-film movie tie-ups at India's
-                        leading telecom operator, Airtel—a concept that was subsequently adopted by others within and
-                        beyond the industry. Additionally, she has established an international initiative that fosters
-                        innovation in the telecom sector among youth and has several other groundbreaking initiatives to
-                        her credit. <br><br>
-
-                        In recent years, her focus and involvement have been in the real estate sector. Notably, she
-                        played a key role in securing the Indirapuram Habitat Centre project, a distinctive venture
-                        encompassing socio-cultural, recreational, and commercial aspects, spanning an expansive area of
-                        more than 2 million square feet.
-                    </div>
-                </div>
-
-                <!-- User 4 - Mani Gupta -->
-                <div class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col gap-4">
-                    <div class="w-full aspect-square max-w-[200px] mx-auto overflow-hidden rounded-[15px]">
-                        <img src="img/founders/mani-gupta.jpg" alt="Mani Gupta" class="w-full h-full object-cover">
-                    </div>
-                    <div class="flex flex-col gap-2 text-center">
-                        <h3 class="font-[600] text-lg sm:text-xl md:text-2xl font-libre-baskerville">
-                            Mani Gupta
-                        </h3>
-                        <p class="font-[500] text-base sm:text-lg text-[#BF4423]">Director</p>
-                    </div>
-                    <div class="font-[400] text-sm sm:text-base text-center leading-relaxed">
-                        It is always a privilege of working alongside a professional whose depth of experience and
-                        instinct for excellence have consistently elevated our collective vision. With over a decade
-                        immersed in the real estate industry, spanning hospitality, healthcare, and large-scale
-                        development, Mani embodies a rare synthesis of entrepreneurial drive and meticulous execution.
-                        Her ability to lead complex initiatives, craft meaningful client experiences, and cultivate
-                        high-value relationships has been instrumental in shaping the stature and substance of our
-                        projects. <br><br>
-                        She brings more than just expertise, she brings perspective. Whether it's steering promotional
-                        strategy, guiding narrative development, or overseeing cross-functional programs, her presence
-                        ensures that every endeavor is thoughtful, innovative, and aligned with long-term impact. Her
-                        leadership continues to set a benchmark within our organization – quietly powerful, unwaveringly
-                        strategic, and always a step ahead.
-                    </div>
-                </div>
-
-                <!-- User 5 - Aditya Goel -->
-                <div class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col gap-4">
-                    <div class="w-full aspect-square max-w-[200px] mx-auto overflow-hidden rounded-[15px]">
-                        <img src="img/founders/Aditya-Goel2.jpg" alt="Aditya Goel" class="w-full h-full object-cover">
-                    </div>
-                    <div class="flex flex-col gap-2 text-center">
-                        <h3 class="font-[600] text-lg sm:text-xl md:text-2xl font-libre-baskerville">
-                            Aditya Goel
-                        </h3>
-                        <p class="font-[500] text-base sm:text-lg text-[#BF4423]">Vice President</p>
-                        <p class="font-[500] text-sm sm:text-base text-[#BF4423]">(Business Development)</p>
-                    </div>
-                    <div class="font-[400] text-sm sm:text-base text-center leading-relaxed">
-                        Aditya Goel, brings over 10 years of experience in the real estate sector, built through
-                        consistent execution and a long-term operating mindset. He holds an LLB and a BBA with a
-                        specialisation in Real Estate and Urban Infrastructure, grounding his leadership in both
-                        commercial acumen and regulatory understanding. <br><br>
-
-                        His career spans sales strategy, luxury real estate marketing, business development, portfolio
-                        advisory, and transaction structuring across high-value residential assets. Known for a sharp
-                        reading of market cycles and disciplined decision-making, he has worked closely with discerning
-                        homeowners, investors, and strategic partners in the premium and luxury segments. <br><br>
-
-                        Aditya's leadership is defined by clarity, discretion, and operational depth. Rather than scale
-                        through noise, he has focused on building trust-led systems and sustainable growth. He reflects
-                        stability, refined execution, and a mature approach to luxury real estate driven by long-term
-                        value creation.
-                    </div>
-                </div>
-
-                <!-- User 6 - Yaman Rizvi -->
-                <div class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col gap-4">
-                    <div class="w-full aspect-square max-w-[200px] mx-auto overflow-hidden rounded-[15px]">
-                        <img src="img/founders/yaman-rizvi.jpg" alt="Yaman Rizvi" class="w-full h-full object-cover">
-                    </div>
-                    <div class="flex flex-col gap-2 text-center">
-                        <h3 class="font-[600] text-lg sm:text-xl md:text-2xl font-libre-baskerville">
-                            Yaman Rizvi
-                        </h3>
-                        <p class="font-[500] text-base sm:text-lg text-[#BF4423]">Executive Lead</p>
-                        <p class="font-[500] text-sm sm:text-base text-[#BF4423]">(Middle East Region)</p>
-                    </div>
-                    <div class="font-[400] text-sm sm:text-base text-center leading-relaxed">
-                        With over a decade of experience across hospitality, healthcare, and real estate, she brings a
-                        unique blend of entrepreneurial instinct and refined operational expertise. Known for turning
-                        ambitious ideas into high-performing ventures, she has led diverse projects and luxury-focused
-                        events with creativity, precision, and a sharp understanding of elevated experiences. <br><br>
-                        In real estate, her strategic influence is both sophisticated and impactful. She plays a key
-                        role in positioning projects for high-net-worth individuals and global investors, especially
-                        across the Middle East. By cultivating meaningful relationships and extending curated investment
-                        opportunities, she continues to shape ventures that are not only successful but enduringly
-                        iconic.
-                    </div>
-                </div>
-            </div>
+      class="hidden w-full px-4 sm:px-6 md:px-8 border-t border-[#DFDFDF] pt-[35px] md:pt-[48px] lg:pt-[70px] flex justify-center flex-col gap-8 items-center"
+    >
+      <!-- Centered Align Container  -->
+      <div
+        class="w-full flex flex-col gap-6 sm:gap-8 md:gap-10 max-width-container-xl"
+      >
+        <!-- Top Row Content  -->
+        <div class="w-full flex flex-col gap-3 md:gap-4 text-center">
+          <h4
+            class="font-[700] text-[25px] sm:text-3xl md:text-4xl font-libre-baskerville"
+          >
+            Our Indian Leaderships
+          </h4>
+          <p
+            class="font-[400] text-lg sm:text-xl md:text-2xl font-baskervville"
+          >
+            Built on Experience and Integrity
+          </p>
         </div>
+
+        <!-- Users Grid Container -->
+        <div class="w-full grid grid-cols-1 gap-4 sm:gap-6 md:gap-8">
+          <!-- User 1 - Arun Kumar Sharma -->
+          <div
+            class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col gap-4"
+          >
+            <div
+              class="w-full aspect-square max-w-[200px] mx-auto overflow-hidden rounded-[15px]"
+            >
+              <img
+                src="img/founders/fond11.jpg"
+                alt="Arun Kumar Sharma"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-2 text-center">
+              <h3
+                class="font-[600] text-lg sm:text-xl md:text-2xl font-libre-baskerville"
+              >
+                Arun Kumar Sharma
+              </h3>
+              <p class="font-[500] text-base sm:text-lg text-[#BF4423]">
+                Chairman
+              </p>
+            </div>
+            <div
+              class="font-[400] text-sm sm:text-base text-center leading-relaxed"
+            >
+              He is a retired senior Indian Police Services (IPS) officer from
+              the 1987 batch, Gujarat cadre, who has served in various positions
+              including Additional Director of the Central Bureau of
+              Investigation (CBI). He has held several positions of distinction
+              and important responsibilities and has a remarkable record of
+              service. He has been honoured with the President's Police Medal
+              for Distinguished Service and awarded the Indian Police Medal for
+              Meritorious Service. <br /><br />
+
+              With over 34 years of expertise, he has held a pivotal role in
+              investigations of bank and security fraud cases and also played an
+              important advisory role in stressed asset management. He has
+              attained specialisation in restructuring, management, and recovery
+              of distressed assets. His acumen in strategy and planning serves
+              as a guiding force for the organisation and helps in formulating
+              optimal future action plans. <br /><br />
+
+              He also lends his expertise in engaging with law enforcement
+              agencies, adeptly addressing jurisdictional issues and overcoming
+              roadblocks to expedite ongoing matters within the organisation.
+              His extensive experience includes effectively managing public
+              order and contributing to decision-making on vigilance and policy
+              matters. He is currently handling and demonstrating a profound
+              interest and active involvement in the real estate sector, which
+              is the second-largest economy in India.
+            </div>
+          </div>
+
+          <!-- User 2 - Avdhesh Kumar Goel -->
+          <div
+            class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col gap-4"
+          >
+            <div
+              class="w-full aspect-square max-w-[200px] mx-auto overflow-hidden rounded-[15px]"
+            >
+              <img
+                src="img/founders/fond44.jpg"
+                alt="Avdhesh Kumar Goel"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-2 text-center">
+              <h3
+                class="font-[600] text-lg sm:text-xl md:text-2xl font-libre-baskerville"
+              >
+                Avdhesh Kumar Goel
+              </h3>
+              <span class="text-sm sm:text-base md:text-lg special-text"
+                >FCA, ACS, AICWA</span
+              >
+              <p class="font-[500] text-base sm:text-lg text-[#BF4423]">
+                Chairman
+              </p>
+              <p class="font-[500] text-sm sm:text-base text-[#BF4423]">
+                (Project Development)
+              </p>
+            </div>
+            <div
+              class="font-[400] text-sm sm:text-base text-center leading-relaxed"
+            >
+              Dynamic executive leader with more than 35 years of distinguished
+              expertise spanning finance, regulatory compliance, corporate
+              governance, strategic project management, and real estate
+              development. A highly accomplished Chartered Accountant, Cost &
+              Works Accountant, and Company Secretary, Mr. Goel has provided
+              strategic financial advisory, audit, and restructuring services to
+              many renowned multinational and Indian corporations. <br /><br />
+
+              Since transitioning into real estate in 2006, he has strategically
+              shaped successful residential, commercial, IT, and farmhouse
+              projects. With comprehensive experience in project development and
+              marketing, Mr. Goel excels at overseeing end-to-end execution of
+              complex developments, emphasizing financial efficiency and
+              innovative, market-relevant solutions.
+              <br /><br />
+              He brings in the Core Competencies of Strategic Leadership &
+              Corporate Governance, Real Estate Development & Project
+              Management, Financial Analysis & Risk Management, Stakeholder
+              Engagement & Partnership Building, Business Structuring &
+              Regulatory Compliance, Investment Strategy & Capital Markets.
+              <br /><br />
+              He brings in deep expertise in financial advisory, regulatory
+              compliance, and corporate governance, followed by more than 20
+              years in real estate development and project leadership. He has
+              led development of innovative residential, commercial, IT space,
+              and farmhouse projects in Delhi NCR region with a focus on
+              market-driven growth and expansion. He specializes in distressed
+              asset acquisitions, land aggregation, legal documentation of real
+              estate projects, and investment advisory, consistently delivering
+              high-impact urban development projects.
+            </div>
+          </div>
+
+          <!-- User 3 - Mona Vij -->
+          <div
+            class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col gap-4"
+          >
+            <div
+              class="w-full aspect-square max-w-[200px] mx-auto overflow-hidden rounded-[15px]"
+            >
+              <img
+                src="img/founders/fond21.jpg"
+                alt="Mona Vij"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-2 text-center">
+              <h3
+                class="font-[600] text-lg sm:text-xl md:text-2xl font-libre-baskerville"
+              >
+                Mona Vij
+              </h3>
+              <p class="font-[500] text-base sm:text-lg text-[#BF4423]">
+                Director
+              </p>
+            </div>
+            <div
+              class="font-[400] text-sm sm:text-base text-center leading-relaxed"
+            >
+              With over 25 years of extensive and diverse experience, she has
+              worked in real estate, project management, marketing
+              communication, and brand and business development. She has
+              consistently demonstrated success in formulating strategies for
+              brand launches and establishing a strong market presence, along
+              with creating aspirational brand images post-launch. <br /><br />
+
+              She is strong in innovation, having pioneered the concept of
+              in-film movie tie-ups at India's leading telecom operator,
+              Airtel—a concept that was subsequently adopted by others within
+              and beyond the industry. Additionally, she has established an
+              international initiative that fosters innovation in the telecom
+              sector among youth and has several other groundbreaking
+              initiatives to her credit. <br /><br />
+
+              In recent years, her focus and involvement have been in the real
+              estate sector. Notably, she played a key role in securing the
+              Indirapuram Habitat Centre project, a distinctive venture
+              encompassing socio-cultural, recreational, and commercial aspects,
+              spanning an expansive area of more than 2 million square feet.
+            </div>
+          </div>
+
+          <!-- User 4 - Mani Gupta -->
+          <div
+            class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col gap-4"
+          >
+            <div
+              class="w-full aspect-square max-w-[200px] mx-auto overflow-hidden rounded-[15px]"
+            >
+              <img
+                src="img/founders/mani-gupta.jpg"
+                alt="Mani Gupta"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-2 text-center">
+              <h3
+                class="font-[600] text-lg sm:text-xl md:text-2xl font-libre-baskerville"
+              >
+                Mani Gupta
+              </h3>
+              <p class="font-[500] text-base sm:text-lg text-[#BF4423]">
+                Director
+              </p>
+            </div>
+            <div
+              class="font-[400] text-sm sm:text-base text-center leading-relaxed"
+            >
+              It is always a privilege of working alongside a professional whose
+              depth of experience and instinct for excellence have consistently
+              elevated our collective vision. With over a decade immersed in the
+              real estate industry, spanning hospitality, healthcare, and
+              large-scale development, Mani embodies a rare synthesis of
+              entrepreneurial drive and meticulous execution. Her ability to
+              lead complex initiatives, craft meaningful client experiences, and
+              cultivate high-value relationships has been instrumental in
+              shaping the stature and substance of our projects. <br /><br />
+              She brings more than just expertise, she brings perspective.
+              Whether it's steering promotional strategy, guiding narrative
+              development, or overseeing cross-functional programs, her presence
+              ensures that every endeavor is thoughtful, innovative, and aligned
+              with long-term impact. Her leadership continues to set a benchmark
+              within our organization – quietly powerful, unwaveringly
+              strategic, and always a step ahead.
+            </div>
+          </div>
+
+          <!-- User 5 - Aditya Goel -->
+          <div
+            class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col gap-4"
+          >
+            <div
+              class="w-full aspect-square max-w-[200px] mx-auto overflow-hidden rounded-[15px]"
+            >
+              <img
+                src="img/founders/Aditya-Goel2.jpg"
+                alt="Aditya Goel"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-2 text-center">
+              <h3
+                class="font-[600] text-lg sm:text-xl md:text-2xl font-libre-baskerville"
+              >
+                Aditya Goel
+              </h3>
+              <p class="font-[500] text-base sm:text-lg text-[#BF4423]">
+                Vice President
+              </p>
+              <p class="font-[500] text-sm sm:text-base text-[#BF4423]">
+                (Business Development)
+              </p>
+            </div>
+            <div
+              class="font-[400] text-sm sm:text-base text-center leading-relaxed"
+            >
+              Aditya Goel, brings over 10 years of experience in the real estate
+              sector, built through consistent execution and a long-term
+              operating mindset. He holds an LLB and a BBA with a specialisation
+              in Real Estate and Urban Infrastructure, grounding his leadership
+              in both commercial acumen and regulatory understanding.
+              <br /><br />
+
+              His career spans sales strategy, luxury real estate marketing,
+              business development, portfolio advisory, and transaction
+              structuring across high-value residential assets. Known for a
+              sharp reading of market cycles and disciplined decision-making, he
+              has worked closely with discerning homeowners, investors, and
+              strategic partners in the premium and luxury segments.
+              <br /><br />
+
+              Aditya's leadership is defined by clarity, discretion, and
+              operational depth. Rather than scale through noise, he has focused
+              on building trust-led systems and sustainable growth. He reflects
+              stability, refined execution, and a mature approach to luxury real
+              estate driven by long-term value creation.
+            </div>
+          </div>
+
+          <!-- User 6 - Yaman Rizvi -->
+          <div
+            class="border border-[#DFDFDF] rounded-[15px] p-4 sm:p-6 flex flex-col gap-4"
+          >
+            <div
+              class="w-full aspect-square max-w-[200px] mx-auto overflow-hidden rounded-[15px]"
+            >
+              <img
+                src="img/founders/yaman-rizvi.jpg"
+                alt="Yaman Rizvi"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col gap-2 text-center">
+              <h3
+                class="font-[600] text-lg sm:text-xl md:text-2xl font-libre-baskerville"
+              >
+                Yaman Rizvi
+              </h3>
+              <p class="font-[500] text-base sm:text-lg text-[#BF4423]">
+                Executive Lead
+              </p>
+              <p class="font-[500] text-sm sm:text-base text-[#BF4423]">
+                (Middle East Region)
+              </p>
+            </div>
+            <div
+              class="font-[400] text-sm sm:text-base text-center leading-relaxed"
+            >
+              With over a decade of experience across hospitality, healthcare,
+              and real estate, she brings a unique blend of entrepreneurial
+              instinct and refined operational expertise. Known for turning
+              ambitious ideas into high-performing ventures, she has led diverse
+              projects and luxury-focused events with creativity, precision, and
+              a sharp understanding of elevated experiences. <br /><br />
+              In real estate, her strategic influence is both sophisticated and
+              impactful. She plays a key role in positioning projects for
+              high-net-worth individuals and global investors, especially across
+              the Middle East. By cultivating meaningful relationships and
+              extending curated investment opportunities, she continues to shape
+              ventures that are not only successful but enduringly iconic.
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Section  8  -->
-    <section id="featured-project "
-        class="s4 w-full   relative overflow-hidden lg:py-[70px] py-[35px] flex flex-col items-center px-4 sm:px-6 md:px-8 lg:px-[48px] md:gap-6 gap-8 sm:gap-10">
-
-        <!-- Row 2  -->
-        <div id="sec4-row2" class="w-full max-width-container-xl flex flex-col gap-6 ">
-            <!-- Div 1  -->
-            <div id="sec4-row2-div1" class="w-full flex flex-col lg:flex-row justify-between gap-6">
-                <!-- Left Side Form Container  -->
-                <div id="sec4-form"
-                    class="w-full lg:w-[calc(100%-402px)] border-[1px] border-[#DEDDDD] flex flex-col px-4 md:px-6 justify-center rounded-[15px] md:rounded-[20px] gap-4 flex-shrink-1 xl:py-0 py-6">
-                    <p
-                        class="font-[400] text-[22px] md:text-[26px] lg:text-[30px] font-baskervville text-center lg:text-left">
-                        Request a Call Back
-                    </p>
-                    <form id="callback-form" class="flex flex-col gap-4">
-                        <div class="flex flex-col xl:flex-row gap-4">
-                            <input type="text" name="Name" required
-                                class="w-full  h-[45px] md:h-[50px] bg-[#F9F9F9] rounded-[8px] md:rounded-[10px] border-none pl-4 text-[14px] md:text-[16px]"
-                                placeholder="Your Name*" />
-                            <div class="w-full flex gap-2">
-                                <select id="callback-country-code" name="CountryCode"
-                                    class="h-[45px] md:h-[50px] bg-[#F9F9F9] rounded-[8px] md:rounded-[10px] border-none pl-3 pr-8 text-[14px] md:text-[16px] focus:outline-none cursor-pointer appearance-none"
-                                    style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23333\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpolyline points=\'6 9 12 15 18 9\'%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 0.5rem center; background-size: 1em 1em; min-width: 90px;">
-                                </select>
-                                <input type="tel" id="callback-phone" name="Phone" required
-                                    class="flex-1 h-[45px] md:h-[50px] bg-[#F9F9F9] rounded-[8px] md:rounded-[10px] border-none pl-4 text-[14px] md:text-[16px]"
-                                    placeholder="Phone Number*" />
-                            </div>
-                            <input type="email" name="Email" required
-                                class="w-full  h-[45px] md:h-[50px] bg-[#F9F9F9] rounded-[8px] md:rounded-[10px] border-none pl-4 text-[14px] md:text-[16px]"
-                                placeholder="Email*" />
-                        </div>
-                        <input type="text" name="Message"
-                            class="w-full lg:w-[100%] h-[50px] md:h-[60px] bg-[#F9F9F9] rounded-[8px] md:rounded-[10px] border-none pl-4 text-[14px] md:text-[16px]"
-                            placeholder="Message" />
-                        <button type="submit"
-                            class="w-full lg:w-[100%] h-[50px] md:h-[60px] bg-[#BF4423] text-white rounded-[4px] font-[600] text-[14px] md:text-[16px] hover:bg-[#BF4423] cursor-pointer">
-                            Get a Call Back
-                        </button>
-                    </form>
+    <section
+      id="featured-project "
+      class="s4 w-full relative overflow-hidden lg:py-[70px] py-[35px] flex flex-col items-center px-4 sm:px-6 md:px-8 lg:px-[48px] md:gap-6 gap-8 sm:gap-10"
+    >
+      <!-- Row 2  -->
+      <div
+        id="sec4-row2"
+        class="w-full max-width-container-xl flex flex-col gap-6"
+      >
+        <!-- Div 1  -->
+        <div
+          id="sec4-row2-div1"
+          class="w-full flex flex-col lg:flex-row justify-between gap-6"
+        >
+          <!-- Left Side Form Container  -->
+          <div
+            id="sec4-form"
+            class="w-full lg:w-[calc(100%-402px)] border-[1px] border-[#DEDDDD] flex flex-col px-4 md:px-6 justify-center rounded-[15px] md:rounded-[20px] gap-4 flex-shrink-1 xl:py-0 py-6"
+          >
+            <p
+              class="font-[400] text-[22px] md:text-[26px] lg:text-[30px] font-baskervville text-center lg:text-left"
+            >
+              Request a Call Back
+            </p>
+            <form id="callback-form" class="flex flex-col gap-4">
+              <div class="flex flex-col xl:flex-row gap-4">
+                <input
+                  type="text"
+                  name="Name"
+                  required
+                  class="w-full h-[45px] md:h-[50px] bg-[#F9F9F9] rounded-[8px] md:rounded-[10px] border-none pl-4 text-[14px] md:text-[16px]"
+                  placeholder="Your Name*"
+                />
+                <div class="w-full flex gap-2">
+                  <select
+                    id="callback-country-code"
+                    name="CountryCode"
+                    class="h-[45px] md:h-[50px] bg-[#F9F9F9] rounded-[8px] md:rounded-[10px] border-none pl-3 pr-8 text-[14px] md:text-[16px] focus:outline-none cursor-pointer appearance-none"
+                    style="
+                      background-image: url(&quot;data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e&quot;);
+                      background-repeat: no-repeat;
+                      background-position: right 0.5rem center;
+                      background-size: 1em 1em;
+                      min-width: 90px;
+                    "
+                  ></select>
+                  <input
+                    type="tel"
+                    id="callback-phone"
+                    name="Phone"
+                    required
+                    class="flex-1 h-[45px] md:h-[50px] bg-[#F9F9F9] rounded-[8px] md:rounded-[10px] border-none pl-4 text-[14px] md:text-[16px]"
+                    placeholder="Phone Number*"
+                  />
                 </div>
+                <input
+                  type="email"
+                  name="Email"
+                  required
+                  class="w-full h-[45px] md:h-[50px] bg-[#F9F9F9] rounded-[8px] md:rounded-[10px] border-none pl-4 text-[14px] md:text-[16px]"
+                  placeholder="Email*"
+                />
+              </div>
+              <input
+                type="text"
+                name="Message"
+                class="w-full lg:w-[100%] h-[50px] md:h-[60px] bg-[#F9F9F9] rounded-[8px] md:rounded-[10px] border-none pl-4 text-[14px] md:text-[16px]"
+                placeholder="Message"
+              />
+              <button
+                type="submit"
+                class="w-full lg:w-[100%] h-[50px] md:h-[60px] bg-[#BF4423] text-white rounded-[4px] font-[600] text-[14px] md:text-[16px] hover:bg-[#BF4423] cursor-pointer"
+              >
+                Get a Call Back
+              </button>
+            </form>
+          </div>
 
-                <!-- Right Side Image Container  -->
-                <div id="sec4-card1"
-                    class="w-full lg:w-[402px] h-[300px] lg:h-auto xl:h-[341px] rounded-[15px] md:rounded-[20px] overflow-hidden bg-[#FFF4F2] flex flex-col justify-between p-4 md:p-6 shrink-0 gap-4">
-                    <!-- Row 1  -->
-                    <div class="flex justify-between w-full">
-                        <p class="font-[400] text-[14px] md:text-[16px] max-w-[219px]">
-                            Fab-Luxe Residences brings lifestyle in most sought after locations of Noida
-                        </p>
-
-                        <img src="svgs/arr-icn.svg" alt="arr-icn"
-                            class="w-[12px] h-[12px] md:w-[15px] md:h-[15px] flex-shrink-0" />
-                    </div>
-
-                    <!-- Row 2  -->
-                    <div class="flex items-center overflow-hidden rounded-[20px]">
-                        <img src="img/s8/s8-i1.png" alt="" class="w-full h-full object-cover">
-                    </div>
-
-                    <!-- Row 3  -->
-                    <div class="">
-                        <p class="font-[400] text-[22px] md:text-[26px] lg:text-[30px] font-libre-baskerville">
-                            About us
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Div 2  -->
-            <div id="sec4-row2-div2" class="w-full flex flex-col lg:flex-row-reverse justify-between gap-6">
-                <!-- Left Side Form Container  -->
-                <div id="sec4-card2"
-                    class="w-full lg:w-[824px] h-[300px] md:h-[341px] p-4 md:p-6 rounded-[20px] overflow-hidden bg-[url('img/footerimg.jpg')] bg-no-repeat bg-center bg-cover flex flex-col justify-between">
-                    <!-- Row 1  -->
-                    <div class="flex justify-end w-full">
-
-                        <div
-                            class="w-[32px] h-[32px] md:w-[38px] md:h-[38px] bg-white rounded-[5px] flex justify-center items-center flex-shrink-0">
-                            <img src="svgs/arr-icn.svg" alt="" class="w-[12px] h-[12px] md:w-[15px] md:h-[15px]" />
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <!-- Right Side Image Container  -->
-                <div id="sec4-card3"
-                    class="w-full lg:w-[402px] h-[300px] md:h-[341px] rounded-[20px] overflow-hidden bg-[#F7F7F7] flex flex-col justify-between p-4 md:p-6 gap-4">
-                    <!-- Row 1  -->
-                    <div class="flex justify-between w-full">
-                        <div class="flex flex-col gap-3 md:gap-4">
-                            <div class="flex gap-4 md:gap-6">
-                                <img src="svgs/email.svg" alt="email"
-                                    class="w-[18px] h-[18px] md:w-[21px] md:h-[21px] flex-shrink-0" />
-                                <p class="font-[400] text-[14px] md:text-[16px] font-open-sans">
-                                    sales@fgpindia.com
-                                </p>
-                            </div>
-                            <div class="flex gap-4 md:gap-6">
-                                <img src="svgs/phone.svg" alt="phone"
-                                    class="w-[18px] h-[18px] md:w-[21px] md:h-[21px] flex-shrink-0" />
-                                <p class="font-[400] text-[14px] md:text-[16px] font-open-sans">
-                                    +91 8888 760 760
-                                </p>
-                            </div>
-                        </div>
-
-                        <img src="svgs/arr-icn.svg" alt="arr-icn"
-                            class="w-[12px] h-[12px] md:w-[15px] md:h-[15px] flex-shrink-0" />
-                    </div>
-
-                    <!-- Row 2  -->
-                    <div class="flex justify-center items-center overflow-hidden rounded-[20px]">
-                        <img src="img/s8/s8-i2.png" alt="s4-r4i2" class="w-auto h-auto max-w-full" />
-                    </div>
-
-                    <!-- Row 3  -->
-                    <div>
-                        <p class="font-[400] text-[22px] md:text-[26px] lg:text-[30px] font-baskervville">
-                            Contact us
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--  -->
-    <footer id="footer"
-        class="w-full min-h-[50vh] bg-[#F7EEE6] text-black flex justify-center items-center lg:pt-[70px] pt-[35px] lg:pb-[35px] pb-[15px] px-4 md:px-0">
-        <!-- Centerd Align Container  -->
-        <div id="footer-container" class="w-full md:w-[90%] flex flex-col gap-10 md:gap-16 lg:gap-20">
+          <!-- Right Side Image Container  -->
+          <div
+            id="sec4-card1"
+            class="w-full lg:w-[402px] h-[300px] lg:h-auto xl:h-[341px] rounded-[15px] md:rounded-[20px] overflow-hidden bg-[#FFF4F2] flex flex-col justify-between p-4 md:p-6 shrink-0 gap-4"
+          >
             <!-- Row 1  -->
-            <div id="footer-row1" class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <!-- Col 1  -->
-                <div class="flex justify-center md:justify-start pb-4 md:pb-0
-                
-                md:border-r-[2px] md:pr-14 md:border-r-[#CDCDCD]
-                ">
-                    <img src="img/logo/black-logo1.png" alt="footer-logo" class="w-[182px] h-auto " />
-                </div>
+            <div class="flex justify-between w-full">
+              <p class="font-[400] text-[14px] md:text-[16px]">
+                Forbes Global Properties is a curated global network
+                representing the world’s exceptional luxury properties.
+              </p>
 
-                <!-- Col 2  -->
-                <div class="w-full md:w-[770px] text-center md:text-left">
-                    <p class="font-[400] text-[18px] md:text-[20px] lg:text-[24px] font-baskervville">
-                        A global network for exceptional homes, represented with discretion, credibility and reach.
-                    </p>
-                </div>
-
-                <!-- Col 3  -->
-                <button id="scroll-to-hero" type="button"
-                    class="w-[50px] h-[50px] md:w-[60px] md:h-[60px] flex justify-center items-center bg-[#BF4423] rounded-[2px] flex-shrink-0"
-                    aria-label="Scroll to top" onclick="scrollToHeroSection()">
-                    <img src="svgs/arr2-icn.svg" alt="Scroll to top" class="w-[20px] h-[20px] md:w-auto md:h-auto" />
-                </button>
-                <script>
-                    function scrollToHeroSection() {
-                        const hero = document.getElementById('hero') || document.querySelector('.s1') || document.body;
-                        if (hero && typeof hero.scrollIntoView === 'function') {
-                            hero.scrollIntoView({ behavior: 'smooth' });
-                        } else {
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                        }
-                    }
-                </script>
+              <img
+                src="svgs/arr-icn.svg"
+                alt="arr-icn"
+                class="w-[12px] h-[12px] md:w-[15px] md:h-[15px] flex-shrink-0"
+              />
             </div>
 
             <!-- Row 2  -->
-            <div id="footer-row2" class="w-full flex flex-col md:flex-row justify-between gap-8 md:gap-4 lg:gap-0">
-                <!-- Col 1  -->
-                <div id="footer-col1"
-                    class="flex flex-col gap-6 md:gap-8 lg:gap-10 w-full md:w-auto items-center md:items-start">
-                    <div class="w-full flex flex-col items-center md:items-start">
-                        <p
-                            class="font-[700] text-[12px] md:text-[14px] uppercase font-open-sans mb-2 md:mb-0 text-center md:text-left">
-                            Expert insights direct to your inbox
-                        </p>
-                        <form id="footer-email-form" class="relative w-full">
-                            <input type="email" name="Email" id="footer-email-input" required
-                                class="w-full xl:w-[524px] border-b-[1px] border-black h-[50px] md:h-[60px] bg-transparent outline-none placeholder:text-[#636363] font-[400] text-[16px] md:text-[18px] placeholder:text-[16px] md:placeholder:text-[18px] pr-8 text-center md:text-left pl-2"
-                                placeholder="Enter your email" />
-                            <button type="submit"
-                                class="absolute right-2 top-1/2 translate-y-[-50%] bg-transparent border-none cursor-pointer p-0"
-                                aria-label="Submit email">
-                                <img src="img/right-arr.png" alt="arr3-icn"
-                                    class="w-[32px] h-[11px] pointer-events-none" />
-                            </button>
-                        </form>
-                    </div>
-                    <div class="flex flex-col gap-2 items-center md:items-start">
-                        <p
-                            class="font-[700] text-[12px] md:text-[14px] uppercase font-open-sans text-center md:text-left">
-                            get in touch
-                        </p>
-                        <p class="font-[400] text-[14px] md:text-[16px] font-open-sans text-center md:text-left cursor-pointer"
-                            onclick="window.location.href='mailto:sales@fgpindia.com'">
-                            sales@fgpindia.com
-                        </p>
-                        <p class="font-[400] text-[14px] md:text-[16px] font-open-sans text-center md:text-left cursor-pointer"
-                            onclick="window.location.href='tel:+918888760760'">
-                            +91 8888 760 760
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Col 2  -->
-                <div id="footer-col2" class="text-black flex flex-col items-center md:items-start">
-                    <p
-                        class="font-[700] text-[12px] md:text-[14px] uppercase text-black font-open-sans mb-2 text-center md:text-left">
-                        find us
-                    </p>
-                    <ul
-                        class="flex flex-col gap-2 font-[400] text-[12px] md:text-[14px] text-black mt-2 md:mt-0 font-open-sans text-center md:text-left">
-                        <li>1, Link Road, Kapashera,</li>
-                        <li>New Delhi</li>
-                    </ul>
-                </div>
-
-                <!-- Col 3  -->
-                <div id="footer-col3" class="text-black flex flex-col items-center md:items-start">
-                    <p
-                        class="font-[700] text-[12px] md:text-[14px] uppercase text-black font-open-sans mb-2 text-center md:text-left">
-                        quick links
-                    </p>
-                    <ul
-                        class="flex flex-col gap-2 font-[400] text-[12px] md:text-[14px] text-black mt-2 md:mt-0 font-open-sans text-center md:text-left">
-                        <li><a href="/about-us/" class="hover:text-[#BF4423] transition-colors cursor-pointer">About
-                                Us</a>
-                        </li>
-                        <li><a href="/our-advisors/" class="hover:text-[#BF4423] transition-colors cursor-pointer">Our
-                                Advisors</a></li>
-                        <li><a href="/mission-&-vision/"
-                                class="hover:text-[#BF4423] transition-colors cursor-pointer">Our Missions</a></li>
-                        <li><a href="#"
-                                class="enquiry-popup-trigger hover:text-[#BF4423] transition-colors cursor-pointer">Get
-                                In Touch</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 4  -->
-                <div id="footer-col4" class="flex flex-col gap-3 md:gap-4 items-center md:items-start">
-                    <p
-                        class="font-[700] text-[12px] md:text-[14px] uppercase text-black font-open-sans text-center md:text-left">
-                        Follow us
-                    </p>
-                    <ul class="flex flex-col gap-3 md:gap-4 items-center md:items-start">
-                        <li>
-                            <a href="https://www.instagram.com/fabluxe.residences/" target="_blank"
-                                rel="noopener noreferrer"
-                                class="flex gap-2 pb-3 md:pb-4 w-full md:w-[120px] justify-center md:justify-start md:border-b-[1px] md:border-[#B9A57B] hover:opacity-80 transition-opacity cursor-pointer">
-                                <img src="img/insta.png" alt="Instagram" class="w-[17px] h-[17px] " />
-                                <p class="font-[400] text-[12px] md:text-[14px] font-open-sans">
-                                    Instagram
-                                </p>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://x.com/fab_luxe" target="_blank" rel="noopener noreferrer"
-                                class="flex gap-2 pb-3 md:pb-4 w-full md:w-[120px] justify-center md:justify-start md:border-b-[1px] md:border-[#B9A57B] hover:opacity-80 transition-opacity cursor-pointer">
-                                <img src="img/twitter.png" alt="Twitter" class="w-[18px] h-[18px] " />
-                                <p class="font-[400] text-[12px] md:text-[14px] font-open-sans">
-                                    Twitter
-                                </p>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://www.linkedin.com/company/fab-luxe-residences" target="_blank"
-                                rel="noopener noreferrer"
-                                class="flex gap-2 pb-3 md:pb-4 w-full md:w-[120px] justify-center md:justify-start md:border-b-[1px] md:border-[#B9A57B] hover:opacity-80 transition-opacity cursor-pointer">
-                                <img src="img/linkdin.png" alt="LinkedIn" class="w-[17px] h-[17px] " />
-                                <p class="font-[400] text-[12px] md:text-[14px] font-open-sans">
-                                    LinkedIn
-                                </p>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://www.youtube.com/@FabLuxeResidences" target="_blank"
-                                rel="noopener noreferrer"
-                                class="flex gap-2 pb-0 w-full md:w-[120px] justify-center md:justify-start hover:opacity-80 transition-opacity cursor-pointer">
-                                <img src="img/yt.png" alt="YouTube" class="w-[14px] h-[14px] " />
-                                <p class="font-[400] text-[12px] md:text-[14px] font-open-sans">
-                                    Youtube
-                                </p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="flex items-center overflow-hidden rounded-[20px]">
+              <img
+                src="img/s8/s8-i1.png"
+                alt=""
+                class="w-full h-full object-cover"
+              />
             </div>
 
             <!-- Row 3  -->
-            <div id="footer-row3"
-                class="flex flex-col md:flex-row justify-between items-center md:items-center border-t-[1px] border-[#CDCDCD] pt-[35px] gap-4 md:gap-0">
-                <p
-                    class="font-[400] text-[12px] md:text-[14px] text-black font-open-sans text-center md:text-left capitalize">
-                    © 2026 All rights reserved.
-                </p>
-
-                <div class="flex justify-center md:justify-between items-center gap-4 md:gap-6">
-                    <p class="font-[400] text-[12px] md:text-[14px] text-black font-open-sans">
-                        Privacy Policy
-                    </p>
-                    <p class="font-[400] text-[12px] md:text-[14px] text-black font-open-sans">
-                        Terms & Conditions
-                    </p>
-                </div>
+            <div class="">
+              <p
+                class="font-[400] text-[22px] md:text-[26px] lg:text-[30px] font-libre-baskerville"
+              >
+                About us
+              </p>
             </div>
+          </div>
         </div>
+
+        <!-- Div 2  -->
+        <div
+          id="sec4-row2-div2"
+          class="w-full flex flex-col lg:flex-row-reverse justify-between gap-6"
+        >
+          <!-- Left Side Form Container  -->
+          <div
+            id="sec4-card2"
+            class="w-full lg:w-[824px] h-[300px] md:h-[341px] p-4 md:p-6 rounded-[20px] overflow-hidden bg-[url('img/footerimg.jpg')] bg-no-repeat bg-center bg-cover flex flex-col justify-between"
+          >
+            <!-- Row 1  -->
+            <div class="flex justify-end w-full">
+              <div
+                class="w-[32px] h-[32px] md:w-[38px] md:h-[38px] bg-white rounded-[5px] flex justify-center items-center flex-shrink-0"
+              >
+                <img
+                  src="svgs/arr-icn.svg"
+                  alt=""
+                  class="w-[12px] h-[12px] md:w-[15px] md:h-[15px]"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side Image Container  -->
+          <div
+            id="sec4-card3"
+            class="w-full lg:w-[402px] h-[300px] md:h-[341px] rounded-[20px] overflow-hidden bg-[#F7F7F7] flex flex-col justify-between p-4 md:p-6 gap-4"
+          >
+            <!-- Row 1  -->
+            <div class="flex justify-between w-full">
+              <div class="flex flex-col gap-3 md:gap-4">
+                <div class="flex gap-4 md:gap-6">
+                  <img
+                    src="svgs/email.svg"
+                    alt="email"
+                    class="w-[18px] h-[18px] md:w-[21px] md:h-[21px] flex-shrink-0"
+                  />
+                  <p
+                    class="font-[400] text-[14px] md:text-[16px] font-open-sans"
+                  >
+                    contact@fgpindia.com
+                  </p>
+                </div>
+                <div class="flex gap-4 md:gap-6">
+                  <img
+                    src="svgs/phone.svg"
+                    alt="phone"
+                    class="w-[18px] h-[18px] md:w-[21px] md:h-[21px] flex-shrink-0"
+                  />
+                  <p
+                    class="font-[400] text-[14px] md:text-[16px] font-open-sans"
+                  >
+                    +91 8888 760 760
+                  </p>
+                </div>
+              </div>
+
+              <img
+                src="svgs/arr-icn.svg"
+                alt="arr-icn"
+                class="w-[12px] h-[12px] md:w-[15px] md:h-[15px] flex-shrink-0"
+              />
+            </div>
+
+            <!-- Row 2  -->
+            <div
+              class="flex justify-center items-center overflow-hidden rounded-[20px]"
+            >
+              <img
+                src="img/s8/s8-i2.png"
+                alt="s4-r4i2"
+                class="w-auto h-auto max-w-full"
+              />
+            </div>
+
+            <!-- Row 3  -->
+            <div>
+              <p
+                class="font-[400] text-[22px] md:text-[26px] lg:text-[30px] font-baskervville"
+              >
+                Contact us
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+    <footer
+      id="footer"
+      class="w-full min-h-[50vh] bg-[#F7EEE6] text-black flex justify-center items-center lg:pt-[70px] pt-[35px] lg:pb-[35px] pb-[15px] px-4 md:px-0"
+    >
+      <!-- Centerd Align Container  -->
+      <div
+        id="footer-container"
+        class="w-full md:w-[90%] flex flex-col gap-10 md:gap-16 lg:gap-20"
+      >
+        <!-- Row 1  -->
+        <div
+          id="footer-row1"
+          class="flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <!-- Col 1  -->
+          <div
+            class="flex justify-center md:justify-start pb-4 md:pb-0 md:border-r-[2px] md:pr-14 md:border-r-[#CDCDCD]"
+          >
+            <img
+              src="img/logo/black-logo1.png"
+              alt="footer-logo"
+              class="w-[182px] h-auto"
+            />
+          </div>
+
+          <!-- Col 2  -->
+          <div class="w-full md:w-[770px] text-center md:text-left">
+            <p
+              class="font-[400] text-[18px] md:text-[20px] lg:text-[24px] font-baskervville"
+            >
+              A global network for exceptional homes, represented with
+              discretion, credibility and reach.
+            </p>
+          </div>
+
+          <!-- Col 3  -->
+          <button
+            id="scroll-to-hero"
+            type="button"
+            class="w-[50px] h-[50px] md:w-[60px] md:h-[60px] flex justify-center items-center bg-[#BF4423] rounded-[2px] flex-shrink-0"
+            aria-label="Scroll to top"
+            onclick="scrollToHeroSection()"
+          >
+            <img
+              src="svgs/arr2-icn.svg"
+              alt="Scroll to top"
+              class="w-[20px] h-[20px] md:w-auto md:h-auto"
+            />
+          </button>
+          <script>
+            function scrollToHeroSection() {
+              const hero =
+                document.getElementById("hero") ||
+                document.querySelector(".s1") ||
+                document.body;
+              if (hero && typeof hero.scrollIntoView === "function") {
+                hero.scrollIntoView({ behavior: "smooth" });
+              } else {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }
+          </script>
+        </div>
+
+        <!-- Row 2  -->
+        <div
+          id="footer-row2"
+          class="w-full flex flex-col md:flex-row justify-between gap-8 md:gap-4 lg:gap-0"
+        >
+          <!-- Col 1  -->
+          <div
+            id="footer-col1"
+            class="flex flex-col gap-6 md:gap-8 lg:gap-10 w-full md:w-auto items-center md:items-start"
+          >
+            <div class="w-full flex flex-col items-center md:items-start">
+              <p
+                class="font-[700] text-[12px] md:text-[14px] uppercase font-open-sans mb-2 md:mb-0 text-center md:text-left"
+              >
+                Expert insights direct to your inbox
+              </p>
+              <form id="footer-email-form" class="relative w-full">
+                <input
+                  type="email"
+                  name="Email"
+                  id="footer-email-input"
+                  required
+                  class="w-full xl:w-[524px] border-b-[1px] border-black h-[50px] md:h-[60px] bg-transparent outline-none placeholder:text-[#636363] font-[400] text-[16px] md:text-[18px] placeholder:text-[16px] md:placeholder:text-[18px] pr-8 text-center md:text-left pl-2"
+                  placeholder="Enter your email"
+                />
+                <button
+                  type="submit"
+                  class="absolute right-2 top-1/2 translate-y-[-50%] bg-transparent border-none cursor-pointer p-0"
+                  aria-label="Submit email"
+                >
+                  <img
+                    src="img/right-arr.png"
+                    alt="arr3-icn"
+                    class="w-[32px] h-[11px] pointer-events-none"
+                  />
+                </button>
+              </form>
+            </div>
+            <div class="flex flex-col gap-2 items-center md:items-start">
+              <p
+                class="font-[700] text-[12px] md:text-[14px] uppercase font-open-sans text-center md:text-left"
+              >
+                get in touch
+              </p>
+              <p
+                class="font-[400] text-[14px] md:text-[16px] font-open-sans text-center md:text-left cursor-pointer"
+                onclick="window.location.href = 'mailto:contact@fgpindia.com'"
+              >
+                contact@fgpindia.com
+              </p>
+              <p
+                class="font-[400] text-[14px] md:text-[16px] font-open-sans text-center md:text-left cursor-pointer"
+                onclick="window.location.href = 'tel:+918888760760'"
+              >
+                +91 8888 760 760
+              </p>
+            </div>
+          </div>
+
+          <!-- Col 2  -->
+          <div
+            id="footer-col2"
+            class="text-black flex flex-col items-center md:items-start"
+          >
+            <p
+              class="font-[700] text-[12px] md:text-[14px] uppercase text-black font-open-sans mb-2 text-center md:text-left"
+            >
+              find us
+            </p>
+            <ul
+              class="flex flex-col gap-2 font-[400] text-[12px] md:text-[14px] text-black mt-2 md:mt-0 font-open-sans text-center md:text-left"
+            >
+              <li>1, Link Road, Kapashera,</li>
+              <li>New Delhi</li>
+            </ul>
+          </div>
+
+          <!-- Col 3  -->
+          <div
+            id="footer-col3"
+            class="text-black flex flex-col items-center md:items-start"
+          >
+            <p
+              class="font-[700] text-[12px] md:text-[14px] uppercase text-black font-open-sans mb-2 text-center md:text-left"
+            >
+              quick links
+            </p>
+            <ul
+              class="flex flex-col gap-2 font-[400] text-[12px] md:text-[14px] text-black mt-2 md:mt-0 font-open-sans text-center md:text-left"
+            >
+              <li>
+                <a
+                  href="/about-us/"
+                  class="hover:text-[#BF4423] transition-colors cursor-pointer"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/our-advisors/"
+                  class="hover:text-[#BF4423] transition-colors cursor-pointer"
+                  >Our Advisors</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/mission-&-vision/"
+                  class="hover:text-[#BF4423] transition-colors cursor-pointer"
+                  >Our Missions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/fab-luxe/"
+                  class="hover:text-[#BF4423] transition-colors cursor-pointer"
+                  >Featured Project</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="enquiry-popup-trigger hover:text-[#BF4423] transition-colors cursor-pointer"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 4  -->
+          <div
+            id="footer-col4"
+            class="flex flex-col gap-3 md:gap-4 items-center md:items-start"
+          >
+            <p
+              class="font-[700] text-[12px] md:text-[14px] uppercase text-black font-open-sans text-center md:text-left"
+            >
+              Follow us
+            </p>
+            <ul
+              class="flex flex-col gap-3 md:gap-4 items-center md:items-start"
+            >
+              <li>
+                <a
+                  href="https://www.instagram.com/fabluxe.residences/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex gap-2 pb-3 md:pb-4 w-full md:w-[120px] justify-center md:justify-start md:border-b-[1px] md:border-[#B9A57B] hover:opacity-80 transition-opacity cursor-pointer"
+                >
+                  <img
+                    src="img/insta.png"
+                    alt="Instagram"
+                    class="w-[17px] h-[17px]"
+                  />
+                  <p
+                    class="font-[400] text-[12px] md:text-[14px] font-open-sans"
+                  >
+                    Instagram
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://x.com/fab_luxe"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex gap-2 pb-3 md:pb-4 w-full md:w-[120px] justify-center md:justify-start md:border-b-[1px] md:border-[#B9A57B] hover:opacity-80 transition-opacity cursor-pointer"
+                >
+                  <img
+                    src="img/twitter.png"
+                    alt="Twitter"
+                    class="w-[18px] h-[18px]"
+                  />
+                  <p
+                    class="font-[400] text-[12px] md:text-[14px] font-open-sans"
+                  >
+                    Twitter
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/fab-luxe-residences"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex gap-2 pb-3 md:pb-4 w-full md:w-[120px] justify-center md:justify-start md:border-b-[1px] md:border-[#B9A57B] hover:opacity-80 transition-opacity cursor-pointer"
+                >
+                  <img
+                    src="img/linkdin.png"
+                    alt="LinkedIn"
+                    class="w-[17px] h-[17px]"
+                  />
+                  <p
+                    class="font-[400] text-[12px] md:text-[14px] font-open-sans"
+                  >
+                    LinkedIn
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.youtube.com/@FabLuxeResidences"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex gap-2 pb-0 w-full md:w-[120px] justify-center md:justify-start hover:opacity-80 transition-opacity cursor-pointer"
+                >
+                  <img
+                    src="img/yt.png"
+                    alt="YouTube"
+                    class="w-[14px] h-[14px]"
+                  />
+                  <p
+                    class="font-[400] text-[12px] md:text-[14px] font-open-sans"
+                  >
+                    Youtube
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Row 3  -->
+        <div
+          id="footer-row3"
+          class="flex flex-col md:flex-row justify-between items-center md:items-center border-t-[1px] border-[#CDCDCD] pt-[35px] gap-4 md:gap-0"
+        >
+          <p
+            class="font-[400] text-[12px] md:text-[14px] text-black font-open-sans text-center md:text-left capitalize"
+          >
+            © 2026 All rights reserved.
+          </p>
+
+          <div
+            class="flex justify-center md:justify-between items-center gap-4 md:gap-6"
+          >
+            <p
+              class="font-[400] text-[12px] md:text-[14px] text-black font-open-sans"
+            >
+              Privacy Policy
+            </p>
+            <p
+              class="font-[400] text-[12px] md:text-[14px] text-black font-open-sans"
+            >
+              Terms & Conditions
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Enquiry Popup Modal -->
-    <div id="enquiry-popup"
-        class="fixed inset-0 z-[10000] hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-md">
-        <!-- Overlay -->
-        <div id="popup-overlay" class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div
+      id="enquiry-popup"
+      class="fixed inset-0 z-[10000] hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-md"
+    >
+      <!-- Overlay -->
+      <div
+        id="popup-overlay"
+        class="absolute inset-0 bg-black bg-opacity-50"
+      ></div>
 
-        <!-- Popup Content -->
-        <div id="popup-content"
-            class="relative w-full max-w-[700px] md:max-w-[800px] mx-4 bg-white rounded-[20px] md:rounded-[24px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] overflow-hidden transform scale-95 opacity-0 transition-all duration-300 flex flex-col md:flex-row max-h-[90vh] overflow-y-auto">
-            <!-- Close Button -->
-            <button id="popup-close-btn"
-                class="absolute top-5 right-5 md:top-6 md:right-6 z-20 w-9 h-9 md:w-10 md:h-10 flex items-center justify-center bg-transparent hover:bg-gray-100 text-gray-400 hover:text-gray-600 rounded-full transition-all duration-300 group"
-                aria-label="Close popup">
-                <svg class="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-90 transition-transform duration-300" fill="none"
-                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                    </path>
-                </svg>
-            </button>
+      <!-- Popup Content -->
+      <div
+        id="popup-content"
+        class="relative w-full max-w-[700px] md:max-w-[800px] mx-4 bg-white rounded-[20px] md:rounded-[24px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] overflow-hidden transform scale-95 opacity-0 transition-all duration-300 flex flex-col md:flex-row max-h-[90vh] overflow-y-auto"
+      >
+        <!-- Close Button -->
+        <button
+          id="popup-close-btn"
+          class="absolute top-5 right-5 md:top-6 md:right-6 z-20 w-9 h-9 md:w-10 md:h-10 flex items-center justify-center bg-transparent hover:bg-gray-100 text-gray-400 hover:text-gray-600 rounded-full transition-all duration-300 group"
+          aria-label="Close popup"
+        >
+          <svg
+            class="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-90 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
 
-            <!-- Left Section - Image -->
-            <div class="w-full md:w-2/5 h-[200px] md:h-auto bg-gray-200 overflow-hidden hidden md:block">
-                <img src="img/s1/ele_tall.jpg" alt="Luxury Property" class="w-full h-full object-cover" />
-            </div>
-
-            <!-- Right Section - Greeting and Form -->
-            <div class="w-full md:w-3/5 flex flex-col">
-                <!-- Greeting Message -->
-                <div class="px-6 md:px-8 pt-6 md:pt-8 pb-4 md:pb-5">
-                    <h2 class="text-black font-[700] text-[22px] md:text-[26px] font-libre-baskerville mb-2">
-                        Request Information
-                    </h2>
-                    <p class="text-gray-600 font-[400] text-[13px] md:text-[14px] font-open-sans">
-                        Connect with our luxury property experts
-                    </p>
-                </div>
-
-                <!-- Popup Form -->
-                <div class="px-6 md:px-8 pb-6 md:pb-8 flex-1">
-                    <form id="enquiry-form" class="flex flex-col gap-4 md:gap-5">
-                        <!-- Name, Email, Phone in Single Row -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-                            <!-- Name Field -->
-                            <div class="flex flex-col gap-1.5">
-                                <label for="popup-name"
-                                    class="text-black font-[600] text-[12px] md:text-[13px] font-open-sans">
-                                    Name <span class="text-[#CF4422]">*</span>
-                                </label>
-                                <input type="text" id="popup-name" name="Name" placeholder="Name" required
-                                    class="w-full h-[42px] md:h-[45px] px-0 pb-2 border-0 border-b-2 border-gray-300 text-black font-[400] text-[14px] md:text-[15px] font-open-sans focus:outline-none focus:border-[#CF4422] transition-colors duration-200 bg-transparent" />
-                            </div>
-
-                            <!-- Email Field -->
-                            <div class="flex flex-col gap-1.5">
-                                <label for="popup-email"
-                                    class="text-black font-[600] text-[12px] md:text-[13px] font-open-sans">
-                                    Email <span class="text-[#CF4422]">*</span>
-                                </label>
-                                <input type="email" id="popup-email" name="Email" placeholder="Email" required
-                                    class="w-full h-[42px] md:h-[45px] px-0 pb-2 border-0 border-b-2 border-gray-300 text-black font-[400] text-[14px] md:text-[15px] font-open-sans focus:outline-none focus:border-[#CF4422] transition-colors duration-200 bg-transparent" />
-                            </div>
-
-
-                        </div>
-                        <!-- Phone Field -->
-                        <div class="flex flex-col gap-1.5">
-                            <label for="popup-phone"
-                                class="text-black font-[600] text-[12px] md:text-[13px] font-open-sans">
-                                Phone <span class="text-[#CF4422]">*</span>
-                            </label>
-                            <div class="flex gap-2 items-end">
-                                <select id="popup-country-code" name="CountryCode"
-                                    class="h-[42px] md:h-[45px] px-0 pb-2 border-0 border-b-2 border-gray-300 text-black font-[400] text-[14px] md:text-[15px] font-open-sans focus:outline-none focus:border-[#CF4422] transition-colors duration-200 bg-transparent cursor-pointer appearance-none"
-                                    style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23333\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3e%3cpolyline points=\'6 9 12 15 18 9\'%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 0.25rem bottom 0.5rem; background-size: 0.875em 0.875em; padding-right: 1.5rem; min-width: 75px; max-width: 100px;">
-                                </select>
-                                <input type="tel" id="popup-phone" name="Phone" placeholder="Phone" required
-                                    class="flex-1 h-[42px] md:h-[45px] px-0 pb-2 border-0 border-b-2 border-gray-300 text-black font-[400] text-[14px] md:text-[15px] font-open-sans focus:outline-none focus:border-[#CF4422] transition-colors duration-200 bg-transparent" />
-                            </div>
-                        </div>
-                        <!-- Message Field -->
-                        <div class="flex flex-col gap-1.5">
-                            <label for="popup-message"
-                                class="text-black font-[600] text-[12px] md:text-[13px] font-open-sans">
-                                Message
-                            </label>
-                            <textarea id="popup-message" name="Message" rows="3" placeholder="Message"
-                                class="w-full px-0 pt-2 pb-2 border-0 border-b-2 border-gray-300 text-black font-[400] text-[14px] md:text-[15px] font-open-sans focus:outline-none focus:border-[#CF4422] transition-colors duration-200 resize-none bg-transparent min-h-[80px]"></textarea>
-                        </div>
-
-                        <!-- Submit Button -->
-                        <button type="submit"
-                            class="w-full h-[46px] md:h-[50px] bg-[#CF4422] hover:bg-[#BF4423] text-white font-[700] text-[13px] md:text-[14px] rounded-[6px] font-open-sans transition-all duration-300 hover:shadow-lg hover:shadow-[#CF4422]/30 hover:scale-[1.01] active:scale-[0.99] mt-1 uppercase tracking-[0.5px]">
-                            Submit Request
-                        </button>
-
-                        <!-- Privacy Note -->
-                        <p
-                            class="text-gray-500 font-[400] text-[11px] md:text-[12px] font-open-sans text-center mt-2 leading-relaxed">
-                            By submitting this form, you agree to our
-                            privacy policy
-                            and
-                            terms of service.
-                        </p>
-                    </form>
-                </div>
-            </div>
+        <!-- Left Section - Image -->
+        <div
+          class="w-full md:w-2/5 h-[200px] md:h-auto bg-gray-200 overflow-hidden hidden md:block"
+        >
+          <img
+            src="img/s1/ele_tall.jpg"
+            alt="Luxury Property"
+            class="w-full h-full object-cover"
+          />
         </div>
+
+        <!-- Right Section - Greeting and Form -->
+        <div class="w-full md:w-3/5 flex flex-col">
+          <!-- Greeting Message -->
+          <div class="px-6 md:px-8 pt-6 md:pt-8 pb-4 md:pb-5">
+            <h2
+              class="text-black font-[700] text-[22px] md:text-[26px] font-libre-baskerville mb-2"
+            >
+              Request Information
+            </h2>
+            <p
+              class="text-gray-600 font-[400] text-[13px] md:text-[14px] font-open-sans"
+            >
+              Connect with our luxury property experts
+            </p>
+          </div>
+
+          <!-- Popup Form -->
+          <div class="px-6 md:px-8 pb-6 md:pb-8 flex-1">
+            <form id="enquiry-form" class="flex flex-col gap-4 md:gap-5">
+              <!-- Name, Email, Phone in Single Row -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+                <!-- Name Field -->
+                <div class="flex flex-col gap-1.5">
+                  <label
+                    for="popup-name"
+                    class="text-black font-[600] text-[12px] md:text-[13px] font-open-sans"
+                  >
+                    Name <span class="text-[#CF4422]">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="popup-name"
+                    name="Name"
+                    placeholder="Name"
+                    required
+                    class="w-full h-[42px] md:h-[45px] px-0 pb-2 border-0 border-b-2 border-gray-300 text-black font-[400] text-[14px] md:text-[15px] font-open-sans focus:outline-none focus:border-[#CF4422] transition-colors duration-200 bg-transparent"
+                  />
+                </div>
+
+                <!-- Email Field -->
+                <div class="flex flex-col gap-1.5">
+                  <label
+                    for="popup-email"
+                    class="text-black font-[600] text-[12px] md:text-[13px] font-open-sans"
+                  >
+                    Email <span class="text-[#CF4422]">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="popup-email"
+                    name="Email"
+                    placeholder="Email"
+                    required
+                    class="w-full h-[42px] md:h-[45px] px-0 pb-2 border-0 border-b-2 border-gray-300 text-black font-[400] text-[14px] md:text-[15px] font-open-sans focus:outline-none focus:border-[#CF4422] transition-colors duration-200 bg-transparent"
+                  />
+                </div>
+              </div>
+              <!-- Phone Field -->
+              <div class="flex flex-col gap-1.5">
+                <label
+                  for="popup-phone"
+                  class="text-black font-[600] text-[12px] md:text-[13px] font-open-sans"
+                >
+                  Phone <span class="text-[#CF4422]">*</span>
+                </label>
+                <div class="flex gap-2 items-end">
+                  <select
+                    id="popup-country-code"
+                    name="CountryCode"
+                    class="h-[42px] md:h-[45px] px-0 pb-2 border-0 border-b-2 border-gray-300 text-black font-[400] text-[14px] md:text-[15px] font-open-sans focus:outline-none focus:border-[#CF4422] transition-colors duration-200 bg-transparent cursor-pointer appearance-none"
+                    style="
+                      background-image: url(&quot;data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e&quot;);
+                      background-repeat: no-repeat;
+                      background-position: right 0.25rem bottom 0.5rem;
+                      background-size: 0.875em 0.875em;
+                      padding-right: 1.5rem;
+                      min-width: 75px;
+                      max-width: 100px;
+                    "
+                  ></select>
+                  <input
+                    type="tel"
+                    id="popup-phone"
+                    name="Phone"
+                    placeholder="Phone"
+                    required
+                    class="flex-1 h-[42px] md:h-[45px] px-0 pb-2 border-0 border-b-2 border-gray-300 text-black font-[400] text-[14px] md:text-[15px] font-open-sans focus:outline-none focus:border-[#CF4422] transition-colors duration-200 bg-transparent"
+                  />
+                </div>
+              </div>
+              <!-- Message Field -->
+              <div class="flex flex-col gap-1.5">
+                <label
+                  for="popup-message"
+                  class="text-black font-[600] text-[12px] md:text-[13px] font-open-sans"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="popup-message"
+                  name="Message"
+                  rows="3"
+                  placeholder="Message"
+                  class="w-full px-0 pt-2 pb-2 border-0 border-b-2 border-gray-300 text-black font-[400] text-[14px] md:text-[15px] font-open-sans focus:outline-none focus:border-[#CF4422] transition-colors duration-200 resize-none bg-transparent min-h-[80px]"
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                class="w-full h-[46px] md:h-[50px] bg-[#CF4422] hover:bg-[#BF4423] text-white font-[700] text-[13px] md:text-[14px] rounded-[6px] font-open-sans transition-all duration-300 hover:shadow-lg hover:shadow-[#CF4422]/30 hover:scale-[1.01] active:scale-[0.99] mt-1 uppercase tracking-[0.5px]"
+              >
+                Submit Request
+              </button>
+
+              <!-- Privacy Note -->
+              <p
+                class="text-gray-500 font-[400] text-[11px] md:text-[12px] font-open-sans text-center mt-2 leading-relaxed"
+              >
+                By submitting this form, you agree to our privacy policy and
+                terms of service.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Loader Popup -->
-    <div id="loader-popup"
-        class="fixed inset-0 z-[20000] hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm">
+    <div
+      id="loader-popup"
+      class="fixed inset-0 z-[20000] hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm"
+    >
+      <div
+        class="bg-white rounded-[20px] md:rounded-[24px] p-8 md:p-12 flex flex-col items-center gap-6 md:gap-8 max-w-[400px] mx-4"
+      >
         <div
-            class="bg-white rounded-[20px] md:rounded-[24px] p-8 md:p-12 flex flex-col items-center gap-6 md:gap-8 max-w-[400px] mx-4">
-            <div
-                class="loader-spinner w-16 h-16 md:w-20 md:h-20 border-4 border-[#F9F9F9] border-t-[#CF4422] rounded-full animate-spin">
-            </div>
-            <p class="text-black font-[600] text-[16px] md:text-[18px] font-open-sans text-center">Submitting your
-                request...
-            </p>
-            <p class="text-gray-600 font-[400] text-[14px] md:text-[15px] font-open-sans text-center">Please wait</p>
-        </div>
+          class="loader-spinner w-16 h-16 md:w-20 md:h-20 border-4 border-[#F9F9F9] border-t-[#CF4422] rounded-full animate-spin"
+        ></div>
+        <p
+          class="text-black font-[600] text-[16px] md:text-[18px] font-open-sans text-center"
+        >
+          Submitting your request...
+        </p>
+        <p
+          class="text-gray-600 font-[400] text-[14px] md:text-[15px] font-open-sans text-center"
+        >
+          Please wait
+        </p>
+      </div>
     </div>
 
-
-
     <!-- Error Popup -->
-    <div id="error-popup"
-        class="fixed inset-0 z-[20000] hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm">
+    <div
+      id="error-popup"
+      class="fixed inset-0 z-[20000] hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm"
+    >
+      <div
+        class="bg-white rounded-[20px] md:rounded-[24px] p-8 md:p-12 flex flex-col items-center gap-6 md:gap-8 max-w-[500px] mx-4 text-center"
+      >
         <div
-            class="bg-white rounded-[20px] md:rounded-[24px] p-8 md:p-12 flex flex-col items-center gap-6 md:gap-8 max-w-[500px] mx-4 text-center">
-            <div class="w-20 h-20 md:w-24 md:h-24 bg-[#dc3545] rounded-full flex items-center justify-center">
-                <svg class="w-12 h-12 md:w-14 md:h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12">
-                    </path>
-                </svg>
-            </div>
-            <div class="flex flex-col gap-3">
-                <h3 class="text-black font-[700] text-[24px] md:text-[28px] font-libre-baskerville">Error!</h3>
-                <p id="error-popup-message" class="text-gray-600 font-[400] text-[15px] md:text-[16px] font-open-sans">
-                    Something
-                    went wrong. Please try again.</p>
-            </div>
-            <button id="error-popup-close"
-                class="w-full md:w-auto px-8 py-3 bg-[#CF4422] hover:bg-[#BF4423] text-white font-[600] text-[14px] md:text-[16px] rounded-[8px] font-open-sans transition-all duration-300">
-                Try Again
-            </button>
+          class="w-20 h-20 md:w-24 md:h-24 bg-[#dc3545] rounded-full flex items-center justify-center"
+        >
+          <svg
+            class="w-12 h-12 md:w-14 md:h-14 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
         </div>
+        <div class="flex flex-col gap-3">
+          <h3
+            class="text-black font-[700] text-[24px] md:text-[28px] font-libre-baskerville"
+          >
+            Error!
+          </h3>
+          <p
+            id="error-popup-message"
+            class="text-gray-600 font-[400] text-[15px] md:text-[16px] font-open-sans"
+          >
+            Something went wrong. Please try again.
+          </p>
+        </div>
+        <button
+          id="error-popup-close"
+          class="w-full md:w-auto px-8 py-3 bg-[#CF4422] hover:bg-[#BF4423] text-white font-[600] text-[14px] md:text-[16px] rounded-[8px] font-open-sans transition-all duration-300"
+        >
+          Try Again
+        </button>
+      </div>
     </div>
 
     <!-- Swiper JS -->
@@ -1119,6 +2116,5 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
