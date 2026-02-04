@@ -753,23 +753,8 @@ function initAnimations() {
     });
   }
 
-  // Footer animations
-  const footer = document.getElementById('footer');
-  if (footer && shouldAnimate && !footer.classList.contains('no-animation')) {
-    const footerContent = footer.querySelectorAll('#footer-row1 > *, #footer-row2 > *');
-    gsap.from(footerContent, {
-      opacity: 0,
-      y: 30,
-      duration: defaultDuration,
-      ease: defaultEase,
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: footer,
-        start: 'top 90%',
-        toggleActions: 'play none none none'
-      }
-    });
-  }
+  // Footer animations - DISABLED
+  // Footer animations have been removed as per request
 
   // Refresh ScrollTrigger after all animations are set up
   ScrollTrigger.refresh();
