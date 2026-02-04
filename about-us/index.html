@@ -2076,233 +2076,60 @@
 
     <!-- Privacy Policy Popup -->
     <div id="privacy-policy-popup"
-      class="fixed inset-0 z-[15000] hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-md">
-      <!-- Overlay -->
-      <div id="privacy-popup-overlay" class="absolute inset-0 bg-black bg-opacity-50"></div>
-
-      <!-- Popup Content -->
-      <div id="privacy-popup-content"
-        class="relative w-full max-w-[800px] md:max-w-[900px] mx-4 bg-white rounded-[20px] md:rounded-[24px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] overflow-hidden transform scale-95 opacity-0 transition-all duration-300 max-h-[90vh] overflow-y-auto">
-        <!-- Close Button -->
-        <button id="privacy-popup-close-btn"
-          class="absolute top-5 right-5 md:top-6 md:right-6 z-20 w-9 h-9 md:w-10 md:h-10 flex items-center justify-center bg-transparent hover:bg-gray-100 text-gray-400 hover:text-gray-600 rounded-full transition-all duration-300 group"
-          aria-label="Close popup">
-          <svg class="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-90 transition-transform duration-300" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-
-        <!-- Content Section -->
-        <div class="px-6 md:px-10 py-8 md:py-12">
-          <!-- Header -->
-          <div class="mb-6 md:mb-8">
-            <h2 class="text-black font-[700] text-[28px] md:text-[34px] font-libre-baskerville mb-3">
-              Privacy Policy
-            </h2>
-            <p class="text-gray-600 font-[400] text-[13px] md:text-[14px] font-open-sans">
-              Last updated: January 2026
-            </p>
-          </div>
-
-          <!-- Content -->
-          <div class="flex flex-col gap-6 md:gap-8 text-black font-[400] text-[14px] md:text-[15px] font-open-sans leading-relaxed">
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">1. Introduction</h3>
-              <p class="text-gray-700">
-                Forbes Global Properties ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services related to luxury real estate properties.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">2. Information We Collect</h3>
-              <p class="text-gray-700 mb-3">We may collect information about you in various ways:</p>
-              <ul class="list-disc list-inside ml-4 space-y-2 text-gray-700">
-                <li><strong>Personal Information:</strong> Name, email address, phone number, postal address, and other contact details you provide when requesting information about our properties.</li>
-                <li><strong>Property Preferences:</strong> Information about your property interests, budget, and requirements.</li>
-                <li><strong>Technical Data:</strong> IP address, browser type, device information, and usage patterns when you visit our website.</li>
-                <li><strong>Communication Records:</strong> Records of correspondence when you contact us through our website or other channels.</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">3. How We Use Your Information</h3>
-              <p class="text-gray-700 mb-3">We use the information we collect to:</p>
-              <ul class="list-disc list-inside ml-4 space-y-2 text-gray-700">
-                <li>Provide information about our luxury properties and services</li>
-                <li>Respond to your inquiries and requests</li>
-                <li>Send you property updates, newsletters, and marketing communications (with your consent)</li>
-                <li>Improve our website and services</li>
-                <li>Comply with legal obligations and protect our rights</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">4. Information Sharing</h3>
-              <p class="text-gray-700">
-                We do not sell your personal information. We may share your information with trusted partners, service providers, and affiliates who assist us in operating our website and conducting our business, subject to confidentiality agreements. We may also disclose information when required by law or to protect our rights and safety.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">5. Data Security</h3>
-              <p class="text-gray-700">
-                We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">6. Your Rights</h3>
-              <p class="text-gray-700 mb-3">You have the right to:</p>
-              <ul class="list-disc list-inside ml-4 space-y-2 text-gray-700">
-                <li>Access and receive a copy of your personal data</li>
-                <li>Rectify inaccurate or incomplete information</li>
-                <li>Request deletion of your personal data</li>
-                <li>Object to or restrict processing of your data</li>
-                <li>Withdraw consent for marketing communications at any time</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">7. Cookies and Tracking</h3>
-              <p class="text-gray-700">
-                Our website uses cookies and similar tracking technologies to enhance your browsing experience, analyze website traffic, and personalize content. You can control cookie preferences through your browser settings.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">8. Contact Us</h3>
-              <p class="text-gray-700">
-                If you have questions about this Privacy Policy or wish to exercise your rights, please contact us at:
-                <br><br>
-                <strong>Forbes Global Properties</strong><br>
-                Email: info@forbesglobalproperties.com<br>
-                Phone: +91-XXXXXXXXXX
-              </p>
-            </div>
-          </div>
+      class="fixed inset-0 z-[20000] hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm">
+      <div
+        class="bg-white rounded-[20px] md:rounded-[24px] p-6 md:p-8 lg:p-10 flex flex-col gap-4 md:gap-6 max-w-[600px] md:max-w-[700px] mx-4">
+        <div class="flex justify-between items-start">
+          <h3 class="text-black font-[700] text-[22px] md:text-[26px] lg:text-[28px] font-libre-baskerville">Privacy Policy</h3>
+          <button id="privacy-popup-close"
+            class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-transparent hover:bg-gray-100 text-gray-400 hover:text-gray-600 rounded-full transition-all duration-300"
+            aria-label="Close popup">
+            <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
         </div>
+        <div class="flex flex-col gap-3 md:gap-4 text-black font-[400] text-[14px] md:text-[15px] lg:text-[16px] font-open-sans leading-relaxed">
+          <p>Forbes Global Properties is committed to protecting your privacy. We collect personal information such as name, email, and phone number when you request information about our luxury properties.</p>
+          <p>We use this information to provide property details, respond to inquiries, and send updates with your consent. We do not sell your personal information to third parties.</p>
+          <p>Your data is secured using appropriate technical measures. You have the right to access, update, or delete your personal information at any time.</p>
+          <p>Our website uses cookies to enhance your browsing experience. You can control cookie preferences through your browser settings.</p>
+          <p>For questions about this Privacy Policy, please contact us at info@forbesglobalproperties.com.</p>
+        </div>
+        <button id="privacy-popup-close-btn"
+          class="w-full md:w-auto px-8 py-3 bg-[#CF4422] hover:bg-[#BF4423] text-white font-[600] text-[14px] md:text-[16px] rounded-[8px] font-open-sans transition-all duration-300 self-end">
+          Close
+        </button>
       </div>
     </div>
 
     <!-- Terms & Conditions Popup -->
     <div id="terms-conditions-popup"
-      class="fixed inset-0 z-[15000] hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-md">
-      <!-- Overlay -->
-      <div id="terms-popup-overlay" class="absolute inset-0 bg-black bg-opacity-50"></div>
-
-      <!-- Popup Content -->
-      <div id="terms-popup-content"
-        class="relative w-full max-w-[800px] md:max-w-[900px] mx-4 bg-white rounded-[20px] md:rounded-[24px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] overflow-hidden transform scale-95 opacity-0 transition-all duration-300 max-h-[90vh] overflow-y-auto">
-        <!-- Close Button -->
-        <button id="terms-popup-close-btn"
-          class="absolute top-5 right-5 md:top-6 md:right-6 z-20 w-9 h-9 md:w-10 md:h-10 flex items-center justify-center bg-transparent hover:bg-gray-100 text-gray-400 hover:text-gray-600 rounded-full transition-all duration-300 group"
-          aria-label="Close popup">
-          <svg class="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-90 transition-transform duration-300" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-
-        <!-- Content Section -->
-        <div class="px-6 md:px-10 py-8 md:py-12">
-          <!-- Header -->
-          <div class="mb-6 md:mb-8">
-            <h2 class="text-black font-[700] text-[28px] md:text-[34px] font-libre-baskerville mb-3">
-              Terms & Conditions
-            </h2>
-            <p class="text-gray-600 font-[400] text-[13px] md:text-[14px] font-open-sans">
-              Last updated: January 2026
-            </p>
-          </div>
-
-          <!-- Content -->
-          <div class="flex flex-col gap-6 md:gap-8 text-black font-[400] text-[14px] md:text-[15px] font-open-sans leading-relaxed">
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">1. Acceptance of Terms</h3>
-              <p class="text-gray-700">
-                By accessing and using the Forbes Global Properties website, you accept and agree to be bound by these Terms & Conditions. If you do not agree with any part of these terms, please do not use our website or services.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">2. Use of Website</h3>
-              <p class="text-gray-700 mb-3">You agree to use our website only for lawful purposes and in accordance with these terms. You agree not to:</p>
-              <ul class="list-disc list-inside ml-4 space-y-2 text-gray-700">
-                <li>Use the website in any way that violates applicable laws or regulations</li>
-                <li>Attempt to gain unauthorized access to any portion of the website</li>
-                <li>Transmit any viruses, malware, or harmful code</li>
-                <li>Use automated systems to access or scrape website content without permission</li>
-                <li>Impersonate any person or entity or misrepresent your affiliation</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">3. Property Information</h3>
-              <p class="text-gray-700">
-                All property information, images, specifications, and pricing displayed on our website are for informational purposes only and are subject to change without notice. While we strive for accuracy, we do not warrant that all information is complete, current, or error-free. Property availability, prices, and features are subject to change and should be verified directly with our sales team.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">4. Intellectual Property</h3>
-              <p class="text-gray-700">
-                All content on this website, including text, graphics, logos, images, and software, is the property of Forbes Global Properties or its licensors and is protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, modify, or create derivative works without our prior written consent.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">5. Property Transactions</h3>
-              <p class="text-gray-700 mb-3">All property transactions are subject to:</p>
-              <ul class="list-disc list-inside ml-4 space-y-2 text-gray-700">
-                <li>Separate purchase agreements and legal documentation</li>
-                <li>Verification of property availability and pricing</li>
-                <li>Compliance with applicable real estate laws and regulations</li>
-                <li>Payment of applicable fees, taxes, and charges</li>
-                <li>Completion of due diligence and verification processes</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">6. Limitation of Liability</h3>
-              <p class="text-gray-700">
-                To the fullest extent permitted by law, Forbes Global Properties shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the website or services. Our total liability shall not exceed the amount you paid to us, if any, for accessing our services.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">7. Indemnification</h3>
-              <p class="text-gray-700">
-                You agree to indemnify and hold harmless Forbes Global Properties, its affiliates, officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses arising from your use of the website, violation of these terms, or infringement of any rights of another party.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">8. Modifications to Terms</h3>
-              <p class="text-gray-700">
-                We reserve the right to modify these Terms & Conditions at any time. Changes will be effective immediately upon posting on the website. Your continued use of the website after changes are posted constitutes acceptance of the modified terms.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">9. Governing Law</h3>
-              <p class="text-gray-700">
-                These Terms & Conditions shall be governed by and construed in accordance with the laws of India. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts in [City], India.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="font-[700] text-[18px] md:text-[20px] mb-3 font-libre-baskerville">10. Contact Information</h3>
-              <p class="text-gray-700">
-                For questions about these Terms & Conditions, please contact us at:
-                <br><br>
-                <strong>Forbes Global Properties</strong><br>
-                Email: info@forbesglobalproperties.com<br>
-                Phone: +91-XXXXXXXXXX
-              </p>
-            </div>
-          </div>
+      class="fixed inset-0 z-[20000] hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm">
+      <div
+        class="bg-white rounded-[20px] md:rounded-[24px] p-6 md:p-8 lg:p-10 flex flex-col gap-4 md:gap-6 max-w-[600px] md:max-w-[700px] mx-4">
+        <div class="flex justify-between items-start">
+          <h3 class="text-black font-[700] text-[22px] md:text-[26px] lg:text-[28px] font-libre-baskerville">Terms & Conditions</h3>
+          <button id="terms-popup-close"
+            class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-transparent hover:bg-gray-100 text-gray-400 hover:text-gray-600 rounded-full transition-all duration-300"
+            aria-label="Close popup">
+            <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
         </div>
+        <div class="flex flex-col gap-3 md:gap-4 text-black font-[400] text-[14px] md:text-[15px] lg:text-[16px] font-open-sans leading-relaxed">
+          <p>By accessing and using the Forbes Global Properties website, you accept and agree to be bound by these Terms & Conditions.</p>
+          <p>All property information, images, specifications, and pricing displayed on our website are for informational purposes only and are subject to change without notice.</p>
+          <p>All content on this website, including text, graphics, logos, and images, is the property of Forbes Global Properties and is protected by copyright and trademark laws.</p>
+          <p>Property transactions are subject to separate purchase agreements, verification of availability and pricing, and compliance with applicable real estate laws.</p>
+          <p>Forbes Global Properties shall not be liable for any indirect, incidental, or consequential damages arising from your use of the website or services.</p>
+          <p>For questions about these Terms & Conditions, please contact us at info@forbesglobalproperties.com.</p>
+        </div>
+        <button id="terms-popup-close-btn"
+          class="w-full md:w-auto px-8 py-3 bg-[#CF4422] hover:bg-[#BF4423] text-white font-[600] text-[14px] md:text-[16px] rounded-[8px] font-open-sans transition-all duration-300 self-end">
+          Close
+        </button>
       </div>
     </div>
 

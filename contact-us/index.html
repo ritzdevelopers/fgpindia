@@ -590,6 +590,65 @@
         </div>
     </div>
 
+    <!-- Privacy Policy Popup -->
+    <div id="privacy-policy-popup"
+      class="fixed inset-0 z-[20000] hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm">
+      <div
+        class="bg-white rounded-[20px] md:rounded-[24px] p-6 md:p-8 lg:p-10 flex flex-col gap-4 md:gap-6 max-w-[600px] md:max-w-[700px] mx-4">
+        <div class="flex justify-between items-start">
+          <h3 class="text-black font-[700] text-[22px] md:text-[26px] lg:text-[28px] font-libre-baskerville">Privacy Policy</h3>
+          <button id="privacy-popup-close"
+            class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-transparent hover:bg-gray-100 text-gray-400 hover:text-gray-600 rounded-full transition-all duration-300"
+            aria-label="Close popup">
+            <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-col gap-3 md:gap-4 text-black font-[400] text-[14px] md:text-[15px] lg:text-[16px] font-open-sans leading-relaxed">
+          <p>Forbes Global Properties is committed to protecting your privacy. We collect personal information such as name, email, and phone number when you request information about our luxury properties.</p>
+          <p>We use this information to provide property details, respond to inquiries, and send updates with your consent. We do not sell your personal information to third parties.</p>
+          <p>Your data is secured using appropriate technical measures. You have the right to access, update, or delete your personal information at any time.</p>
+          <p>Our website uses cookies to enhance your browsing experience. You can control cookie preferences through your browser settings.</p>
+          <p>For questions about this Privacy Policy, please contact us at info@forbesglobalproperties.com.</p>
+        </div>
+        <button id="privacy-popup-close-btn"
+          class="w-full md:w-auto px-8 py-3 bg-[#CF4422] hover:bg-[#BF4423] text-white font-[600] text-[14px] md:text-[16px] rounded-[8px] font-open-sans transition-all duration-300 self-end">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <!-- Terms & Conditions Popup -->
+    <div id="terms-conditions-popup"
+      class="fixed inset-0 z-[20000] hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm">
+      <div
+        class="bg-white rounded-[20px] md:rounded-[24px] p-6 md:p-8 lg:p-10 flex flex-col gap-4 md:gap-6 max-w-[600px] md:max-w-[700px] mx-4">
+        <div class="flex justify-between items-start">
+          <h3 class="text-black font-[700] text-[22px] md:text-[26px] lg:text-[28px] font-libre-baskerville">Terms & Conditions</h3>
+          <button id="terms-popup-close"
+            class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-transparent hover:bg-gray-100 text-gray-400 hover:text-gray-600 rounded-full transition-all duration-300"
+            aria-label="Close popup">
+            <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-col gap-3 md:gap-4 text-black font-[400] text-[14px] md:text-[15px] lg:text-[16px] font-open-sans leading-relaxed">
+          <p>By accessing and using the Forbes Global Properties website, you accept and agree to be bound by these Terms & Conditions.</p>
+          <p>All property information, images, specifications, and pricing displayed on our website are for informational purposes only and are subject to change without notice.</p>
+          <p>All content on this website, including text, graphics, logos, and images, is the property of Forbes Global Properties and is protected by copyright and trademark laws.</p>
+          <p>Property transactions are subject to separate purchase agreements, verification of availability and pricing, and compliance with applicable real estate laws.</p>
+          <p>Forbes Global Properties shall not be liable for any indirect, incidental, or consequential damages arising from your use of the website or services.</p>
+          <p>For questions about these Terms & Conditions, please contact us at info@forbesglobalproperties.com.</p>
+        </div>
+        <button id="terms-popup-close-btn"
+          class="w-full md:w-auto px-8 py-3 bg-[#CF4422] hover:bg-[#BF4423] text-white font-[600] text-[14px] md:text-[16px] rounded-[8px] font-open-sans transition-all duration-300 self-end">
+          Close
+        </button>
+      </div>
+    </div>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 

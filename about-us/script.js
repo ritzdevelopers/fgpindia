@@ -1074,93 +1074,29 @@ if (document.readyState === 'loading') {
 // ============================================
 // Privacy Policy & Terms & Conditions Popups
 // ============================================
-
 function initPrivacyPolicyPopup() {
   const privacyPopup = document.getElementById('privacy-policy-popup');
-  const privacyPopupContent = document.getElementById('privacy-popup-content');
-  const privacyPopupOverlay = document.getElementById('privacy-popup-overlay');
+  const privacyPopupClose = document.getElementById('privacy-popup-close');
   const privacyPopupCloseBtn = document.getElementById('privacy-popup-close-btn');
   const privacyTriggers = document.querySelectorAll('.privacy-policy-trigger');
 
-  if (!privacyPopup || !privacyPopupContent) {
-    return;
+  if (!privacyPopup) {
+    return; // Popup doesn't exist, skip initialization
   }
 
-  let isPrivacyPopupOpen = false;
-
   function openPrivacyPopup() {
-    if (isPrivacyPopupOpen) return;
-
-    isPrivacyPopupOpen = true;
     privacyPopup.classList.remove('hidden');
     privacyPopup.classList.add('flex');
-    document.body.classList.add('popup-open');
-
-    if (typeof gsap !== 'undefined') {
-      gsap.fromTo(privacyPopup,
-        { opacity: 0 },
-        {
-          opacity: 1,
-          duration: 0.3,
-          ease: 'power2.out',
-          onComplete: () => {
-            privacyPopup.classList.add('active');
-          }
-        }
-      );
-
-      gsap.fromTo(privacyPopupContent,
-        {
-          scale: 0.9,
-          opacity: 0,
-          y: 50
-        },
-        {
-          scale: 1,
-          opacity: 1,
-          y: 0,
-          duration: 0.4,
-          ease: 'power3.out',
-          delay: 0.1
-        }
-      );
-    } else {
-      privacyPopup.classList.add('active');
-    }
+    document.body.style.overflow = 'hidden';
   }
 
   function closePrivacyPopup() {
-    if (!isPrivacyPopupOpen) return;
-
-    isPrivacyPopupOpen = false;
-
-    if (typeof gsap !== 'undefined') {
-      gsap.to(privacyPopupContent, {
-        scale: 0.9,
-        opacity: 0,
-        y: 50,
-        duration: 0.3,
-        ease: 'power2.in'
-      });
-
-      gsap.to(privacyPopup, {
-        opacity: 0,
-        duration: 0.3,
-        ease: 'power2.in',
-        delay: 0.1,
-        onComplete: () => {
-          privacyPopup.classList.remove('active', 'flex');
-          privacyPopup.classList.add('hidden');
-          document.body.classList.remove('popup-open');
-        }
-      });
-    } else {
-      privacyPopup.classList.remove('active', 'flex');
-      privacyPopup.classList.add('hidden');
-      document.body.classList.remove('popup-open');
-    }
+    privacyPopup.classList.remove('flex');
+    privacyPopup.classList.add('hidden');
+    document.body.style.overflow = '';
   }
 
+  // Event listeners for trigger elements
   privacyTriggers.forEach(trigger => {
     trigger.addEventListener('click', function (e) {
       e.preventDefault();
@@ -1168,16 +1104,24 @@ function initPrivacyPolicyPopup() {
     });
   });
 
+  // Close buttons
+  if (privacyPopupClose) {
+    privacyPopupClose.addEventListener('click', closePrivacyPopup);
+  }
   if (privacyPopupCloseBtn) {
     privacyPopupCloseBtn.addEventListener('click', closePrivacyPopup);
   }
 
-  if (privacyPopupOverlay) {
-    privacyPopupOverlay.addEventListener('click', closePrivacyPopup);
-  }
+  // Close on overlay click
+  privacyPopup.addEventListener('click', function (e) {
+    if (e.target === privacyPopup) {
+      closePrivacyPopup();
+    }
+  });
 
+  // Close on Escape key
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && isPrivacyPopupOpen) {
+    if (e.key === 'Escape' && !privacyPopup.classList.contains('hidden')) {
       closePrivacyPopup();
     }
   });
@@ -1185,90 +1129,27 @@ function initPrivacyPolicyPopup() {
 
 function initTermsConditionsPopup() {
   const termsPopup = document.getElementById('terms-conditions-popup');
-  const termsPopupContent = document.getElementById('terms-popup-content');
-  const termsPopupOverlay = document.getElementById('terms-popup-overlay');
+  const termsPopupClose = document.getElementById('terms-popup-close');
   const termsPopupCloseBtn = document.getElementById('terms-popup-close-btn');
   const termsTriggers = document.querySelectorAll('.terms-conditions-trigger');
 
-  if (!termsPopup || !termsPopupContent) {
-    return;
+  if (!termsPopup) {
+    return; // Popup doesn't exist, skip initialization
   }
 
-  let isTermsPopupOpen = false;
-
   function openTermsPopup() {
-    if (isTermsPopupOpen) return;
-
-    isTermsPopupOpen = true;
     termsPopup.classList.remove('hidden');
     termsPopup.classList.add('flex');
-    document.body.classList.add('popup-open');
-
-    if (typeof gsap !== 'undefined') {
-      gsap.fromTo(termsPopup,
-        { opacity: 0 },
-        {
-          opacity: 1,
-          duration: 0.3,
-          ease: 'power2.out',
-          onComplete: () => {
-            termsPopup.classList.add('active');
-          }
-        }
-      );
-
-      gsap.fromTo(termsPopupContent,
-        {
-          scale: 0.9,
-          opacity: 0,
-          y: 50
-        },
-        {
-          scale: 1,
-          opacity: 1,
-          y: 0,
-          duration: 0.4,
-          ease: 'power3.out',
-          delay: 0.1
-        }
-      );
-    } else {
-      termsPopup.classList.add('active');
-    }
+    document.body.style.overflow = 'hidden';
   }
 
   function closeTermsPopup() {
-    if (!isTermsPopupOpen) return;
-
-    isTermsPopupOpen = false;
-
-    if (typeof gsap !== 'undefined') {
-      gsap.to(termsPopupContent, {
-        scale: 0.9,
-        opacity: 0,
-        y: 50,
-        duration: 0.3,
-        ease: 'power2.in'
-      });
-
-      gsap.to(termsPopup, {
-        opacity: 0,
-        duration: 0.3,
-        ease: 'power2.in',
-        delay: 0.1,
-        onComplete: () => {
-          termsPopup.classList.remove('active', 'flex');
-          termsPopup.classList.add('hidden');
-          document.body.classList.remove('popup-open');
-        }
-      });
-    } else {
-      termsPopup.classList.remove('active', 'flex');
-      termsPopup.classList.add('hidden');
-      document.body.classList.remove('popup-open');
-    }
+    termsPopup.classList.remove('flex');
+    termsPopup.classList.add('hidden');
+    document.body.style.overflow = '';
   }
 
+  // Event listeners for trigger elements
   termsTriggers.forEach(trigger => {
     trigger.addEventListener('click', function (e) {
       e.preventDefault();
@@ -1276,21 +1157,30 @@ function initTermsConditionsPopup() {
     });
   });
 
+  // Close buttons
+  if (termsPopupClose) {
+    termsPopupClose.addEventListener('click', closeTermsPopup);
+  }
   if (termsPopupCloseBtn) {
     termsPopupCloseBtn.addEventListener('click', closeTermsPopup);
   }
 
-  if (termsPopupOverlay) {
-    termsPopupOverlay.addEventListener('click', closeTermsPopup);
-  }
+  // Close on overlay click
+  termsPopup.addEventListener('click', function (e) {
+    if (e.target === termsPopup) {
+      closeTermsPopup();
+    }
+  });
 
+  // Close on Escape key
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && isTermsPopupOpen) {
+    if (e.key === 'Escape' && !termsPopup.classList.contains('hidden')) {
       closeTermsPopup();
     }
   });
 }
 
+// Initialize popups when DOM is ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', function() {
     initPrivacyPolicyPopup();
