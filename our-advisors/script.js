@@ -1146,12 +1146,12 @@ function populateCountryCodeDropdown(selectElement, defaultValue = "91") {
         return a.country.localeCompare(b.country);
     });
 
-    // Add options with country name and code
+    // Add options with country code only
     sortedCountries.forEach(country => {
         const option = document.createElement('option');
         option.value = country.value;
-        // Display format: "Country Name +Code" (e.g., "India +91")
-        option.textContent = `${country.country} ${country.code}`;
+        // Display format: "+Code" (e.g., "+91")
+        option.textContent = country.code;
         option.setAttribute('data-code', country.code);
         option.setAttribute('data-country', country.country);
         selectElement.appendChild(option);

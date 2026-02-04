@@ -663,61 +663,6 @@ function initAnimations() {
     });
   }
 
-  // Section 6 - Unit Layout
-  const section6 = Array.from(allSections).find(section =>
-    section.textContent.includes('Unit Layout') ||
-    section.classList.toString().includes('F7EEE6')
-  );
-  if (section6 && shouldAnimate) {
-    // Heading animation
-    const section6Heading = section6.querySelector('h3');
-    if (section6Heading) {
-      gsap.from(section6Heading, {
-        opacity: 0,
-        y: 30,
-        duration: defaultDuration,
-        ease: defaultEase,
-        scrollTrigger: {
-          trigger: section6Heading,
-          start: 'top 85%',
-          toggleActions: 'play none none none'
-        }
-      });
-    }
-
-    // Layout images
-    const layoutImages = section6.querySelectorAll('img[alt*="BHK"]');
-    gsap.from(layoutImages, {
-      opacity: 0,
-      y: 50,
-      scale: 0.95,
-      duration: defaultDuration,
-      ease: defaultEase,
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: layoutImages[0],
-        start: 'top 85%',
-        toggleActions: 'play none none none'
-      }
-    });
-
-    // Button animation
-    const section6Button = section6.querySelector('button');
-    if (section6Button) {
-      gsap.from(section6Button, {
-        opacity: 0,
-        y: 20,
-        duration: defaultDuration,
-        ease: defaultEase,
-        scrollTrigger: {
-          trigger: section6Button,
-          start: 'top 85%',
-          toggleActions: 'play none none none'
-        }
-      });
-    }
-  }
-
   // Section 7 - Trust & Governance
   const section7 = document.querySelector('section:nth-of-type(7)');
   if (section7 && shouldAnimate) {
@@ -1102,12 +1047,12 @@ function populateCountryCodeDropdown(selectElement, defaultValue = "91") {
     return a.country.localeCompare(b.country);
   });
 
-  // Add options with country name and code
+  // Add options with country code only
   sortedCountries.forEach(country => {
     const option = document.createElement('option');
     option.value = country.value;
-    // Display format: "Country Name +Code" (e.g., "India +91")
-    option.textContent = `${country.country} ${country.code}`;
+    // Display format: "+Code" (e.g., "+91")
+    option.textContent = country.code;
     option.setAttribute('data-code', country.code);
     option.setAttribute('data-country', country.country);
     selectElement.appendChild(option);

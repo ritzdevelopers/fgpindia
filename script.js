@@ -1308,6 +1308,26 @@ async function submitToGoogleSheets(form, sheetName, options = {}) {
       data[key] = value;
     }
 
+    // Format phone number with country code
+    // Check if this form has a country code selector
+    const countryCodeSelect = form.querySelector('select[name="CountryCode"]');
+    const phoneInput = form.querySelector('input[name="Phone"]');
+    
+    if (countryCodeSelect && phoneInput) {
+      const countryCodeValue = countryCodeSelect.value || "91";
+      // Get the full phone number value directly from the input
+      const phoneNumber = phoneInput.value.trim();
+      
+      // Only format if phone number exists
+      if (phoneNumber) {
+        // Format phone number as "91-00000000" (numeric value only, no + sign)
+        data.Phone = formatPhoneNumberWithCountryCode(countryCodeValue, phoneNumber);
+      }
+      
+      // Keep country code value separate (numeric value only, no + sign)
+      data.CountryCode = countryCodeValue;
+    }
+
     // Add Date and Time in Indian format (IST - Indian Standard Time)
     // IST is UTC+5:30
     const now = new Date();
@@ -1674,6 +1694,7 @@ function initEnquiryPopup() {
       }
 
       // Submit to Google Sheets with sheet name "Sheet1"
+      // Phone number formatting with country code is handled in submitToGoogleSheets function
       // Navigation to thank you page is handled in submitToGoogleSheets function
       await submitToGoogleSheets(enquiryForm, 'Sheet1', {
         onSuccess: (data) => {
@@ -1881,4 +1902,184 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initAllForms);
 } else {
   initAllForms();
+}
+
+// ============================================
+// Country Code Data and Functions
+// ============================================
+const countryCodes = [
+  { "country": "India", "code": "+91", "value": "91" },
+  { "country": "Pakistan", "code": "+92", "value": "92" },
+  { "country": "Bangladesh", "code": "+880", "value": "880" },
+  { "country": "Sri Lanka", "code": "+94", "value": "94" },
+  { "country": "Nepal", "code": "+977", "value": "977" },
+  { "country": "China", "code": "+86", "value": "86" },
+  { "country": "Japan", "code": "+81", "value": "81" },
+  { "country": "South Korea", "code": "+82", "value": "82" },
+  { "country": "Thailand", "code": "+66", "value": "66" },
+  { "country": "Malaysia", "code": "+60", "value": "60" },
+  { "country": "Singapore", "code": "+65", "value": "65" },
+  { "country": "Indonesia", "code": "+62", "value": "62" },
+  { "country": "Philippines", "code": "+63", "value": "63" },
+  { "country": "Vietnam", "code": "+84", "value": "84" },
+  { "country": "Afghanistan", "code": "+93", "value": "93" },
+  { "country": "Saudi Arabia", "code": "+966", "value": "966" },
+  { "country": "United Arab Emirates", "code": "+971", "value": "971" },
+  { "country": "Qatar", "code": "+974", "value": "974" },
+  { "country": "Kuwait", "code": "+965", "value": "965" },
+  { "country": "Oman", "code": "+968", "value": "968" },
+  { "country": "Bahrain", "code": "+973", "value": "973" },
+  { "country": "Iran", "code": "+98", "value": "98" },
+  { "country": "Iraq", "code": "+964", "value": "964" },
+  { "country": "Israel", "code": "+972", "value": "972" },
+  { "country": "Jordan", "code": "+962", "value": "962" },
+  { "country": "Lebanon", "code": "+961", "value": "961" },
+  { "country": "Yemen", "code": "+967", "value": "967" },
+  { "country": "United Kingdom", "code": "+44", "value": "44" },
+  { "country": "Germany", "code": "+49", "value": "49" },
+  { "country": "France", "code": "+33", "value": "33" },
+  { "country": "Italy", "code": "+39", "value": "39" },
+  { "country": "Spain", "code": "+34", "value": "34" },
+  { "country": "Netherlands", "code": "+31", "value": "31" },
+  { "country": "Belgium", "code": "+32", "value": "32" },
+  { "country": "Switzerland", "code": "+41", "value": "41" },
+  { "country": "Austria", "code": "+43", "value": "43" },
+  { "country": "Sweden", "code": "+46", "value": "46" },
+  { "country": "Norway", "code": "+47", "value": "47" },
+  { "country": "Denmark", "code": "+45", "value": "45" },
+  { "country": "Poland", "code": "+48", "value": "48" },
+  { "country": "Russia", "code": "+7", "value": "7" },
+  { "country": "United States", "code": "+1", "value": "1" },
+  { "country": "Canada", "code": "+1", "value": "1" },
+  { "country": "Mexico", "code": "+52", "value": "52" },
+  { "country": "Brazil", "code": "+55", "value": "55" },
+  { "country": "Argentina", "code": "+54", "value": "54" },
+  { "country": "Chile", "code": "+56", "value": "56" },
+  { "country": "Colombia", "code": "+57", "value": "57" },
+  { "country": "Peru", "code": "+51", "value": "51" },
+  { "country": "Venezuela", "code": "+58", "value": "58" },
+  { "country": "Uruguay", "code": "+598", "value": "598" },
+  { "country": "Paraguay", "code": "+595", "value": "595" },
+  { "country": "Bolivia", "code": "+591", "value": "591" }
+];
+
+/**
+ * Populate country code dropdown
+ * @param {HTMLElement} selectElement - The select element to populate
+ * @param {string} defaultValue - Default country code value (default: "91" for India)
+ */
+function populateCountryCodeDropdown(selectElement, defaultValue = "91") {
+  if (!selectElement) return;
+
+  // Clear existing options
+  selectElement.innerHTML = '';
+
+  // Sort countries alphabetically by country name
+  const sortedCountries = [...countryCodes].sort((a, b) => {
+    return a.country.localeCompare(b.country);
+  });
+
+  // Add options with country code only
+  sortedCountries.forEach(country => {
+    const option = document.createElement('option');
+    option.value = country.value;
+    // Display format: "+Code" (e.g., "+91")
+    option.textContent = country.code;
+    option.setAttribute('data-code', country.code);
+    option.setAttribute('data-country', country.country);
+    selectElement.appendChild(option);
+  });
+
+  // Set default to India (+91)
+  selectElement.value = defaultValue;
+}
+
+/**
+ * Initialize country code dropdowns
+ */
+function initCountryCodeDropdowns() {
+  const callbackCountryCode = document.getElementById('callback-country-code');
+  const popupCountryCode = document.getElementById('popup-country-code');
+
+  if (callbackCountryCode) {
+    populateCountryCodeDropdown(callbackCountryCode, "91");
+  }
+
+  if (popupCountryCode) {
+    populateCountryCodeDropdown(popupCountryCode, "91");
+  }
+}
+
+/**
+ * Format phone number with country code
+ * @param {string} countryCodeValue - Country code value (e.g., "91")
+ * @param {string} phoneNumber - Phone number without country code
+ * @returns {string} Formatted phone number (e.g., "91-1234567890")
+ */
+function formatPhoneNumberWithCountryCode(countryCodeValue, phoneNumber) {
+  if (!phoneNumber) return '';
+  
+  // Remove any spaces, dashes, or special characters, but keep all digits
+  let cleanPhone = phoneNumber.replace(/[^\d]/g, '');
+  
+  // Remove leading country code if user accidentally included it
+  // Check if phone starts with the selected country code
+  if (cleanPhone.startsWith(countryCodeValue)) {
+    cleanPhone = cleanPhone.substring(countryCodeValue.length);
+  }
+  
+  // Format as "91-00000000" (numeric value only, no + sign)
+  return `${countryCodeValue}-${cleanPhone}`;
+}
+
+// Initialize country code dropdowns when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCountryCodeDropdowns);
+} else {
+  initCountryCodeDropdowns();
+}
+
+/**
+ * Validate phone input to allow only numbers
+ * @param {HTMLElement} inputElement - The phone input element
+ */
+function validatePhoneInput(inputElement) {
+  if (!inputElement) return;
+
+  inputElement.addEventListener('input', function(e) {
+    // Remove any non-numeric characters
+    const value = e.target.value.replace(/[^\d]/g, '');
+    
+    // Update the input value with only numbers
+    if (e.target.value !== value) {
+      e.target.value = value;
+    }
+  });
+}
+
+// Initialize phone input validation
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function() {
+    const callbackPhone = document.getElementById('callback-phone');
+    const popupPhone = document.getElementById('popup-phone');
+
+    if (callbackPhone) {
+      validatePhoneInput(callbackPhone);
+    }
+
+    if (popupPhone) {
+      validatePhoneInput(popupPhone);
+    }
+  });
+} else {
+  const callbackPhone = document.getElementById('callback-phone');
+  const popupPhone = document.getElementById('popup-phone');
+
+  if (callbackPhone) {
+    validatePhoneInput(callbackPhone);
+  }
+
+  if (popupPhone) {
+    validatePhoneInput(popupPhone);
+  }
 }
