@@ -475,9 +475,10 @@ function initAnimations() {
 
   // Section 2 - Overview Section
   const section2 = document.querySelector('section:nth-of-type(2)');
-  if (section2 && shouldAnimate) {
-    const section2Content = section2.querySelectorAll('h2, p, img, .flex.flex-col.gap-2');
-    gsap.utils.toArray(section2Content).forEach((el, index) => {
+  if (section2 && shouldAnimate && !section2.classList.contains('no-animation')) {
+    const section2Content = section2.querySelectorAll('h2:not(.no-animation), p:not(.no-animation), img:not(.no-animation), .flex.flex-col.gap-2:not(.no-animation)');
+    const filteredContent = Array.from(section2Content).filter(el => !el.closest('.no-animation'));
+    gsap.utils.toArray(filteredContent).forEach((el, index) => {
       gsap.from(el, {
         opacity: 0,
         y: 40,
@@ -495,7 +496,7 @@ function initAnimations() {
 
   // Section 3 - Pillars of a Better Life
   const section3 = document.querySelector('section:nth-of-type(3)');
-  if (section3 && shouldAnimate) {
+  if (section3 && shouldAnimate && !section3.classList.contains('no-animation')) {
     // Heading animation
     const section3Heading = section3.querySelector('p.font-baskervville');
     if (section3Heading) {
@@ -569,7 +570,7 @@ function initAnimations() {
     section.textContent.includes('Location Advantage') ||
     section.classList.toString().includes('BF4423')
   );
-  if (section4 && shouldAnimate) {
+  if (section4 && shouldAnimate && !section4.classList.contains('no-animation')) {
     // Heading animation
     const section4Headings = section4.querySelectorAll('h3, p.font-baskervville');
     gsap.from(section4Headings, {
@@ -630,7 +631,7 @@ function initAnimations() {
 
   // Section 5 - Layouts & Planning
   const section5 = document.querySelector('section:nth-of-type(5)');
-  if (section5 && shouldAnimate) {
+  if (section5 && shouldAnimate && !section5.classList.contains('no-animation')) {
     // Heading animation
     const section5Heading = section5.querySelector('h3');
     if (section5Heading) {
@@ -663,27 +664,44 @@ function initAnimations() {
     });
   }
 
+  // Section 6 - Unit Layout (NO ANIMATIONS - explicitly skipped)
+  const section6 = document.querySelector('section:nth-of-type(6)');
+  if (section6) {
+    // Explicitly disable all animations for this section
+    const section6Elements = section6.querySelectorAll('*');
+    section6Elements.forEach(el => {
+      el.classList.add('no-animation');
+      // Kill any existing GSAP animations on these elements
+      if (typeof gsap !== 'undefined') {
+        gsap.killTweensOf(el);
+      }
+    });
+  }
+
   // Section 7 - Trust & Governance
   const section7 = document.querySelector('section:nth-of-type(7)');
-  if (section7 && shouldAnimate) {
+  if (section7 && shouldAnimate && !section7.classList.contains('no-animation')) {
     // Text content animation
-    const section7Text = section7.querySelectorAll('h2, p');
-    gsap.from(section7Text, {
-      opacity: 0,
-      y: 30,
-      duration: defaultDuration,
-      ease: defaultEase,
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: section7Text[0],
+    const section7Text = section7.querySelectorAll('h2:not(.no-animation), p:not(.no-animation)');
+    const filteredSection7Text = Array.from(section7Text).filter(el => !el.closest('.no-animation'));
+    if (filteredSection7Text.length > 0) {
+      gsap.from(filteredSection7Text, {
+        opacity: 0,
+        y: 30,
+        duration: defaultDuration,
+        ease: defaultEase,
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: filteredSection7Text[0],
         start: 'top 85%',
         toggleActions: 'play none none none'
       }
-    });
+      });
+    }
 
     // Image animation
-    const section7Image = section7.querySelector('img');
-    if (section7Image) {
+    const section7Image = section7.querySelector('img:not(.no-animation)');
+    if (section7Image && !section7Image.closest('.no-animation')) {
       gsap.from(section7Image, {
         opacity: 0,
         scale: 0.9,
@@ -700,10 +718,10 @@ function initAnimations() {
 
   // Section 8 - Featured Project (Form Section)
   const section8 = document.getElementById('featured-project');
-  if (section8 && shouldAnimate) {
+  if (section8 && shouldAnimate && !section8.classList.contains('no-animation')) {
     // Form container
     const formContainer = section8.querySelector('#sec4-form');
-    if (formContainer) {
+    if (formContainer && !formContainer.closest('.no-animation')) {
       gsap.from(formContainer, {
         opacity: 0,
         x: isMobile ? 0 : -50,
@@ -718,16 +736,17 @@ function initAnimations() {
     }
 
     // Cards animation
-    const section8Cards = section8.querySelectorAll('#sec4-card1, #sec4-card2, #sec4-card3');
-    gsap.from(section8Cards, {
+    const section8Cards = section8.querySelectorAll('#sec4-card1:not(.no-animation), #sec4-card2:not(.no-animation), #sec4-card3:not(.no-animation)');
+    const filteredCards = Array.from(section8Cards).filter(card => !card.closest('.no-animation'));
+    gsap.from(filteredCards, {
       opacity: 0,
       y: 50,
       scale: 0.95,
       duration: defaultDuration,
       ease: defaultEase,
       stagger: 0.15,
-      scrollTrigger: {
-        trigger: section8Cards[0],
+        scrollTrigger: {
+          trigger: filteredCards[0] || section8,
         start: 'top 85%',
         toggleActions: 'play none none none'
       }
@@ -736,7 +755,7 @@ function initAnimations() {
 
   // Footer animations
   const footer = document.getElementById('footer');
-  if (footer && shouldAnimate) {
+  if (footer && shouldAnimate && !footer.classList.contains('no-animation')) {
     const footerContent = footer.querySelectorAll('#footer-row1 > *, #footer-row2 > *');
     gsap.from(footerContent, {
       opacity: 0,
@@ -970,6 +989,236 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initEnquiryPopup);
 } else {
   initEnquiryPopup();
+}
+
+// ============================================
+// Privacy Policy & Terms & Conditions Popups
+// ============================================
+
+function initPrivacyPolicyPopup() {
+  const privacyPopup = document.getElementById('privacy-policy-popup');
+  const privacyPopupContent = document.getElementById('privacy-popup-content');
+  const privacyPopupOverlay = document.getElementById('privacy-popup-overlay');
+  const privacyPopupCloseBtn = document.getElementById('privacy-popup-close-btn');
+  const privacyTriggers = document.querySelectorAll('.privacy-policy-trigger');
+
+  if (!privacyPopup || !privacyPopupContent) {
+    return;
+  }
+
+  let isPrivacyPopupOpen = false;
+
+  function openPrivacyPopup() {
+    if (isPrivacyPopupOpen) return;
+
+    isPrivacyPopupOpen = true;
+    privacyPopup.classList.remove('hidden');
+    privacyPopup.classList.add('flex');
+    document.body.classList.add('popup-open');
+
+    if (typeof gsap !== 'undefined') {
+      gsap.fromTo(privacyPopup,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 0.3,
+          ease: 'power2.out',
+          onComplete: () => {
+            privacyPopup.classList.add('active');
+          }
+        }
+      );
+
+      gsap.fromTo(privacyPopupContent,
+        {
+          scale: 0.9,
+          opacity: 0,
+          y: 50
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          y: 0,
+          duration: 0.4,
+          ease: 'power3.out',
+          delay: 0.1
+        }
+      );
+    } else {
+      privacyPopup.classList.add('active');
+    }
+  }
+
+  function closePrivacyPopup() {
+    if (!isPrivacyPopupOpen) return;
+
+    isPrivacyPopupOpen = false;
+
+    if (typeof gsap !== 'undefined') {
+      gsap.to(privacyPopupContent, {
+        scale: 0.9,
+        opacity: 0,
+        y: 50,
+        duration: 0.3,
+        ease: 'power2.in'
+      });
+
+      gsap.to(privacyPopup, {
+        opacity: 0,
+        duration: 0.3,
+        ease: 'power2.in',
+        delay: 0.1,
+        onComplete: () => {
+          privacyPopup.classList.remove('active', 'flex');
+          privacyPopup.classList.add('hidden');
+          document.body.classList.remove('popup-open');
+        }
+      });
+    } else {
+      privacyPopup.classList.remove('active', 'flex');
+      privacyPopup.classList.add('hidden');
+      document.body.classList.remove('popup-open');
+    }
+  }
+
+  privacyTriggers.forEach(trigger => {
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      openPrivacyPopup();
+    });
+  });
+
+  if (privacyPopupCloseBtn) {
+    privacyPopupCloseBtn.addEventListener('click', closePrivacyPopup);
+  }
+
+  if (privacyPopupOverlay) {
+    privacyPopupOverlay.addEventListener('click', closePrivacyPopup);
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && isPrivacyPopupOpen) {
+      closePrivacyPopup();
+    }
+  });
+}
+
+function initTermsConditionsPopup() {
+  const termsPopup = document.getElementById('terms-conditions-popup');
+  const termsPopupContent = document.getElementById('terms-popup-content');
+  const termsPopupOverlay = document.getElementById('terms-popup-overlay');
+  const termsPopupCloseBtn = document.getElementById('terms-popup-close-btn');
+  const termsTriggers = document.querySelectorAll('.terms-conditions-trigger');
+
+  if (!termsPopup || !termsPopupContent) {
+    return;
+  }
+
+  let isTermsPopupOpen = false;
+
+  function openTermsPopup() {
+    if (isTermsPopupOpen) return;
+
+    isTermsPopupOpen = true;
+    termsPopup.classList.remove('hidden');
+    termsPopup.classList.add('flex');
+    document.body.classList.add('popup-open');
+
+    if (typeof gsap !== 'undefined') {
+      gsap.fromTo(termsPopup,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 0.3,
+          ease: 'power2.out',
+          onComplete: () => {
+            termsPopup.classList.add('active');
+          }
+        }
+      );
+
+      gsap.fromTo(termsPopupContent,
+        {
+          scale: 0.9,
+          opacity: 0,
+          y: 50
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          y: 0,
+          duration: 0.4,
+          ease: 'power3.out',
+          delay: 0.1
+        }
+      );
+    } else {
+      termsPopup.classList.add('active');
+    }
+  }
+
+  function closeTermsPopup() {
+    if (!isTermsPopupOpen) return;
+
+    isTermsPopupOpen = false;
+
+    if (typeof gsap !== 'undefined') {
+      gsap.to(termsPopupContent, {
+        scale: 0.9,
+        opacity: 0,
+        y: 50,
+        duration: 0.3,
+        ease: 'power2.in'
+      });
+
+      gsap.to(termsPopup, {
+        opacity: 0,
+        duration: 0.3,
+        ease: 'power2.in',
+        delay: 0.1,
+        onComplete: () => {
+          termsPopup.classList.remove('active', 'flex');
+          termsPopup.classList.add('hidden');
+          document.body.classList.remove('popup-open');
+        }
+      });
+    } else {
+      termsPopup.classList.remove('active', 'flex');
+      termsPopup.classList.add('hidden');
+      document.body.classList.remove('popup-open');
+    }
+  }
+
+  termsTriggers.forEach(trigger => {
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      openTermsPopup();
+    });
+  });
+
+  if (termsPopupCloseBtn) {
+    termsPopupCloseBtn.addEventListener('click', closeTermsPopup);
+  }
+
+  if (termsPopupOverlay) {
+    termsPopupOverlay.addEventListener('click', closeTermsPopup);
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && isTermsPopupOpen) {
+      closeTermsPopup();
+    }
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function() {
+    initPrivacyPolicyPopup();
+    initTermsConditionsPopup();
+  });
+} else {
+  initPrivacyPolicyPopup();
+  initTermsConditionsPopup();
 }
 
 // ============================================
