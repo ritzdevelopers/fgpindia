@@ -54,47 +54,24 @@
       class="w-full flex justify-between absolute top-0 left-0 z-50 pr-4 xl:pr-20 xl:pl-10 transition-all duration-300 py-2 px-4"
     >
       <!-- Left Side Logo Container  -->
-      <a
-        href="/"
-        class="flex items-center md:w-[202px] w-[126px] h-auto cursor-pointer logo-link"
-      >
+      <a href="/"	class="flex items-center h-[65px] w-[147px]">
         <!-- By DEfault It Wil Show  -->
-        <img
-          id="default-logo"
-          src="img/logo/white-logo2.png"
-          alt="logo"
-          class="transition-opacity duration-300"
-        />
+        <img id="default-logo" src="img/logo/white-logo2.png" alt="logo" class=" transition-opacity duration-300" />
 
         <!-- It Will SHow After Scroll  -->
-        <img
-          id="scroll-logo"
-          src="img/logo/white-logo2.png"
-          alt="logo"
-          class="overflow-hidden transition-opacity duration-300 hidden w-[156px]"
-        />
+        <img id="scroll-logo" src="img/logo/white-logo2.png" alt="logo"
+          class=" overflow-hidden transition-opacity duration-300 hidden" />
       </a>
 
       <!-- Desktop Navigation Links Container  -->
       <div class="hidden lg:block pt-4">
         <ul
-          class="flex justify-center items-center gap-8 text-white font-[700] text-[13px] xl:text-[15px] font-open-sans"
-        >
-          <li class="hover:text-[#BF4423] cursor-pointer">
-            <a href="/" class="nav-home-link">Home</a>
-          </li>
-          <li class="hover:text-[#BF4423] cursor-pointer">
-            <a href="/about-us">About Us</a>
-          </li>
-          <li class="hover:text-[#BF4423] cursor-pointer">
-            <a href="/our-advisors">Our Advisors</a>
-          </li>
-          <li class="hover:text-[#BF4423] cursor-pointer">
-            <a href="/mission-&amp;-vision">Our Mission</a>
-          </li>
-          <li class="hover:text-[#BF4423] cursor-pointer">
-            <a href="/fab-luxe/" class="nav-featured-link">Featured Project</a>
-          </li>
+          class="flex justify-center items-center gap-8  text-white font-[700] text-[13px] xl:text-[15px] font-open-sans">
+          <li class="hover:text-[#BF4423] cursor-pointer"><a href="/">Home</a></li>
+          <li class="hover:text-[#BF4423] cursor-pointer"><a href="/about-us">About Us</a></li>
+          <li class="hover:text-[#BF4423] cursor-pointer"><a href="/our-advisors">Our Advisors</a></li>
+          <li class="hover:text-[#BF4423] cursor-pointer"><a href="/mission-&amp;-vision">Our Mission</a></li>
+          <li class="hover:text-[#BF4423] cursor-pointer"><a href="/fab-luxe">Featured Project</a></li>
           <li>
             <button onclick="window.location.href='/contact-us'" class="bg-[#CF4422] text-white font-[700] rounded-[4px] hover:bg-[#BF4423] cursor-pointer px-4 py-2 text-[13px] xl:text-[15px] font-open-sans">
               Contact Us
@@ -104,42 +81,16 @@
       </div>
 
       <!-- Mobile Menu Button -->
-      <button
-        id="mobile-menu-btn"
-        class="lg:hidden text-white z-50 relative"
-        aria-label="Toggle menu"
-      >
+      <button id="mobile-menu-btn" class="lg:hidden text-white z-50 relative" aria-label="Toggle menu">
         <!-- Menu Icon SVG -->
-        <svg
-          id="menu-icon"
-          class="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          ></path>
+        <svg id="menu-icon" class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
         <!-- Close Icon SVG -->
-        <svg
-          id="close-icon"
-          class="w-6 h-6 hidden"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"
-          ></path>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
     </div>
@@ -152,42 +103,32 @@
       <div class="w-full h-full flex flex-col justify-center items-center px-8">
         <ul class="flex flex-col justify-center items-center gap-8 text-black">
           <li class="mobile-menu-item">
-            <a
-              href="/"
-              class="nav-home-link text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors"
-            >
+            <a href="/"
+              class="text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors">
               Home
             </a>
           </li>
           <li class="mobile-menu-item">
-            <a
-              href="/about-us"
-              class="text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors"
-            >
+            <a href="/about-us"
+              class="text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors">
               About Us
             </a>
           </li>
           <li class="mobile-menu-item">
-            <a
-              href="/our-advisors"
-              class="text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors"
-            >
+            <a href="/our-advisors"
+              class="text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors">
               Our Advisors
             </a>
           </li>
           <li class="mobile-menu-item">
-            <a
-              href="/mission-&amp;-vision"
-              class="text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors"
-            >
+            <a href="/mission-&amp;-vision"
+              class="text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors">
               Our Mission
             </a>
           </li>
           <li class="mobile-menu-item">
-            <a
-              href="#"
-              class="nav-featured-link text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors"
-            >
+            <a href="#featured-project"
+              class="text-2xl md:text-3xl font-[700] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors">
               Featured Project
             </a>
           </li>
@@ -196,27 +137,13 @@
               Contact Us
             </button>
           </li>
-
         </ul>
         <!-- Close Button at Bottom -->
-        <button
-          id="mobile-menu-close-btn"
+        <button id="mobile-menu-close-btn"
           class="mobile-menu-item mt-12 flex items-center justify-center gap-2 text-black font-[600] text-[18px] md:text-[20px] font-open-sans hover:text-[#BF4423] cursor-pointer transition-colors"
-          aria-label="Close menu"
-        >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            ></path>
+          aria-label="Close menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
           <span>Close</span>
         </button>
@@ -249,18 +176,21 @@
 
 
 
-          <!-- Fixed Position Button For Contact Us  -->
-          <button
-          class="enquiry-popup-trigger fixed top-[30%] bg-[#CF4422] text-white font-[600] font-[700] rounded-[4px] hover:bg-[#BF4423] cursor-pointer z-40
-          w-[100px] h-[32px] text-[9px] -right-[42px] sm:w-[110px] sm:h-[35px] sm:text-[10px] sm:-right-[45px]
-          md:w-[120px] md:h-[36px] md:text-[10px] md:-right-[48px]
-          lg:w-[130px] lg:h-[38px] lg:text-[11px] lg:-right-[50px]
-          xl:w-[137px] xl:h-[43px] xl:text-[13px] xl:-right-[52px]"
-          style="transform: translateY(-50%) rotate(-90deg) translateZ(0); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; backface-visibility: hidden; will-change: transform; text-rendering: optimizeLegibility;">
-        <p>
-          Get In Touch
-        </p>
-      </button>
+           <!-- Fixed Position Button For Contact Us  -->
+  <button
+  class="enquiry-popup-trigger fixed top-[30%] bg-[#CF4422] text-white font-[600] font-[700] rounded-[4px] hover:bg-[#BF4423] cursor-pointer z-40
+  w-[100px] h-[32px] text-[9px] -right-[42px] sm:w-[110px] sm:h-[35px] sm:text-[10px] sm:-right-[45px]
+  md:w-[120px] md:h-[36px] md:text-[10px] md:-right-[48px]
+  lg:w-[130px] lg:h-[38px] lg:text-[11px] 
+  xl:w-[137px] xl:h-[43px] xl:text-[13px] "
+  style="transform: translateY(-50%) rotate(-90deg) translateZ(0); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; backface-visibility: hidden; will-change: transform; text-rendering: optimizeLegibility;">
+  <p>
+    Get In Touch
+  </p>
+</button>
+
+
+
     <!-- Section 1  -->
     <section
       class="s1 w-full lg:min-h-[552px] min-h-[90vh] relative overflow-hidden flex items-center justify-center lg:justify-start pl-5 md:pl-10 text-center lg:text-start"
