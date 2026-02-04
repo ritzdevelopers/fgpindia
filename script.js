@@ -1798,49 +1798,80 @@ function initAllForms() {
       // Get email from form
       const emailInput = document.getElementById('footer-email-input');
       const email = emailInput ? emailInput.value.trim() : '';
+      const submitBtn = footerEmailForm.querySelector('button[type="submit"]');
+      const originalBtnOpacity = submitBtn ? submitBtn.style.opacity : '';
 
       if (!email) {
         return;
       }
 
-      // Add hidden fields to the form for Name, Phone, and Message
-      // Check if they already exist to avoid duplicates
-      let nameField = footerEmailForm.querySelector('input[name="Name"]');
-      if (!nameField) {
-        nameField = document.createElement('input');
-        nameField.type = 'hidden';
-        nameField.name = 'Name';
-        footerEmailForm.appendChild(nameField);
+      // Show loading state
+      showLoader();
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.style.cursor = 'not-allowed';
+        submitBtn.style.opacity = '0.5';
       }
-      nameField.value = '';
 
-      let phoneField = footerEmailForm.querySelector('input[name="Phone"]');
-      if (!phoneField) {
-        phoneField = document.createElement('input');
-        phoneField.type = 'hidden';
-        phoneField.name = 'Phone';
-        footerEmailForm.appendChild(phoneField);
-      }
-      phoneField.value = '';
-
-      let messageField = footerEmailForm.querySelector('input[name="Message"], textarea[name="Message"]');
-      if (!messageField) {
-        messageField = document.createElement('input');
-        messageField.type = 'hidden';
-        messageField.name = 'Message';
-        footerEmailForm.appendChild(messageField);
-      }
-      messageField.value = 'bottom enquiry';
-
-      // Submit using the same function - will navigate to thank you page on success
-      await submitToGoogleSheets(footerEmailForm, 'Sheet1', {
-        onSuccess: (data) => {
-          console.log('Footer email form submitted successfully:', data);
-        },
-        onError: (error) => {
-          console.error('Error submitting footer email form:', error);
+      try {
+        // Add hidden fields to the form for Name, Phone, and Message
+        // Check if they already exist to avoid duplicates
+        let nameField = footerEmailForm.querySelector('input[name="Name"]');
+        if (!nameField) {
+          nameField = document.createElement('input');
+          nameField.type = 'hidden';
+          nameField.name = 'Name';
+          footerEmailForm.appendChild(nameField);
         }
-      });
+        nameField.value = '';
+
+        let phoneField = footerEmailForm.querySelector('input[name="Phone"]');
+        if (!phoneField) {
+          phoneField = document.createElement('input');
+          phoneField.type = 'hidden';
+          phoneField.name = 'Phone';
+          footerEmailForm.appendChild(phoneField);
+        }
+        phoneField.value = '';
+
+        let messageField = footerEmailForm.querySelector('input[name="Message"], textarea[name="Message"]');
+        if (!messageField) {
+          messageField = document.createElement('input');
+          messageField.type = 'hidden';
+          messageField.name = 'Message';
+          footerEmailForm.appendChild(messageField);
+        }
+        messageField.value = 'bottom enquiry';
+
+        // Submit using the same function - will navigate to thank you page on success
+        await submitToGoogleSheets(footerEmailForm, 'Sheet1', {
+          onSuccess: (data) => {
+            console.log('Footer email form submitted successfully:', data);
+          },
+          onError: (error) => {
+            console.error('Error submitting footer email form:', error);
+          }
+        });
+
+        // Hide loader after successful submission
+        hideLoader();
+        
+        // Navigate to thank you page after successful submission
+        setTimeout(() => {
+          window.location.href = '/thankyou.html';
+        }, 300);
+      } catch (error) {
+        console.error('Error submitting footer email form:', error);
+        hideLoader();
+        showErrorPopup('There was an error submitting your email. Please try again.');
+        
+        // Reset button state
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.style.cursor = '';
+          submitBtn.style.opacity = originalBtnOpacity || '1';
+        }
+      }
     });
   }
 }

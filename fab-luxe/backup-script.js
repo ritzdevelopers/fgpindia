@@ -1730,7 +1730,7 @@ async function submitToCRM(form, formData) {
       
       // Navigate to thank you page after successful submission
       setTimeout(() => {
-        window.location.href = 'thankyou.html';
+        window.location.href = '/thankyou.html';
       }, isEnquiryForm ? 400 : 300);
       
       console.log('✅ CRM data sent successfully!');

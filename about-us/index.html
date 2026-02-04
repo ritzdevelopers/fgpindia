@@ -141,7 +141,20 @@
             </button>
         </div>
     </div>
-
+    <!-- Loader Popup -->
+    <div id="loader-popup"
+        class="fixed inset-0 z-[20000] hidden items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm">
+        <div
+            class="bg-white rounded-[20px] md:rounded-[24px] p-8 md:p-12 flex flex-col items-center gap-6 md:gap-8 max-w-[400px] mx-4">
+            <div
+                class="loader-spinner w-16 h-16 md:w-20 md:h-20 border-4 border-[#F9F9F9] border-t-[#CF4422] rounded-full animate-spin">
+            </div>
+            <p class="text-black font-[600] text-[16px] md:text-[18px] font-open-sans text-center">Submitting your
+                request...
+            </p>
+            <p class="text-gray-600 font-[400] text-[14px] md:text-[15px] font-open-sans text-center">Please wait</p>
+        </div>
+    </div>
     <!-- Section 1  -->
     <section
         class="s1 w-full lg:min-h-[552px]  min-h-[90vh] relative overflow-hidden flex items-center justify-center lg:justify-start pl-5 md:pl-10 text-center lg:text-start">
@@ -182,7 +195,10 @@
             <div
                 class="flex w-full justify-center flex-col items-center gap-6 sm:gap-8 md:gap-10 lg:gap-[40px] text-center">
                 <p class="font-[400] text-[16px] lg:max-w-[800px] px-4 sm:px-6 md:px-0 font-open-sans">
-                    As the India arm of Forbes Global Properties,India Forbes Global properties extends beyond developing luxury projects we are building an integrated ecosystem that connects Indian and international luxury real estate through trusted advisory, luxury developments and market intelligence
+                    As the India arm of Forbes Global Properties,India Forbes Global properties extends beyond
+                    developing luxury projects we are building an integrated ecosystem that connects Indian and
+                    international luxury real estate through trusted advisory, luxury developments and market
+                    intelligence
                 </p>
 
             </div>
@@ -862,22 +878,16 @@
                     </p>
                     <ul
                         class="flex flex-col gap-2 font-[400] text-[12px] md:text-[14px] text-black mt-2 md:mt-0 font-open-sans text-center md:text-left">
-                        <li><a href="#"
-                                class="nav-home-link hover:text-[#BF4423] transition-colors cursor-pointer">Home</a>
+                        <li><a href="/about-us/" class="hover:text-[#BF4423] transition-colors cursor-pointer">About
+                                Us</a>
                         </li>
-                        <li><a href="#"
-                                class="nav-about-link hover:text-[#BF4423] transition-colors cursor-pointer">About
-                                Us</a></li>
-                        <li><a href="#"
-                                class="nav-luxury-link hover:text-[#BF4423] transition-colors cursor-pointer">Luxury &
-                                Clarity</a></li>
-                        <li><a href="#"
-                                class="nav-featured-link hover:text-[#BF4423] transition-colors cursor-pointer">Featured
-                                Project</a></li>
+                        <li><a href="/our-advisors/" class="hover:text-[#BF4423] transition-colors cursor-pointer">Our
+                                Advisors</a></li>
+                        <li><a href="/mission-&-vision/"
+                                class="hover:text-[#BF4423] transition-colors cursor-pointer">Our Missions</a></li>
                         <li><a href="#"
                                 class="enquiry-popup-trigger hover:text-[#BF4423] transition-colors cursor-pointer">Get
-                                in
-                                Touch</a></li>
+                                In Touch</a></li>
                     </ul>
                 </div>
 

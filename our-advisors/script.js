@@ -1770,7 +1770,7 @@ async function submitToCRM(form, formData) {
 
             // Navigate to thank you page after successful submission
             setTimeout(() => {
-                window.location.href = 'thankyou.html';
+                window.location.href = '/thankyou.html';
             }, isEnquiryForm ? 400 : 300);
 
             console.log('✅ CRM data sent successfully!');
@@ -1907,6 +1907,10 @@ function initFooterEmailForm() {
 
         const emailInput = document.getElementById('footer-email-input');
         const email = emailInput.value.trim();
+        const submitBtn = footerForm.querySelector('button[type="submit"]');
+        const submitBtnImg = submitBtn ? submitBtn.querySelector('img') : null;
+        const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+        const originalBtnOpacity = submitBtn ? submitBtn.style.opacity : '';
 
         // Validate email
         if (!email) {
@@ -1920,45 +1924,74 @@ function initFooterEmailForm() {
             return;
         }
 
-        // Create a temporary form data object for footer form
-        // Footer form needs special handling - add "Footer Enquiry" as message
-        const tempForm = document.createElement('form');
-        const nameInput = document.createElement('input');
-        nameInput.type = 'hidden';
-        nameInput.name = 'Name';
-        nameInput.value = email.split('@')[0] || 'Footer Subscriber';
+        // Show loading state
+        showLoader();
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.style.cursor = 'not-allowed';
+            submitBtn.style.opacity = '0.5';
+        }
 
-        const emailInputField = document.createElement('input');
-        emailInputField.type = 'hidden';
-        emailInputField.name = 'Email';
-        emailInputField.value = email;
+        try {
+            // Create a temporary form data object for footer form
+            // Footer form needs special handling - add "Footer Enquiry" as message
+            const tempForm = document.createElement('form');
+            const nameInput = document.createElement('input');
+            nameInput.type = 'hidden';
+            nameInput.name = 'Name';
+            nameInput.value = email.split('@')[0] || 'Footer Subscriber';
 
-        const phoneInput = document.createElement('input');
-        phoneInput.type = 'hidden';
-        phoneInput.name = 'Phone';
-        phoneInput.value = 'N/A';
+            const emailInputField = document.createElement('input');
+            emailInputField.type = 'hidden';
+            emailInputField.name = 'Email';
+            emailInputField.value = email;
 
-        const messageInput = document.createElement('input');
-        messageInput.type = 'hidden';
-        messageInput.name = 'Message';
-        messageInput.value = 'Footer Enquiry';
+            const phoneInput = document.createElement('input');
+            phoneInput.type = 'hidden';
+            phoneInput.name = 'Phone';
+            phoneInput.value = 'N/A';
 
-        tempForm.appendChild(nameInput);
-        tempForm.appendChild(emailInputField);
-        tempForm.appendChild(phoneInput);
-        tempForm.appendChild(messageInput);
+            const messageInput = document.createElement('input');
+            messageInput.type = 'hidden';
+            messageInput.name = 'Message';
+            messageInput.value = 'Footer Enquiry';
 
-        // Submit to Google Sheets with sheet name "Footer"
-        await submitToGoogleSheets(tempForm, 'Footer', {
-            onSuccess: (data) => {
-                console.log('Footer form submitted successfully:', data);
-                // Clear the input
-                emailInput.value = '';
-            },
-            onError: (error) => {
-                console.error('Error submitting footer form:', error);
+            tempForm.appendChild(nameInput);
+            tempForm.appendChild(emailInputField);
+            tempForm.appendChild(phoneInput);
+            tempForm.appendChild(messageInput);
+
+            // Submit to Google Sheets with sheet name "Footer"
+            await submitToGoogleSheets(tempForm, 'Footer', {
+                onSuccess: (data) => {
+                    console.log('Footer form submitted successfully:', data);
+                    // Clear the input
+                    emailInput.value = '';
+                },
+                onError: (error) => {
+                    console.error('Error submitting footer form:', error);
+                }
+            });
+
+            // Hide loader after successful submission
+            hideLoader();
+            
+            // Navigate to thank you page after successful submission
+            setTimeout(() => {
+                window.location.href = '/thankyou.html';
+            }, 300);
+        } catch (error) {
+            console.error('Error submitting footer form:', error);
+            hideLoader();
+            showErrorPopup('There was an error submitting your email. Please try again.');
+            
+            // Reset button state
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.style.cursor = '';
+                submitBtn.style.opacity = originalBtnOpacity || '1';
             }
-        });
+        }
     });
 }
 
